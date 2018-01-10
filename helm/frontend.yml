@@ -1,0 +1,35 @@
+deployment:
+  healthcheck: /healthz
+  image:
+    pullPolicy: IfNotPresent
+    repository: 412241670359.dkr.ecr.us-east-1.amazonaws.com/clevertech/boilerplate-frontend-development
+    tag: placeholder
+  initialDelaySeconds: 10
+  minReadySeconds: 1
+hpa:
+  cpuUtilization:
+    targetPercentage: 50
+  maxReplicas: 1
+  minReplicas: 1
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  hosts:
+  - name: cleverbuild.biz
+    rules:
+    - path: /
+      subdomain: boilerplate-dev-randomvalue.
+replicaCount: 1
+resources:
+  limits:
+    cpu: 300m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi
+service:
+  externalPort: 80
+  internalPort: 80
+  name: frontend
+  type: ""

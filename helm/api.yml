@@ -1,0 +1,48 @@
+deployment:
+  healthcheck: /healthz
+  image:
+    pullPolicy: IfNotPresent
+    repository: 412241670359.dkr.ecr.us-east-1.amazonaws.com/clevertech/boilerplate-api-development
+    tag: placeholder
+  initialDelaySeconds: 10
+  minReadySeconds: 1
+envFrom:
+- secretRef:
+    name: app-credentials
+env:
+- name: NODE_ENV
+  value: development
+- name: DEBUG
+  value: ""
+- name: PORT
+  value: "8080"
+hpa:
+  cpuUtilization:
+    targetPercentage: 50
+  maxReplicas: 1
+  minReplicas: 1
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  hosts:
+  - name: cleverbuild.biz
+    rules:
+    - path: /
+      subdomain: boilerplate-api-dev-randomvalue.
+replicaCount: 1
+resources:
+  limits:
+    cpu: 300m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi
+secrets:
+- name: app-credentials
+  type: Opaque
+service:
+  externalPort: 80
+  internalPort: 8080
+  name: api
+  type: ""

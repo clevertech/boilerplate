@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap-starter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "Alberto Gimeno <gimenete@gimenete.net>",
+  "license": "MIT",
+  "bin": {
+    "Boilerplate": "./index.js"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": ["prettier --write", "git add"]
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "dashify": "^0.2.2",
+    "fs-extra": "^4.0.2",
+    "inquirer": "^3.3.0",
+    "nanoid": "^1.0.1",
+    "uppercamelcase": "^3.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
+  }
+}
