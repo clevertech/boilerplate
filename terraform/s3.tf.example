@@ -1,0 +1,12 @@
+# resource "aws_s3_bucket" "main" {
+#   bucket = "${var.appname}-${var.prefix}"
+#   acl = "private"
+#
+#   # cors_rule {
+#   #  allowed_origins = ["*"]
+#   #  allowed_methods = ["GET","PUT","POST","DELETE"]
+#   #  allowed_headers = ["*"]
+#   #  expose_headers = ["ETag"]
+#   #}
+# }
+#

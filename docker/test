@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+CONFIG_FILE=docker-compose.yml
+
+# Init empty cache file
+touch yarn.lock
+if [ ! -f .-yarn-cache.tgz ]; then
+  echo "Init empty .yarn-cache.tgz"
+  tar cvzf api/.yarn-cache.tgz --files-from /dev/null
+fi
+
+make -C api build
+make -C api test

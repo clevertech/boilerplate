@@ -1,0 +1,41 @@
+version: '2'
+services:
+  api:
+    build: api/.
+    command: yarn run start-dev
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - api/.env
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./api/.:/opt/app
+      - /opt/app/node_modules
+  frontend:
+    build: frontend/.
+    command: npm start
+    ports:
+      - "0.0.0.0:3000:3000"
+      - "0.0.0.0:3001:3001"
+      - "0.0.0.0:3002:3002"
+    volumes:
+      - ./frontend/.:/opt/app
+      - /opt/app/node_modules
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: o5MU9UhWaHNUXfrMqU~Ho
+      POSTGRES_USER: postgres
+      POSTGRES_DB: boilerplate
+    ports:
+      - '5432:5432'
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+  redis:
+    build: docker/definitions/redis
