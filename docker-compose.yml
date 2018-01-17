@@ -10,6 +10,9 @@ services:
       - api/.env
     ports:
       - '8080:8080'
+      - '9229:9229'
+    expose:
+      - 9229
     volumes:
       - ./api/.:/opt/app
       - /opt/app/node_modules
