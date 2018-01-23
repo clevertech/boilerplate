@@ -181,7 +181,7 @@ const generateRandom = () => {
 const SUMOLOGIC_BASE = 'https://service.us2.sumologic.com/ui/index.html'
 
 const sumologicSearch = sourcecategory =>
-  `${SUMOLOGIC_BASE}#section/search/@0,0@_sourcecategory="${sourcecategory}"`
+  `${SUMOLOGIC_BASE}#section/search/@0,0@_sourcecategory=%22${sourcecategory}%22`
 
 const sumologicLink = (name, env, component) =>
   sumologicSearch(`kubernetes/${name}/${env}/${name}/${component}`)
