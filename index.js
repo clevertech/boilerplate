@@ -66,7 +66,7 @@ const cloneRepo = async (projectName, basedir) => {
     return 'ssh'
   } catch (err) {
     if (err.message.indexOf('Permission denied (publickey)') === -1) throw err
-    console.log('Cloning using SSH failed. Trying with SSH')
+    console.log('Cloning using SSH failed. Trying with HTTPS')
     await exec(
       `git clone ${repoURL('https', projectName)} ${basedir} --depth 1`
     )
