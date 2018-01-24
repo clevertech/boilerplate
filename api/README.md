@@ -65,6 +65,26 @@ The command to run them is:
 docker-compose exec api yarn run test:integration
 ```
 
+## Debugging
+
+The project is prepared to be debugged thanks to the V8 debugging protocol. For example for VSCode you can create a launch configuration like this:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Docker",
+      "port": 9229,
+      "restart": true,
+      "remoteRoot": "/app"
+    }
+  ]
+}
+```
+
 ## Writing new tests
 
 **App unit tests**
