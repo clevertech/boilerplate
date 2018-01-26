@@ -32,10 +32,7 @@ function* watchLogoutUser() {
 function* getAccount(action) {
   try {
     const payload = yield call(api.getAccount, action);
-    console.log(
-      'This is just a test request to check that authentication works',
-      payload
-    );
+    console.log('This is just a test request to check that authentication works', payload);
   } catch (e) {
     yield put({
       type: constants.AUTHENTICATION_GET_ACCOUNT.FAILED,

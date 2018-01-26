@@ -10,8 +10,7 @@ class Home extends Component {
         <div className="hero-body">
           <p className="title">Boilerplate</p>
           <p className="subtitle">
-            &nbsp; Everything you need to <strong>create an awesome</strong>{' '}
-            project
+            &nbsp; Everything you need to <strong>create an awesome</strong> project
           </p>
         </div>
       </section>
