@@ -6,6 +6,7 @@ const fs = require('fs-extra')
 const inquirer = require('inquirer')
 const dashify = require('dashify')
 const uppercamelcase = require('uppercamelcase')
+const to_snake_case = require('just-snake-case')
 const child_process = require('child_process')
 const chalk = require('chalk')
 const generate = require('nanoid/generate')
@@ -88,21 +89,28 @@ const updateDockerCompose = async (answers, dbPassword) => {
   const dokerComposeSource = await fs.readFile(dockerComposePath, 'utf8')
   const dockerCompose = yaml.parse(dokerComposeSource)
   const dbPort = databases[answers.databaseEngine].port
-  const db = dockerCompose.services.db
+  const db = dockerCompose.services.db[('api', 'frontend', 'redis')].forEach(
+    key =>
+      (dockerCompose.services[key].image = `${dashify(
+        answers.projectName
+      )}_${key}:latest`)
+  )
+
   db.image = answers.databaseEngine
   db.ports = [`${dbPort}:${dbPort}`]
+  let db_user = to_snake_case(answers.projectName)
   if (answers.databaseEngine === 'postgres') {
     db.environment = {
       POSTGRES_PASSWORD: dbPassword,
-      POSTGRES_DB: dashify(answers.projectName + '-local'),
-      POSTGRES_USER: dashify(answers.projectName)
+      POSTGRES_DB: db_user + '_local',
+      POSTGRES_USER: db_user
     }
   } else if (answers.databaseEngine === 'mysql') {
     db.environment = {
       MYSQL_ROOT_PASSWORD: nanoid(),
       MYSQL_PASSWORD: dbPassword,
-      MYSQL_DATABASE: dashify(answers.projectName + '-local'),
-      MYSQL_USER: dashify(answers.projectName)
+      MYSQL_DATABASE: db_user + '_local',
+      MYSQL_USER: db_user
     }
   }
   await fs.writeFile(dockerComposePath, yaml.stringify(dockerCompose, 4, 2))
@@ -112,8 +120,8 @@ const updateEnvFile = async (answers, dbPassword) => {
   const envPath = path.join(basedir, 'api/.env.example')
   const envSource = await fs.readFile(envPath, 'utf8')
   const changes = {
-    DB_DATABASE: dashify(answers.projectName + '-local'),
-    DB_USER: dashify(answers.projectName),
+    DB_DATABASE: to_snake_case(answers.projectName) + '_local',
+    DB_USER: to_snake_case(answers.projectName),
     DB_PASSWORD: dbPassword,
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: databases[answers.databaseEngine].port,
@@ -295,10 +303,11 @@ const generateHelmAPI = async (answers, randomValue) => {
   helm.ingress.hosts[0].rules[0].subdomain = helm.ingress.hosts[0].rules[0].subdomain
     .replace(/boilerplate/g, dashify(answers.projectName))
     .replace(/randomvalue/g, randomValue)
+  let db_name = to_snake_case(answers.projectName)
   helm.secrets[0].data = {
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: dbPort,
-    DB_DATABASE: dashify(answers.projectName) + '-development',
+    DB_DATABASE: db_name + '_development',
     DB_POOL_MIN: 2,
     DB_POOL_MAX: 10,
     DB_HOST: answers.dbhost,
@@ -306,7 +315,7 @@ const generateHelmAPI = async (answers, randomValue) => {
     DB_PASSWORD: answers.dbpassword,
     REDIS_HOST: answers.redishost,
     REDIS_PORT: '6379',
-    REDIS_PREFIX: dashify(answers.projectName) + '-development',
+    REDIS_PREFIX: db_name + '_development',
     SESSION_SECRET: nanoid(),
     HEALTH_CHECK_SECRET: nanoid()
   }
