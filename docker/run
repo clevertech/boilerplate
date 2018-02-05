@@ -40,14 +40,14 @@ function retrieveYarnCache() {
   fi
 
   # Case #2: yarn packages changed during build
-  docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /cache/yarn.lock > /tmp/${SERVICE_NAME}_yarn.lock
+  docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /opt/cache/yarn.lock > /tmp/${SERVICE_NAME}_yarn.lock
   if ! diff -q $SERVICE_DIR/yarn.lock /tmp/${SERVICE_NAME}_yarn.lock > /dev/null  2>&1; then
     RETRIEVE=true
   fi
 
   if [ "$RETRIEVE" = true ]; then
     echo "Retrieving"
-    docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /.yarn-cache.tgz > $SERVICE_DIR/.yarn-cache.tgz
+    docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /opt/cache/.yarn-cache.tgz > $SERVICE_DIR/.yarn-cache.tgz
     cp /tmp/${SERVICE_NAME}_yarn.lock $SERVICE_DIR/yarn.lock
   else
     echo "Not retrieving"
