@@ -1,27 +1,43 @@
 FROM node:8-alpine
-LABEL maintainer="Clevertech DevOps <support@clevertech.biz>"
+MAINTAINER Clevertech DevOps <support@clevertech.biz>
 
 # Update OS
-RUN apk --no-cache add ca-certificates && update-ca-certificates
+RUN apk --no-cache add ca-certificates wget && update-ca-certificates
+
+# Install yarn
+RUN mkdir -p /opt/yarn \
+  && cd /opt/yarn \
+  && wget https://github.com/yarnpkg/yarn/releases/download/v1.3.2/yarn-v1.3.2.tar.gz \
+  && tar zxf yarn-v1.3.2.tar.gz \
+  && mv yarn-v1.3.2 dist
+ENV PATH="/opt/yarn/dist/bin:${PATH}"
+
+COPY . /opt/app
+
+# Do not use cache when we change node dependencies in package.json
+ADD package.json yarn.lock /opt/cache/
+
+ADD .yarn-cache.tgz /opt/cache
+
+RUN addgroup lowpriv \
+  && adduser -DG lowpriv lowpriv \
+  && chown lowpriv:lowpriv -R /opt
+USER lowpriv
+
+# Create the working dir
+RUN mkdir -p /opt/app
+WORKDIR /opt/app
+
+RUN yarn config set prefix /opt/cache/.cache/yarn
+
+# Install packages + Prepare cache file
+RUN cd /opt/cache \
+  && yarn config set cache-folder /opt/cache/.cache/yarn \
+  && yarn \
+  && cd /opt/app && ln -s /opt/cache/node_modules node_modules \
+  && tar czf /opt/cache/.yarn-cache.tgz /opt/cache/.cache/yarn
+
+RUN yarn install
 
 EXPOSE 3000
 CMD ["yarn", "run", "start"]
-
-# Create the working dir
-RUN mkdir -p /opt/app && mkdir /cache
-WORKDIR /opt/app
-
-# Do not use cache when we change node dependencies in package.json
-ADD package.json yarn.lock /cache/
-
-# Copy cache contents (if any) from local machine
-ADD .yarn-cache.tgz /
-
-# Install packages + Prepare cache file
-RUN cd /cache \
-  && yarn config set cache-folder /usr/local/share/.cache/yarn \
-  && yarn \
-  && cd /opt/app && ln -s /cache/node_modules node_modules \
-  && tar czf /.yarn-cache.tgz /usr/local/share/.cache/yarn
-
-COPY . /opt/app
