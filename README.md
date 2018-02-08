@@ -22,7 +22,7 @@ Some of the used technologies are:
 
 * [Node.js](https://nodejs.org/en/) for the backend.
 * [React.js](https://reactjs.org/) for the frontend with many other libraries
-  already integrated such as redux, raect-router, redux-saga, etc.
+  already integrated such as redux, react-router, redux-saga, etc.
 * [Docker](https://www.docker.com) for containers.
 * [Docker Compose](https://docs.docker.com/compose) to run containers locally
   and during the build.
@@ -32,9 +32,9 @@ Some of the used technologies are:
   (see the `create-boilerplate-app` script) as database engines.
 
 Containers offer big advantages in software development, quality assurance and
-software deployment: namely consistency, reliability and scalability. In
+software deployment -- namely consistency, reliability and scalability. In
 particular, scalability is implemented from the beginning, and the system is
-ready to grow as the application get traction.
+ready to grow as the application gets traction.
 
 # Creating new applications
 
