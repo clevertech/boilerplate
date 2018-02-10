@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import './styles/test.scss';
+import './styles/main.scss';
 
 import registerServiceWorker from './registerServiceWorker';
 import Routes from './routes';

@@ -7,6 +7,7 @@ Clevertech provides an integrated technology stack that
   hot-reloading, local utilities (npm scripts), dev tools (linters, git hooks),
   etc.
 * 🛠 Implements a solid workflow for building, testing and deploying applications
+* 📦 Now supports SASS
 
 Some of the best practices include:
 
@@ -63,6 +64,7 @@ _generated with [DocToc](https://github.com/thlorenz/doctoc)_
   * [Installation](#installation)
   * [Setting up the environment](#setting-up-the-environment)
   * [Running the application](#running-the-application)
+  * [SASS](#sass)
   * [Tests](#tests)
     * [Running the tests](#running-the-tests)
     * [Creating new tests](#creating-new-tests)
@@ -131,6 +133,10 @@ adding a package), you can do something like:
 ```
 docker-compose exec api yarn add $YOUR_PACKAGE$
 ```
+
+### SASS
+
+Boilerplate now supports styling with SASS. Just go to `frontend/src/styles` and open `main.scss`. From there you can style the page and take advantage of all of SASS's features.
 
 ### Tests
 
