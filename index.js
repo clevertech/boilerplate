@@ -6,7 +6,7 @@ const fs = require('fs-extra')
 const inquirer = require('inquirer')
 const dashify = require('dashify')
 const uppercamelcase = require('uppercamelcase')
-const to_snake_case = require('just-snake-case')
+const toSnakeCase = require('just-snake-case')
 const child_process = require('child_process')
 const chalk = require('chalk')
 const generate = require('nanoid/generate')
@@ -84,21 +84,28 @@ const deleteLicense = () => {
   return fs.remove(path.join(basedir, 'LICENSE'))
 }
 
+function setImageNames(composeConfig, keys, name) {
+  keys.forEach(function(key) {
+    composeConfig.services[key].image = `${name}_${key}:latest`
+  })
+}
+
 const updateDockerCompose = async (answers, dbPassword) => {
   const dockerComposePath = path.join(basedir, 'docker-compose.yml')
-  const dokerComposeSource = await fs.readFile(dockerComposePath, 'utf8')
-  const dockerCompose = yaml.parse(dokerComposeSource)
+  const dockerComposeSource = await fs.readFile(dockerComposePath, 'utf8')
+  const dockerCompose = yaml.parse(dockerComposeSource)
   const dbPort = databases[answers.databaseEngine].port
-  const db = dockerCompose.services.db[('api', 'frontend', 'redis')].forEach(
-    key =>
-      (dockerCompose.services[key].image = `${dashify(
-        answers.projectName
-      )}_${key}:latest`)
+  const db = dockerCompose.services.db
+
+  setImageNames(
+    dockerCompose,
+    ['api', 'frontend', 'redis'],
+    dashify(answers.projectName)
   )
 
   db.image = answers.databaseEngine
   db.ports = [`${dbPort}:${dbPort}`]
-  let db_user = to_snake_case(answers.projectName)
+  const db_user = toSnakeCase(answers.projectName)
   if (answers.databaseEngine === 'postgres') {
     db.environment = {
       POSTGRES_PASSWORD: dbPassword,
@@ -120,8 +127,8 @@ const updateEnvFile = async (answers, dbPassword) => {
   const envPath = path.join(basedir, 'api/.env.example')
   const envSource = await fs.readFile(envPath, 'utf8')
   const changes = {
-    DB_DATABASE: to_snake_case(answers.projectName) + '_local',
-    DB_USER: to_snake_case(answers.projectName),
+    DB_DATABASE: toSnakeCase(answers.projectName) + '_local',
+    DB_USER: toSnakeCase(answers.projectName),
     DB_PASSWORD: dbPassword,
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: databases[answers.databaseEngine].port,
@@ -303,7 +310,7 @@ const generateHelmAPI = async (answers, randomValue) => {
   helm.ingress.hosts[0].rules[0].subdomain = helm.ingress.hosts[0].rules[0].subdomain
     .replace(/boilerplate/g, dashify(answers.projectName))
     .replace(/randomvalue/g, randomValue)
-  let db_name = to_snake_case(answers.projectName)
+  const db_name = toSnakeCase(answers.projectName)
   helm.secrets[0].data = {
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: dbPort,
