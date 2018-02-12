@@ -105,19 +105,19 @@ const updateDockerCompose = async (answers, dbPassword) => {
 
   db.image = answers.databaseEngine
   db.ports = [`${dbPort}:${dbPort}`]
-  const db_user = toSnakeCase(answers.projectName)
+  const dbUser = toSnakeCase(answers.projectName)
   if (answers.databaseEngine === 'postgres') {
     db.environment = {
       POSTGRES_PASSWORD: dbPassword,
-      POSTGRES_DB: db_user + '_local',
-      POSTGRES_USER: db_user
+      POSTGRES_DB: dbUser + '_local',
+      POSTGRES_USER: dbUser
     }
   } else if (answers.databaseEngine === 'mysql') {
     db.environment = {
       MYSQL_ROOT_PASSWORD: nanoid(),
       MYSQL_PASSWORD: dbPassword,
-      MYSQL_DATABASE: db_user + '_local',
-      MYSQL_USER: db_user
+      MYSQL_DATABASE: dbUser + '_local',
+      MYSQL_USER: dbUser
     }
   }
   await fs.writeFile(dockerComposePath, yaml.stringify(dockerCompose, 4, 2))
@@ -310,11 +310,11 @@ const generateHelmAPI = async (answers, randomValue) => {
   helm.ingress.hosts[0].rules[0].subdomain = helm.ingress.hosts[0].rules[0].subdomain
     .replace(/boilerplate/g, dashify(answers.projectName))
     .replace(/randomvalue/g, randomValue)
-  const db_name = toSnakeCase(answers.projectName)
+  const dbName = toSnakeCase(answers.projectName)
   helm.secrets[0].data = {
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: dbPort,
-    DB_DATABASE: db_name + '_development',
+    DB_DATABASE: dbName + '_development',
     DB_POOL_MIN: 2,
     DB_POOL_MAX: 10,
     DB_HOST: answers.dbhost,
@@ -322,7 +322,7 @@ const generateHelmAPI = async (answers, randomValue) => {
     DB_PASSWORD: answers.dbpassword,
     REDIS_HOST: answers.redishost,
     REDIS_PORT: '6379',
-    REDIS_PREFIX: db_name + '_development',
+    REDIS_PREFIX: dbName + '_development',
     SESSION_SECRET: nanoid(),
     HEALTH_CHECK_SECRET: nanoid()
   }
