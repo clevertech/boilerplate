@@ -200,7 +200,7 @@ const updateRootPackageJSON = async answers => {
     sentry: `https://sentry.cleverbuild.biz/clevertech/${name}-sentry/`,
     development: {
       servers: {
-        api: `https://${name}-api-dev-${randomDev}.cleverbuild.biz/`,
+        api: `https://api-${name}-dev-${randomDev}.cleverbuild.biz/`,
         frontend: `https://${name}-dev-${randomDev}.cleverbuild.biz/`
       },
       logs: {
@@ -210,7 +210,7 @@ const updateRootPackageJSON = async answers => {
     },
     staging: {
       servers: {
-        api: `https://${name}-api-staging-${randomStaging}.cleverbuild.biz/`,
+        api: `https://api-${name}-staging-${randomStaging}.cleverbuild.biz/`,
         frontend: `https://${name}-staging-${randomStaging}.cleverbuild.biz/`
       },
       logs: {
