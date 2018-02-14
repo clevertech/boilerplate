@@ -22,10 +22,10 @@ const envs = {
 };
 
 // Expected hosts:
-// local  :      local.cleverbuild.biz
-// dev    :   dev-<random>.example.com
-// staging: stage-<random>.example.com
-// prod   :                example.com
+// local  :             local.cleverbuild.biz
+// dev    :   <name>-dev-<random>.example.com
+// staging: <name>-stage-<random>.example.com
+// prod   :                       example.com
 
 const localHostnames = ['local.cleverbuild.biz', 'localhost', '127.0.0.1'];
 
@@ -39,7 +39,8 @@ const calculateConfig = () => {
     return envs['prod'];
   }
   const subdomain = hostnameParts[0];
-  const env = subdomain.split('-')[0];
+  const parts = subdomain.split('-');
+  const env = parts[parts.length - 2];
   const config = envs[env];
   config.API_BASE = `${protocol}//api-${host}`;
   return config;
