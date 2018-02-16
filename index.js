@@ -274,6 +274,8 @@ const useProjectName = async answers => {
   ]
   for (const file of files) {
     const filePath = path.join(basedir, file)
+    // Some files do not exist if you are not a Clevertech employee
+    if (!(await fs.exists(filePath))) continue
     const source = await fs.readFile(filePath, 'utf8')
     const sourceNew = source
       .replace(/boilerplate/g, dashify(answers.projectName))
