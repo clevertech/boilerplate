@@ -6,6 +6,7 @@ const fs = require('fs-extra')
 const inquirer = require('inquirer')
 const dashify = require('dashify')
 const uppercamelcase = require('uppercamelcase')
+const toSnakeCase = require('just-snake-case')
 const child_process = require('child_process')
 const chalk = require('chalk')
 const generate = require('nanoid/generate')
@@ -83,26 +84,40 @@ const deleteLicense = () => {
   return fs.remove(path.join(basedir, 'LICENSE'))
 }
 
+function setImageNames(composeConfig, keys, name) {
+  keys.forEach(function(key) {
+    composeConfig.services[key].image = `${name}_${key}:latest`
+  })
+}
+
 const updateDockerCompose = async (answers, dbPassword) => {
   const dockerComposePath = path.join(basedir, 'docker-compose.yml')
-  const dokerComposeSource = await fs.readFile(dockerComposePath, 'utf8')
-  const dockerCompose = yaml.parse(dokerComposeSource)
+  const dockerComposeSource = await fs.readFile(dockerComposePath, 'utf8')
+  const dockerCompose = yaml.parse(dockerComposeSource)
   const dbPort = databases[answers.databaseEngine].port
   const db = dockerCompose.services.db
+
+  setImageNames(
+    dockerCompose,
+    ['api', 'frontend', 'redis'],
+    dashify(answers.projectName)
+  )
+
   db.image = answers.databaseEngine
   db.ports = [`${dbPort}:${dbPort}`]
+  const dbUser = toSnakeCase(answers.projectName)
   if (answers.databaseEngine === 'postgres') {
     db.environment = {
       POSTGRES_PASSWORD: dbPassword,
-      POSTGRES_DB: dashify(answers.projectName + '-local'),
-      POSTGRES_USER: dashify(answers.projectName)
+      POSTGRES_DB: dbUser + '_local',
+      POSTGRES_USER: dbUser
     }
   } else if (answers.databaseEngine === 'mysql') {
     db.environment = {
       MYSQL_ROOT_PASSWORD: nanoid(),
       MYSQL_PASSWORD: dbPassword,
-      MYSQL_DATABASE: dashify(answers.projectName + '-local'),
-      MYSQL_USER: dashify(answers.projectName)
+      MYSQL_DATABASE: dbUser + '_local',
+      MYSQL_USER: dbUser
     }
   }
   await fs.writeFile(dockerComposePath, yaml.stringify(dockerCompose, 4, 2))
@@ -112,8 +127,8 @@ const updateEnvFile = async (answers, dbPassword) => {
   const envPath = path.join(basedir, 'api/.env.example')
   const envSource = await fs.readFile(envPath, 'utf8')
   const changes = {
-    DB_DATABASE: dashify(answers.projectName + '-local'),
-    DB_USER: dashify(answers.projectName),
+    DB_DATABASE: toSnakeCase(answers.projectName) + '_local',
+    DB_USER: toSnakeCase(answers.projectName),
     DB_PASSWORD: dbPassword,
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: databases[answers.databaseEngine].port,
@@ -295,10 +310,11 @@ const generateHelmAPI = async (answers, randomValue) => {
   helm.ingress.hosts[0].rules[0].subdomain = helm.ingress.hosts[0].rules[0].subdomain
     .replace(/boilerplate/g, dashify(answers.projectName))
     .replace(/randomvalue/g, randomValue)
+  const dbName = toSnakeCase(answers.projectName)
   helm.secrets[0].data = {
     DB_ENGINE: answers.databaseEngine,
     DB_PORT: dbPort,
-    DB_DATABASE: dashify(answers.projectName) + '-development',
+    DB_DATABASE: dbName + '_development',
     DB_POOL_MIN: 2,
     DB_POOL_MAX: 10,
     DB_HOST: answers.dbhost,
@@ -306,7 +322,7 @@ const generateHelmAPI = async (answers, randomValue) => {
     DB_PASSWORD: answers.dbpassword,
     REDIS_HOST: answers.redishost,
     REDIS_PORT: '6379',
-    REDIS_PREFIX: dashify(answers.projectName) + '-development',
+    REDIS_PREFIX: dbName + '_development',
     SESSION_SECRET: nanoid(),
     HEALTH_CHECK_SECRET: nanoid()
   }
