@@ -416,6 +416,11 @@ const addExtras = async () => {
   await fs.remove(dir)
 }
 
+const createRootEnvFile = async (answers) => {
+  const content = `COMPOSE_PROJECT_NAME=${toSnakeCase(answers.projectName)}\n`
+  await fs.writeFile(path.join(basedir, '.env'), content)
+}
+
 const run = async () => {
   try {
     const protocol = await cloneRepo('boilerplate', basedir)
@@ -468,6 +473,7 @@ const run = async () => {
     const dbPassword = nanoid()
     console.log()
     await Promise.all([
+      createRootEnvFile(answers),
       updateDockerCompose(answers, dbPassword),
       updateEnvFile(answers, dbPassword),
       updateAPIPackageJSON(answers),
