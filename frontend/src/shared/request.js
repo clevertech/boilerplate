@@ -15,8 +15,7 @@ const isLoggedIn = () => {
   return !!(state.authentication && state.authentication.user);
 };
 
-const isLiteralObject = obj =>
-  Object.prototype.toString.call(obj) === '[object Object]';
+const isLiteralObject = obj => Object.prototype.toString.call(obj) === '[object Object]';
 
 const jsonBody = response => {
   try {
@@ -42,8 +41,7 @@ const request = async (path, options) => {
   }
   const response = await fetch(`${API_BASE}/api${path}`, options);
   const json = await jsonBody(response);
-  const createError = () =>
-    new Error(json.error || response.statusText || 'Unexpected error');
+  const createError = () => new Error(json.error || response.statusText || 'Unexpected error');
   if (response.status === 401 && isLoggedIn()) {
     store.dispatch(actions.logout());
     throw new Error(createError());

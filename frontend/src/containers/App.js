@@ -34,10 +34,7 @@ class App extends Component {
                       <a className="navbar-item">Hi {props.user.username}</a>
                     </p>
                     <p className="control">
-                      <Link
-                        to="/account"
-                        className="navbar-item button is-primary"
-                      >
+                      <Link to="/account" className="navbar-item button is-primary">
                         Account
                       </Link>
                     </p>
@@ -51,10 +48,7 @@ class App extends Component {
                 {!props.user && (
                   <div className="field is-grouped">
                     <p className="control">
-                      <Link
-                        to="/login"
-                        className="navbar-item button is-primary"
-                      >
+                      <Link to="/login" className="navbar-item button is-primary">
                         Sign in
                       </Link>
                     </p>

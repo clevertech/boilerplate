@@ -55,9 +55,7 @@ class Login extends Component {
 
             <div className="control">
               <button
-                className={`button is-primary ${
-                  this.props.loggingIn ? 'is-loading' : ''
-                }`}
+                className={`button is-primary ${this.props.loggingIn ? 'is-loading' : ''}`}
                 disabled={this.props.loggingIn}
                 type="submit"
               >
