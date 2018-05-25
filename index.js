@@ -60,16 +60,16 @@ const defaultDeatabase = databaseNames[0]
 
 console.log('Creating a new Clevertech project in', basedir)
 
-const cloneRepo = async (projectName, basedir) => {
+const cloneRepo = async (projectName, basedir, branch = null) => {
   console.log('Cloning repository')
   try {
-    await exec(`git clone ${repoURL('ssh', projectName)} ${basedir} --depth 1`)
+    await exec(`git clone `+(branch ? `-b ${branch}` : ``)+` ${repoURL('ssh', projectName)} ${basedir} --depth 1`)
     return 'ssh'
   } catch (err) {
     if (err.message.indexOf('Permission denied (publickey)') === -1) throw err
     console.log('Cloning using SSH failed. Trying with HTTPS')
     await exec(
-      `git clone ${repoURL('https', projectName)} ${basedir} --depth 1`
+      `git clone `+(branch ? `-b ${branch}` : ``)+` ${repoURL('https', projectName)} ${basedir} --depth 1`
     )
     return 'https'
   }
@@ -265,12 +265,7 @@ const useProjectName = async answers => {
     'Jenkinsfile',
     'api/Makefile',
     'frontend/Makefile',
-    'docker/run',
-    'terraform/ecr.tf',
-    'terraform/main.tf',
-    'terraform/terraform.backend.development',
-    'terraform/terraform.backend.staging',
-    'terraform/terraform.backend.production'
+    'docker/run'
   ]
   for (const file of files) {
     const filePath = path.join(basedir, file)
@@ -394,9 +389,9 @@ const makeAdminQuestions = async initialAnswers => {
 
 const addExtras = async () => {
   const dir = path.join(basedir, 'extras')
-  await cloneRepo('boilerplate-extras', dir)
+  await cloneRepo('boilerplate-extras', dir, 'terraform')
 
-  const files = ['api/Makefile', 'frontend/Makefile', 'Jenkinsfile']
+  const files = ['api/Makefile', 'frontend/Makefile', 'Jenkinsfile', 'terraform']
 
   // move files
   await Promise.all(
