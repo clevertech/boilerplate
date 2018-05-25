@@ -73,7 +73,6 @@ _generated with [DocToc](https://github.com/thlorenz/doctoc)_
   * [Long health check](#long-health-check)
 * [Directory structure](#directory-structure)
   * [Troubleshooting and useful Docker commands](#troubleshooting-and-useful-docker-commands)
-  * [Terraform](#terraform)
   * [Deploy](#deploy)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -252,12 +251,6 @@ project
 
 [Common issues](TROUBLESHOOTING.md) that developers may encounter when executing
 this project and useful Docker commands.
-
-### Terraform
-
-AWS resources are setup using Terraform. Run Terraform prior to deploy the
-Kubernetes setup, and use it for every modification in the AWS resources. See
-the `terraform` directory for more info.
 
 ### Deploy
 

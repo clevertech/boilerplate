@@ -1,4 +1,0 @@
-bucket  = ""
-key     = "env/boilerplate/production/terraform.tfstate"
-region  = "us-east-1"
-profile = ""
