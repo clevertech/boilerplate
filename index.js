@@ -265,12 +265,7 @@ const useProjectName = async answers => {
     'Jenkinsfile',
     'api/Makefile',
     'frontend/Makefile',
-    'docker/run',
-    'terraform/ecr.tf',
-    'terraform/main.tf',
-    'terraform/terraform.backend.development',
-    'terraform/terraform.backend.staging',
-    'terraform/terraform.backend.production'
+    'docker/run'
   ]
   for (const file of files) {
     const filePath = path.join(basedir, file)
@@ -396,7 +391,7 @@ const addExtras = async () => {
   const dir = path.join(basedir, 'extras')
   await cloneRepo('boilerplate-extras', dir)
 
-  const files = ['api/Makefile', 'frontend/Makefile', 'Jenkinsfile']
+  const files = ['api/Makefile', 'frontend/Makefile', 'Jenkinsfile', 'terraform']
 
   // move files
   await Promise.all(
