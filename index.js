@@ -262,7 +262,6 @@ const updatePrettierConfiguration = async answers => {
 
 const useProjectName = async answers => {
   const files = [
-    'Jenkinsfile',
     'api/Makefile',
     'frontend/Makefile',
     'docker/run'
@@ -387,16 +386,23 @@ const makeAdminQuestions = async initialAnswers => {
   ])
 }
 
-const addExtras = async () => {
+const addExtras = async (deployMode) => {
   const dir = path.join(basedir, 'extras')
   await cloneRepo('boilerplate-extras', dir)
 
-  const files = ['api/Makefile', 'frontend/Makefile', 'Jenkinsfile', 'terraform']
+  const files = ['api/Makefile', 'frontend/Makefile', 'terraform']
+  if (deployMode === 'k8s') {
+      files.push('buildspec-k8s-api.yml');
+      files.push('buildspec-k8s-frontend.yml');
+  } else {
+      files.push('buildspec-ecs-api.yml');
+      files.push('buildspec-ecs-frontend.yml');
+  }
 
   // move files
   await Promise.all(
     files.map(filename =>
-      fs.move(path.join(dir, filename), path.join(basedir, filename))
+      fs.move(path.join(dir, filename), path.join(basedir, filename.replace( /\-k8s|\-ecs/, '' )))
     )
   )
 
@@ -453,6 +459,13 @@ const run = async () => {
         default: false
       },
       {
+        name: 'deployMode',
+        type: 'list',
+        message: 'What is the deploy mode?',
+        choices: ['k8s','ecs'],
+        default: 'k8s'
+      },
+      {
         name: 'admin',
         type: 'confirm',
         message: 'Are you a Clevertech admin?',
@@ -462,7 +475,7 @@ const run = async () => {
     ])
 
     if (answers.employee) {
-      await addExtras()
+      await addExtras(answers.deployMode)
     }
 
     const dbPassword = nanoid()
