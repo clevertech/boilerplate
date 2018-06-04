@@ -2,6 +2,7 @@ const {
   Core,
   Crypto,
   DefaultEmailService,
+  TwilioSMSService,
   JWT,
   KnexAdapter,
   Validations
@@ -14,9 +15,20 @@ const db = new KnexAdapter(knexConfig);
 
 db.init();
 
-const { CRYPTO_KEY, CRYPTO_ALGORITHM, JWT_ALGORITHM, JWT_SECRET, DEFAULT_FROM } = process.env;
+const {
+  CRYPTO_KEY,
+  CRYPTO_ALGORITHM,
+  JWT_ALGORITHM,
+  JWT_SECRET,
+  DEFAULT_FROM,
+  BASE_URL,
+  TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN,
+  TWILIO_NUMBER_FROM
+} = process.env;
 
-const sms = null;
+const sms = new TwilioSMSService(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_NUMBER_FROM);
+
 const templatesDir = join(__dirname, '../../email-templates');
 const languages = fs.readdirSync(templatesDir);
 
@@ -25,9 +37,9 @@ const auth = new Core({
   db,
   email: new DefaultEmailService({
     projectName: 'Boilerplate',
-    confirmEmailURL: 'http://localhost:9020/account/confirm-email',
-    requestResetPasswordURL: 'http://localhost:9020/account/forgot-password',
-    resetPasswordURL: 'http://localhost:9020/account/reset-password',
+    confirmEmailURL: `${BASE_URL}/account/confirm-email`,
+    requestResetPasswordURL: `${BASE_URL}/account/forgot-password`,
+    resetPasswordURL: `${BASE_URL}/account/reset-password`,
     emailServiceConfig: {
       DEFAULT_FROM,
       TEMPLATES_DIR: templatesDir

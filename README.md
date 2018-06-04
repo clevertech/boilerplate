@@ -7,6 +7,7 @@ Clevertech provides an integrated technology stack that
   hot-reloading, local utilities (npm scripts), dev tools (linters, git hooks),
   etc.
 * 🛠 Implements a solid workflow for building, testing and deploying applications
+* 👤 Secure and complete authentication functionality (including 2FA with either SMS or apps like Google Authenticator)
 
 Some of the best practices include:
 
@@ -15,7 +16,7 @@ Some of the best practices include:
 * 🔒 Properly storage of secrets outside the code
 * 💊 Healthcheck implementations
 * ✒️ Linters and code prettifiers
-* 👤 Basic auth infrastructure based on JWT
+* 👤 Complete auth infrastructure based on JWT
 * 🏛 Source code architecture that scales
 
 Some of the used technologies are:
@@ -100,6 +101,8 @@ development, inside each app directory there should be an `.env.example` file.
 Simply copy `.env.example` to `.env` and fill in your credentials as needed. The
 `.env.` file can be used to store sensitive / personal credentials without the
 risk of checking it into source control.
+
+By default [CleverAuth](https://github.com/clevertech/cleverauth) is enabled and some env variables are required for it. Take a look to `api/.env.example` and fill the required values.
 
 ### Running the application
 
