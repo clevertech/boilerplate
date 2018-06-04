@@ -1,7 +1,9 @@
 import products from './products';
-import authentication from './authentication';
+import account from './account';
+import errors from './errors';
 
 export default {
   products,
-  authentication
+  account,
+  errors
 };

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 
-import { actions } from '../redux/modules/products';
+import { actions } from '../../redux/modules/products';
 
 const propTypes = {};
 
@@ -34,14 +34,12 @@ class Products extends Component {
                 </tr>
               </thead>
               <tbody>
-                {products.records.map(
-                  ({ name, price, quantity, description, id }) => (
-                    <tr key={id}>
-                      <td>{name}</td>
-                      <td>{price}</td>
-                    </tr>
-                  )
-                )}
+                {products.records.map(({ name, price, quantity, description, id }) => (
+                  <tr key={id}>
+                    <td>{name}</td>
+                    <td>{price}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -57,6 +55,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 Products.propTypes = propTypes;
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(Products)
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Products));

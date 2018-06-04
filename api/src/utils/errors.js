@@ -27,6 +27,17 @@ class NotFound extends Error {
   }
 }
 
+const asyncMiddleware = middleware => {
+  const wrap = async (req, res, next) => {
+    try {
+      await middleware(req, res, next);
+    } catch (err) {
+      next(err);
+    }
+  };
+  return wrap;
+};
+
 const apiErrorHandler = (err, req, res, next) => {
   const statusCode = err.httpStatusCode || 500;
   res.status(statusCode).json({ error: err.message || String(err) });
@@ -34,6 +45,7 @@ const apiErrorHandler = (err, req, res, next) => {
 
 module.exports = {
   apiErrorHandler,
+  asyncMiddleware,
   BadRequest,
   Unauthorized,
   Forbidden,

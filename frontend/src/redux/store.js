@@ -2,6 +2,8 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { routerReducer } from 'react-router-redux';
 import throttle from 'lodash/throttle';
+import history from '../history';
+import { constants as errorConstants } from './modules/errors';
 
 import reducers from './modules';
 import rootSaga from './sagas';
@@ -18,9 +20,9 @@ const loadState = () => {
   }
 };
 
-const saveState = ({ authentication }) => {
+const saveState = state => {
   try {
-    localStorage.setItem('state', JSON.stringify({ authentication }));
+    localStorage.setItem('state', JSON.stringify(state));
   } catch (err) {
     console.error('Error storing redux state in localStorage', err);
   }
@@ -43,5 +45,11 @@ store.subscribe(
 
 // Run the saga now
 sagaMiddleware.run(rootSaga);
+
+history.listen((location, action) => {
+  if (action === 'PUSH') {
+    store.dispatch({ type: errorConstants.ERRORS_CLEANUP });
+  }
+});
 
 export default store;

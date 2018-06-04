@@ -6,21 +6,15 @@ const propTypes = {};
 
 class EnsureAuthenticated extends Component {
   render() {
-    return this.props.user ? (
-      this.props.children || null
-    ) : (
-      <Redirect to="/login" />
-    );
+    return this.props.user ? this.props.children || null : <Redirect to="/account/login" />;
   }
 }
 
 const mapStateToProps = (state, { location }) => ({
   location,
-  user: state.authentication.user
+  user: state.account.user
 });
 const mapDispatchToProps = (dispatch, ownProps) => ({});
 
 EnsureAuthenticated.propTypes = propTypes;
-export default connect(mapStateToProps, mapDispatchToProps)(
-  EnsureAuthenticated
-);
+export default connect(mapStateToProps, mapDispatchToProps)(EnsureAuthenticated);

@@ -6,15 +6,12 @@ const propTypes = {};
 class Home extends Component {
   render() {
     return (
-      <section className="hero is-primary is-fullheight">
-        <div className="hero-body">
-          <p className="title">Boilerplate</p>
-          <p className="subtitle">
-            &nbsp; Everything you need to <strong>create an awesome</strong>{' '}
-            project
-          </p>
-        </div>
-      </section>
+      <div>
+        <h1>Boilerplate</h1>
+        <p className="text-muted">
+          Everything you need to <strong>create an awesome</strong> project
+        </p>
+      </div>
     );
   }
 }

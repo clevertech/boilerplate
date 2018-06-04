@@ -2,21 +2,20 @@ import config from '../config';
 import store from '../redux/store';
 
 const { API_BASE } = config;
-const { actions } = require('../redux/modules/authentication');
+const { actions } = require('../redux/modules/account');
 
 const getAuthorization = () => {
   const state = store.getState();
-  const token = state.authentication && state.authentication.token;
+  const token = state.account && state.account.token;
   return token ? `Bearer ${token}` : void 0;
 };
 
 const isLoggedIn = () => {
   const state = store.getState();
-  return !!(state.authentication && state.authentication.user);
+  return !!(state.account && state.account.user);
 };
 
-const isLiteralObject = obj =>
-  Object.prototype.toString.call(obj) === '[object Object]';
+const isLiteralObject = obj => Object.prototype.toString.call(obj) === '[object Object]';
 
 const jsonBody = response => {
   try {
@@ -42,8 +41,7 @@ const request = async (path, options) => {
   }
   const response = await fetch(`${API_BASE}/api${path}`, options);
   const json = await jsonBody(response);
-  const createError = () =>
-    new Error(json.error || response.statusText || 'Unexpected error');
+  const createError = () => new Error(json.error || response.statusText || 'Unexpected error');
   if (response.status === 401 && isLoggedIn()) {
     store.dispatch(actions.logout());
     throw new Error(createError());

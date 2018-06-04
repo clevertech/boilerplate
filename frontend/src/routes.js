@@ -1,12 +1,11 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 
-import App from './containers/App';
-import Products from './containers/Products';
-import Home from './containers/Home';
-import Login from './containers/Login';
-import Account from './containers/Account';
-import EnsureAuthenticated from './containers/EnsureAuthenticated';
+import App from './components/App';
+import Products from './components/products/Products';
+import Home from './components/Home';
+import EnsureAuthenticated from './components/EnsureAuthenticated';
+import accountRoutes from './components/account/routes';
 
 import NoMatch from './components/NoMatch';
 
@@ -17,10 +16,9 @@ export default () => (
     <App>
       <Switch>
         <Route path="/" component={Home} exact />
-        <Route path="/login" component={Login} />
-        <Route path="/products" component={Products} />
+        <Route path="/account" component={accountRoutes} />
         <EnsureAuthenticated>
-          <Route path="/account" component={Account} />
+          <Route path="/products" component={Products} />
         </EnsureAuthenticated>
         <Route component={NoMatch} />
       </Switch>
