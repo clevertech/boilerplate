@@ -79,7 +79,8 @@ The project is prepared to be debugged thanks to the V8 debugging protocol. For 
       "name": "Attach to Docker",
       "port": 9229,
       "restart": true,
-      "remoteRoot": "/app"
+      "remoteRoot": "/opt/app",
+      "localRoot": "${workspaceFolder}/api"
     }
   ]
 }
