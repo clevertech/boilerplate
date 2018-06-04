@@ -2,7 +2,7 @@ FROM node:8-alpine
 LABEL maintainer="Clevertech DevOps <support@clevertech.biz>"
 
 # Update OS
-RUN apk --no-cache add ca-certificates && update-ca-certificates
+RUN apk --no-cache add ca-certificates python2 make g++ vim && update-ca-certificates
 
 EXPOSE 3000
 CMD ["yarn", "run", "start"]

@@ -24,7 +24,7 @@ require('./routes/index')(app);
 
 // API routes
 const api = express.Router();
-require('./routes/users')(api);
+require('./routes/account')(api);
 require('./routes/products')(api);
 
 api.use(apiErrorHandler);

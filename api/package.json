@@ -15,8 +15,7 @@
   },
   "betterScripts": {
     "start": "knex migrate:latest && node src/index.js",
-    "start-dev":
-      "node src/wait-for-db.js && knex migrate:latest && nodemon --inspect=0.0.0.0:9229",
+    "start-dev": "node src/wait-for-db.js && knex migrate:latest && nodemon --inspect=0.0.0.0:9229",
     "knex": "knex",
     "test": {
       "command": "jest",
@@ -40,6 +39,7 @@
     "collectCoverageFrom": ["src/**/*.js", "!**/node_modules/**"]
   },
   "dependencies": {
+    "@clevertech.biz/auth-core": "0.1.3",
     "body-parser": "^1.18.2",
     "connect-redis": "^3.3.2",
     "cors": "^2.8.4",
@@ -52,6 +52,7 @@
     "node-fetch": "^1.7.3",
     "pg": "^7.3.0",
     "raven": "^2.2.1",
+    "useragent": "^2.3.0",
     "winston": "*"
   },
   "devDependencies": {

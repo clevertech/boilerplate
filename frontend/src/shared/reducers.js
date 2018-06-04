@@ -3,7 +3,5 @@
  *
  * Used by the individual reducers per module.
  */
-export const createReducer = (initialState, reducer) => (
-  state = initialState,
-  action
-) => reducer(state, action) || state;
+export const createReducer = (initialState, reducer) => (state = initialState, action) =>
+  reducer(state, action) || state;
