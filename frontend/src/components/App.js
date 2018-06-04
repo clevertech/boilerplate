@@ -12,7 +12,7 @@ class App extends Component {
     const { props } = this;
     return (
       <div>
-        <nav className="navbar navbar-dark bg-dark" aria-label="main navigation">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="main navigation">
           <Link className="navbar-brand" to="/">
             Boilerplate
           </Link>
@@ -49,8 +49,8 @@ class App extends Component {
               </li>
             )}
           </ul>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent" />
         </nav>
+
         <br />
         <section className="container">{props.children}</section>
       </div>
