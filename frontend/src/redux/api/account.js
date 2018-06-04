@@ -22,8 +22,8 @@ export function register({ username, firstName, lastName, email, password }) {
 }
 
 export function getAccount() {
-  return request('/account/get-account', {
-    method: 'POST'
+  return request('/account/settings/get-account', {
+    method: 'GET'
   });
 }
 

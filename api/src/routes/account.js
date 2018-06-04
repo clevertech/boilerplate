@@ -44,7 +44,13 @@ module.exports = app => {
       if (user.twofactor === 'sms') {
         await auth.send2FASMS(user, user.twofactorSecret, user.twofactorPhone);
       }
-      const userData = { name: user.name, email: user.email, id: user.id };
+      const userData = {
+        username: user.username,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        id: user.id
+      };
       const authenticated = !user.twofactor;
       // TODO get token from api
       const token = await sessionJWT.sign({ ...userData, authenticated });
@@ -123,8 +129,8 @@ module.exports = app => {
   settings.get(
     '/get-account',
     asyncMiddleware(async (req, res) => {
-      const { name, email } = req.user;
-      const user = { name, email };
+      const { username, firstName, lastName, email } = req.user;
+      const user = { username, firstName, lastName, email };
       res.json({ user });
     })
   );

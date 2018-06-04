@@ -20,8 +20,14 @@ class Profile extends Component {
         <h2>Public Profile</h2>
         <hr />
         <dl>
+          <dt>Username</dt>
+          <dd>{this.props.user.username}</dd>
+        </dl>
+        <dl>
           <dt>Name</dt>
-          <dd>{this.props.user.name}</dd>
+          <dd>
+            {this.props.user.firstName} {this.props.user.lastName}
+          </dd>
         </dl>
         <dl>
           <dt>Email</dt>
