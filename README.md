@@ -104,6 +104,8 @@ Simply copy `.env.example` to `.env` and fill in your credentials as needed. The
 `.env.` file can be used to store sensitive / personal credentials without the
 risk of checking it into source control.
 
+## -By default [CleverAuth](https://github.com/clevertech/cleverauth) is enabled and some env variables are required for it. Take a look to `api/.env.example` and fill the required values.
+
 ### Running the application
 
 ```
