@@ -76,8 +76,7 @@ class App extends Component {
             </div>
           </div>
         </nav>
-        <br />
-        <section className="container">{props.children}</section>
+        <div className="content">{props.children}</div>
       </div>
     );
   }
