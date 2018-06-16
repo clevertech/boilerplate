@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import withError from '../withError';
 import { actions } from '../../redux/modules/account';
-import Box from './Box';
 
 const propTypes = {
   location: PropTypes.object,
@@ -65,24 +64,36 @@ class ForgotPassword extends Component {
 
   renderForm() {
     return (
-      <Box>
-        <Form schema={forgot.schema} uiSchema={forgot.ui} onSubmit={this.onSubmit} noHtml5Validate>
-          {this.props.error}
-          <fieldset>
-            <button className="btn btn-primary btn-lg btn-block" type="submit">
-              Send reset instructions
-            </button>
-            <div className="mt-2">
-              <div className="float-left">
-                <Link to="/account/register">Create an account</Link>
-              </div>
-              <div className="float-right d-block">
-                <Link to="/account/login">Log In</Link>
-              </div>
+      <div>
+        <br />
+        <div className="columns is-mobile">
+          <div className="column is-half is-offset-one-fifth">
+            <div className="box">
+              <Form
+                schema={forgot.schema}
+                uiSchema={forgot.ui}
+                onSubmit={this.onSubmit}
+                noHtml5Validate
+              >
+                {this.props.error}
+                <fieldset>
+                  <button className="btn btn-primary btn-lg btn-block" type="submit">
+                    Send reset instructions
+                  </button>
+                  <div className="mt-2">
+                    <div className="float-left">
+                      <Link to="/account/register">Create an account</Link>
+                    </div>
+                    <div className="float-right d-block">
+                      <Link to="/account/login">Log In</Link>
+                    </div>
+                  </div>
+                </fieldset>
+              </Form>
             </div>
-          </fieldset>
-        </Form>
-      </Box>
+          </div>
+        </div>
+      </div>
     );
   }
 }

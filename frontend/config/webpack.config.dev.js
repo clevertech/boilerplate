@@ -187,7 +187,7 @@ module.exports = {
           },
           // same as above, but sourced from internal SCSS instead of external CSS.
           {
-            test: /\.scss$/,
+            test: [/\.scss$/, /\.sass$/],
             use: [
               require.resolve('style-loader'),
               {

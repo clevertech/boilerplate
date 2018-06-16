@@ -1,6 +1,33 @@
-/* Add your own styles here. */
+@import '../../node_modules/bulma/bulma.sass';
 
+/* Add your own styles here. */
 html,
 body {
   background-color: #efefef;
+}
+
+/* Redefining react-jsonschema-form default classes to extend bulma classes. */
+fieldset {
+  border: none;
+}
+
+.form-control {
+  @extend .input;
+}
+
+.control-label {
+  @extend .label;
+}
+
+.text-danger {
+  @extend .help;
+  @extend .is-danger;
+}
+
+.btn {
+  @extend .button;
+}
+
+.btn-primary {
+  @extend .is-primary;
 }

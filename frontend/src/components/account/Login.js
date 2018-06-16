@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import Form from 'react-jsonschema-form';
 import withError from '../withError';
 import { actions } from '../../redux/modules/account';
 
@@ -12,27 +13,36 @@ const propTypes = {
   location: PropTypes.object.isRequired
 };
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      password: ''
-    };
+const login = {
+  schema: {
+    type: 'object',
+    required: ['email', 'password'],
+    properties: {
+      email: {
+        type: 'string',
+        title: 'Email',
+        format: 'email'
+      },
+      password: {
+        type: 'string',
+        title: 'Password'
+      }
+    }
+  },
+  ui: {
+    email: {
+      'ui:placeholder': 'you@example.com',
+      classNames: 'field'
+    },
+    password: {
+      'ui:widget': 'password'
+    }
   }
-  onSubmit = () => {
-    this.props.login({
-      email: this.state.email,
-      password: this.state.password
-    });
-  };
+};
 
-  handleInputEmailChange = event => {
-    this.setState({ email: event.target.value });
-  };
-
-  handleInputPasswordChange = event => {
-    this.setState({ password: event.target.value });
+class Login extends Component {
+  onSubmit = form => {
+    this.props.login(form.formData);
   };
 
   render() {
@@ -56,52 +66,28 @@ class Login extends Component {
                 </div>
               )}
 
-              <div className="field">
-                <p className="control has-icons-left has-icons-right">
-                  <input
-                    className="input"
-                    type="email"
-                    placeholder="Email"
-                    onChange={this.handleInputEmailChange}
-                    value={this.state.email}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-envelope" />
-                  </span>
-                  <span className="icon is-small is-right">
-                    <i className="fas fa-check" />
-                  </span>
-                </p>
-              </div>
-              <div className="field">
-                <p className="control has-icons-left">
-                  <input
-                    className="input"
-                    type="password"
-                    placeholder="Password"
-                    onChange={this.handleInputPasswordChange}
-                    value={this.state.password}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-lock" />
-                  </span>
-                </p>
-              </div>
-              <div className="field">
-                <p className="control">
-                  <button className="button is-success" onClick={() => this.onSubmit()}>
-                    Login
-                  </button>
-                </p>
-              </div>
-              <div className="field is-grouped">
-                <p className="control">
-                  <Link to="/account/forgot-password">Forgot your password?</Link>
-                </p>
-                <p className="control">
-                  <Link to="/account/register">Create an account</Link>
-                </p>
-              </div>
+              <Form
+                schema={login.schema}
+                uiSchema={login.ui}
+                onSubmit={this.onSubmit}
+                noHtml5Validate
+              >
+                <div className="field">
+                  <p className="control">
+                    <button className="button is-success" type="submit">
+                      Login
+                    </button>
+                  </p>
+                </div>
+                <div className="field is-grouped">
+                  <p className="control">
+                    <Link to="/account/forgot-password">Forgot your password?</Link>
+                  </p>
+                  <p className="control">
+                    <Link to="/account/register">Create an account</Link>
+                  </p>
+                </div>
+              </Form>
             </div>
           </div>
         </div>
