@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import withError from '../withError';
 import { actions, accountInfo } from '../../redux/modules/account';
-import Box from './Box';
 
 const validate = (formData, errors) => {
   if (formData.password !== formData.repassword) {
@@ -98,27 +97,34 @@ class Register extends Component {
 
   renderForm() {
     return (
-      <Box>
-        <Form
-          schema={register.schema}
-          uiSchema={register.ui}
-          onSubmit={this.onSubmit}
-          noHtml5Validate
-          validate={validate}
-        >
-          {this.props.error}
-          <fieldset>
-            <button className="btn btn-primary btn-block btn-lg" type="submit">
-              Register
-            </button>
-            <div className="mt-2">
-              <div className="float-left">
-                <Link to="/account/login">Log in to your account</Link>
-              </div>
+      <div>
+        <br />
+        <div className="columns is-mobile">
+          <div className="column is-half is-offset-one-fifth">
+            <div className="box">
+              <Form
+                schema={register.schema}
+                uiSchema={register.ui}
+                onSubmit={this.onSubmit}
+                noHtml5Validate
+                validate={validate}
+              >
+                {this.props.error}
+                <fieldset>
+                  <button className="btn btn-primary btn-block btn-lg" type="submit">
+                    Register
+                  </button>
+                  <div className="mt-2">
+                    <div className="float-left">
+                      <Link to="/account/login">Log in to your account</Link>
+                    </div>
+                  </div>
+                </fieldset>
+              </Form>
             </div>
-          </fieldset>
-        </Form>
-      </Box>
+          </div>
+        </div>
+      </div>
     );
   }
 }
