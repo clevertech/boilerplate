@@ -335,7 +335,7 @@ const initGit = async answers => {
 const commit = async answers => {
   const options = { cwd: basedir }
   await exec('git add -A', options)
-  await exec('git commit -m "Boilerplate initialization"', options)
+  await exec('git commit --no-verify -m "Boilerplate initialization"', options)
 }
 
 const runYarn = async answers => {
