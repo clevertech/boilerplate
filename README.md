@@ -92,9 +92,9 @@ and without obvious errors.
 
 Local prerequisites are minimal, please follow the
 [installation instructions](INSTALL.md) carefully. We support Linux and MacOS;
-Windows users should use a Linux VM. Review your Docker Advanced settings and
-consider to assign more CPUs and more memory to the Docker process to boost
-performance.
+Windows users can use Docker for Windows with several workarounds or use a Linux VM.
+Review your Docker Advanced settings and consider to assign more CPUs and more memory
+to the Docker process to boost performance.
 
 ### Setting up the environment
 
