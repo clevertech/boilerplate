@@ -7,13 +7,14 @@ ShallowWrapper {
     disableTwoFactor={[Function]}
     getTwoFactorStatus={[Function]}
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -29,7 +30,7 @@ ShallowWrapper {
         undefined,
         <p>
           Loading two-factor configuration status...
-</p>,
+        </p>,
       ],
     },
     "ref": null,
@@ -59,7 +60,7 @@ ShallowWrapper {
           undefined,
           <p>
             Loading two-factor configuration status...
-</p>,
+          </p>,
         ],
       },
       "ref": null,
@@ -84,9 +85,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -107,18 +112,19 @@ ShallowWrapper {
     disableTwoFactor={[Function]}
     getTwoFactorStatus={[Function]}
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
     twoFactorStatus={
-        Object {
-            "twofactor": null,
-          }
+      Object {
+        "twofactor": null,
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -133,78 +139,78 @@ ShallowWrapper {
       "children": Array [
         <div
           className="row"
->
+        >
           <div
-                    className="col-12"
+            className="col-12"
           >
-                    <h2>
-                              Security
-                    </h2>
+            <h2>
+              Security
+            </h2>
           </div>
-</div>,
+        </div>,
         null,
         <div>
           <p>
-                    There are two ways to configure two factor authentication 
+            There are two ways to configure two factor authentication 
           </p>
           <div
-                    className="card"
+            className="card"
           >
-                    <div
-                              className="card-body"
-                    >
-                              <h5
-                                        className="card-title"
-                              >
-                                        SMS text message
-                              </h5>
-                              <p
-                                        className="card-text"
-                              >
-                                        Receive a text message to your mobile device
-                              </p>
-                              <Link
-                                        replace={false}
-                                        to="/account/settings/2fa/sms"
-                              >
-                                        <button
-                                                  className="btn btn-primary"
-                                        >
-                                                  Configure phone
-                                        </button>
-                              </Link>
-                    </div>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                SMS text message
+              </h5>
+              <p
+                className="card-text"
+              >
+                Receive a text message to your mobile device
+              </p>
+              <Link
+                replace={false}
+                to="/account/settings/2fa/sms"
+              >
+                <button
+                  className="btn btn-primary"
+                >
+                  Configure phone
+                </button>
+              </Link>
+            </div>
           </div>
           <br />
           <div
-                    className="card"
+            className="card"
           >
-                    <div
-                              className="card-body"
-                    >
-                              <h5
-                                        className="card-title"
-                              >
-                                        Use an app
-                              </h5>
-                              <p
-                                        className="card-text"
-                              >
-                                        Scan a QR code with Google Authentication or similar apps
-                              </p>
-                              <Link
-                                        replace={false}
-                                        to="/account/settings/2fa/app"
-                              >
-                                        <button
-                                                  className="btn btn-primary"
-                                        >
-                                                  Configure app
-                                        </button>
-                              </Link>
-                    </div>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Use an app
+              </h5>
+              <p
+                className="card-text"
+              >
+                Scan a QR code with Google Authentication or similar apps
+              </p>
+              <Link
+                replace={false}
+                to="/account/settings/2fa/app"
+              >
+                <button
+                  className="btn btn-primary"
+                >
+                  Configure app
+                </button>
+              </Link>
+            </div>
           </div>
-</div>,
+        </div>,
       ],
       "className": "container",
     },
@@ -217,11 +223,11 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="col-12"
->
+          >
             <h2>
-                        Security
+              Security
             </h2>
-</div>,
+          </div>,
           "className": "row",
         },
         "ref": null,
@@ -232,7 +238,7 @@ ShallowWrapper {
           "props": Object {
             "children": <h2>
               Security
-</h2>,
+            </h2>,
             "className": "col-12",
           },
           "ref": null,
@@ -260,64 +266,64 @@ ShallowWrapper {
           "children": Array [
             <p>
               There are two ways to configure two factor authentication 
-</p>,
+            </p>,
             <div
               className="card"
->
+            >
               <div
-                            className="card-body"
+                className="card-body"
               >
-                            <h5
-                                          className="card-title"
-                            >
-                                          SMS text message
-                            </h5>
-                            <p
-                                          className="card-text"
-                            >
-                                          Receive a text message to your mobile device
-                            </p>
-                            <Link
-                                          replace={false}
-                                          to="/account/settings/2fa/sms"
-                            >
-                                          <button
-                                                        className="btn btn-primary"
-                                          >
-                                                        Configure phone
-                                          </button>
-                            </Link>
+                <h5
+                  className="card-title"
+                >
+                  SMS text message
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Receive a text message to your mobile device
+                </p>
+                <Link
+                  replace={false}
+                  to="/account/settings/2fa/sms"
+                >
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure phone
+                  </button>
+                </Link>
               </div>
-</div>,
+            </div>,
             <br />,
             <div
               className="card"
->
+            >
               <div
-                            className="card-body"
+                className="card-body"
               >
-                            <h5
-                                          className="card-title"
-                            >
-                                          Use an app
-                            </h5>
-                            <p
-                                          className="card-text"
-                            >
-                                          Scan a QR code with Google Authentication or similar apps
-                            </p>
-                            <Link
-                                          replace={false}
-                                          to="/account/settings/2fa/app"
-                            >
-                                          <button
-                                                        className="btn btn-primary"
-                                          >
-                                                        Configure app
-                                          </button>
-                            </Link>
+                <h5
+                  className="card-title"
+                >
+                  Use an app
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Scan a QR code with Google Authentication or similar apps
+                </p>
+                <Link
+                  replace={false}
+                  to="/account/settings/2fa/app"
+                >
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure app
+                  </button>
+                </Link>
               </div>
-</div>,
+            </div>,
           ],
         },
         "ref": null,
@@ -340,28 +346,28 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="card-body"
->
+              >
                 <h5
-                                className="card-title"
+                  className="card-title"
                 >
-                                SMS text message
+                  SMS text message
                 </h5>
                 <p
-                                className="card-text"
+                  className="card-text"
                 >
-                                Receive a text message to your mobile device
+                  Receive a text message to your mobile device
                 </p>
                 <Link
-                                replace={false}
-                                to="/account/settings/2fa/sms"
+                  replace={false}
+                  to="/account/settings/2fa/sms"
                 >
-                                <button
-                                                className="btn btn-primary"
-                                >
-                                                Configure phone
-                                </button>
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure phone
+                  </button>
                 </Link>
-</div>,
+              </div>,
               "className": "card",
             },
             "ref": null,
@@ -373,24 +379,24 @@ ShallowWrapper {
                 "children": Array [
                   <h5
                     className="card-title"
->
+                  >
                     SMS text message
-</h5>,
+                  </h5>,
                   <p
                     className="card-text"
->
+                  >
                     Receive a text message to your mobile device
-</p>,
+                  </p>,
                   <Link
                     replace={false}
                     to="/account/settings/2fa/sms"
->
+                  >
                     <button
-                                        className="btn btn-primary"
+                      className="btn btn-primary"
                     >
-                                        Configure phone
+                      Configure phone
                     </button>
-</Link>,
+                  </Link>,
                 ],
                 "className": "card-body",
               },
@@ -427,9 +433,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <button
                       className="btn btn-primary"
->
+                    >
                       Configure phone
-</button>,
+                    </button>,
                     "replace": false,
                     "to": "/account/settings/2fa/sms",
                   },
@@ -469,28 +475,28 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="card-body"
->
+              >
                 <h5
-                                className="card-title"
+                  className="card-title"
                 >
-                                Use an app
+                  Use an app
                 </h5>
                 <p
-                                className="card-text"
+                  className="card-text"
                 >
-                                Scan a QR code with Google Authentication or similar apps
+                  Scan a QR code with Google Authentication or similar apps
                 </p>
                 <Link
-                                replace={false}
-                                to="/account/settings/2fa/app"
+                  replace={false}
+                  to="/account/settings/2fa/app"
                 >
-                                <button
-                                                className="btn btn-primary"
-                                >
-                                                Configure app
-                                </button>
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure app
+                  </button>
                 </Link>
-</div>,
+              </div>,
               "className": "card",
             },
             "ref": null,
@@ -502,24 +508,24 @@ ShallowWrapper {
                 "children": Array [
                   <h5
                     className="card-title"
->
+                  >
                     Use an app
-</h5>,
+                  </h5>,
                   <p
                     className="card-text"
->
+                  >
                     Scan a QR code with Google Authentication or similar apps
-</p>,
+                  </p>,
                   <Link
                     replace={false}
                     to="/account/settings/2fa/app"
->
+                  >
                     <button
-                                        className="btn btn-primary"
+                      className="btn btn-primary"
                     >
-                                        Configure app
+                      Configure app
                     </button>
-</Link>,
+                  </Link>,
                 ],
                 "className": "card-body",
               },
@@ -556,9 +562,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <button
                       className="btn btn-primary"
->
+                    >
                       Configure app
-</button>,
+                    </button>,
                     "replace": false,
                     "to": "/account/settings/2fa/app",
                   },
@@ -597,78 +603,78 @@ ShallowWrapper {
         "children": Array [
           <div
             className="row"
->
+          >
             <div
-                        className="col-12"
+              className="col-12"
             >
-                        <h2>
-                                    Security
-                        </h2>
+              <h2>
+                Security
+              </h2>
             </div>
-</div>,
+          </div>,
           null,
           <div>
             <p>
-                        There are two ways to configure two factor authentication 
+              There are two ways to configure two factor authentication 
             </p>
             <div
-                        className="card"
+              className="card"
             >
-                        <div
-                                    className="card-body"
-                        >
-                                    <h5
-                                                className="card-title"
-                                    >
-                                                SMS text message
-                                    </h5>
-                                    <p
-                                                className="card-text"
-                                    >
-                                                Receive a text message to your mobile device
-                                    </p>
-                                    <Link
-                                                replace={false}
-                                                to="/account/settings/2fa/sms"
-                                    >
-                                                <button
-                                                            className="btn btn-primary"
-                                                >
-                                                            Configure phone
-                                                </button>
-                                    </Link>
-                        </div>
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  SMS text message
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Receive a text message to your mobile device
+                </p>
+                <Link
+                  replace={false}
+                  to="/account/settings/2fa/sms"
+                >
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure phone
+                  </button>
+                </Link>
+              </div>
             </div>
             <br />
             <div
-                        className="card"
+              className="card"
             >
-                        <div
-                                    className="card-body"
-                        >
-                                    <h5
-                                                className="card-title"
-                                    >
-                                                Use an app
-                                    </h5>
-                                    <p
-                                                className="card-text"
-                                    >
-                                                Scan a QR code with Google Authentication or similar apps
-                                    </p>
-                                    <Link
-                                                replace={false}
-                                                to="/account/settings/2fa/app"
-                                    >
-                                                <button
-                                                            className="btn btn-primary"
-                                                >
-                                                            Configure app
-                                                </button>
-                                    </Link>
-                        </div>
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  Use an app
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Scan a QR code with Google Authentication or similar apps
+                </p>
+                <Link
+                  replace={false}
+                  to="/account/settings/2fa/app"
+                >
+                  <button
+                    className="btn btn-primary"
+                  >
+                    Configure app
+                  </button>
+                </Link>
+              </div>
             </div>
-</div>,
+          </div>,
         ],
         "className": "container",
       },
@@ -681,11 +687,11 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="col-12"
->
+            >
               <h2>
-                            Security
+                Security
               </h2>
-</div>,
+            </div>,
             "className": "row",
           },
           "ref": null,
@@ -696,7 +702,7 @@ ShallowWrapper {
             "props": Object {
               "children": <h2>
                 Security
-</h2>,
+              </h2>,
               "className": "col-12",
             },
             "ref": null,
@@ -724,64 +730,64 @@ ShallowWrapper {
             "children": Array [
               <p>
                 There are two ways to configure two factor authentication 
-</p>,
+              </p>,
               <div
                 className="card"
->
+              >
                 <div
-                                className="card-body"
+                  className="card-body"
                 >
-                                <h5
-                                                className="card-title"
-                                >
-                                                SMS text message
-                                </h5>
-                                <p
-                                                className="card-text"
-                                >
-                                                Receive a text message to your mobile device
-                                </p>
-                                <Link
-                                                replace={false}
-                                                to="/account/settings/2fa/sms"
-                                >
-                                                <button
-                                                                className="btn btn-primary"
-                                                >
-                                                                Configure phone
-                                                </button>
-                                </Link>
+                  <h5
+                    className="card-title"
+                  >
+                    SMS text message
+                  </h5>
+                  <p
+                    className="card-text"
+                  >
+                    Receive a text message to your mobile device
+                  </p>
+                  <Link
+                    replace={false}
+                    to="/account/settings/2fa/sms"
+                  >
+                    <button
+                      className="btn btn-primary"
+                    >
+                      Configure phone
+                    </button>
+                  </Link>
                 </div>
-</div>,
+              </div>,
               <br />,
               <div
                 className="card"
->
+              >
                 <div
-                                className="card-body"
+                  className="card-body"
                 >
-                                <h5
-                                                className="card-title"
-                                >
-                                                Use an app
-                                </h5>
-                                <p
-                                                className="card-text"
-                                >
-                                                Scan a QR code with Google Authentication or similar apps
-                                </p>
-                                <Link
-                                                replace={false}
-                                                to="/account/settings/2fa/app"
-                                >
-                                                <button
-                                                                className="btn btn-primary"
-                                                >
-                                                                Configure app
-                                                </button>
-                                </Link>
+                  <h5
+                    className="card-title"
+                  >
+                    Use an app
+                  </h5>
+                  <p
+                    className="card-text"
+                  >
+                    Scan a QR code with Google Authentication or similar apps
+                  </p>
+                  <Link
+                    replace={false}
+                    to="/account/settings/2fa/app"
+                  >
+                    <button
+                      className="btn btn-primary"
+                    >
+                      Configure app
+                    </button>
+                  </Link>
                 </div>
-</div>,
+              </div>,
             ],
           },
           "ref": null,
@@ -804,28 +810,28 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="card-body"
->
+                >
                   <h5
-                                    className="card-title"
+                    className="card-title"
                   >
-                                    SMS text message
+                    SMS text message
                   </h5>
                   <p
-                                    className="card-text"
+                    className="card-text"
                   >
-                                    Receive a text message to your mobile device
+                    Receive a text message to your mobile device
                   </p>
                   <Link
-                                    replace={false}
-                                    to="/account/settings/2fa/sms"
+                    replace={false}
+                    to="/account/settings/2fa/sms"
                   >
-                                    <button
-                                                      className="btn btn-primary"
-                                    >
-                                                      Configure phone
-                                    </button>
+                    <button
+                      className="btn btn-primary"
+                    >
+                      Configure phone
+                    </button>
                   </Link>
-</div>,
+                </div>,
                 "className": "card",
               },
               "ref": null,
@@ -837,24 +843,24 @@ ShallowWrapper {
                   "children": Array [
                     <h5
                       className="card-title"
->
+                    >
                       SMS text message
-</h5>,
+                    </h5>,
                     <p
                       className="card-text"
->
+                    >
                       Receive a text message to your mobile device
-</p>,
+                    </p>,
                     <Link
                       replace={false}
                       to="/account/settings/2fa/sms"
->
+                    >
                       <button
-                                            className="btn btn-primary"
+                        className="btn btn-primary"
                       >
-                                            Configure phone
+                        Configure phone
                       </button>
-</Link>,
+                    </Link>,
                   ],
                   "className": "card-body",
                 },
@@ -891,9 +897,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <button
                         className="btn btn-primary"
->
+                      >
                         Configure phone
-</button>,
+                      </button>,
                       "replace": false,
                       "to": "/account/settings/2fa/sms",
                     },
@@ -933,28 +939,28 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="card-body"
->
+                >
                   <h5
-                                    className="card-title"
+                    className="card-title"
                   >
-                                    Use an app
+                    Use an app
                   </h5>
                   <p
-                                    className="card-text"
+                    className="card-text"
                   >
-                                    Scan a QR code with Google Authentication or similar apps
+                    Scan a QR code with Google Authentication or similar apps
                   </p>
                   <Link
-                                    replace={false}
-                                    to="/account/settings/2fa/app"
+                    replace={false}
+                    to="/account/settings/2fa/app"
                   >
-                                    <button
-                                                      className="btn btn-primary"
-                                    >
-                                                      Configure app
-                                    </button>
+                    <button
+                      className="btn btn-primary"
+                    >
+                      Configure app
+                    </button>
                   </Link>
-</div>,
+                </div>,
                 "className": "card",
               },
               "ref": null,
@@ -966,24 +972,24 @@ ShallowWrapper {
                   "children": Array [
                     <h5
                       className="card-title"
->
+                    >
                       Use an app
-</h5>,
+                    </h5>,
                     <p
                       className="card-text"
->
+                    >
                       Scan a QR code with Google Authentication or similar apps
-</p>,
+                    </p>,
                     <Link
                       replace={false}
                       to="/account/settings/2fa/app"
->
+                    >
                       <button
-                                            className="btn btn-primary"
+                        className="btn btn-primary"
                       >
-                                            Configure app
+                        Configure app
                       </button>
-</Link>,
+                    </Link>,
                   ],
                   "className": "card-body",
                 },
@@ -1020,9 +1026,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <button
                         className="btn btn-primary"
->
+                      >
                         Configure app
-</button>,
+                      </button>,
                       "replace": false,
                       "to": "/account/settings/2fa/app",
                     },
@@ -1057,9 +1063,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -1080,18 +1090,19 @@ ShallowWrapper {
     disableTwoFactor={[Function]}
     getTwoFactorStatus={[Function]}
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
     twoFactorStatus={
-        Object {
-            "twofactor": "qr",
-          }
+      Object {
+        "twofactor": "qr",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -1106,39 +1117,39 @@ ShallowWrapper {
       "children": Array [
         <div
           className="row"
->
+        >
           <div
-                    className="col-12"
+            className="col-12"
           >
-                    <h2>
-                              Security
-                    </h2>
+            <h2>
+              Security
+            </h2>
           </div>
-</div>,
+        </div>,
         <div
           className="card"
->
+        >
           <div
-                    className="card-body"
+            className="card-body"
           >
-                    <p
-                              className="card-text"
-                    >
-                              You have two factor authentication enabled 
-                              using an app
-                    </p>
-                    <p
-                              className="card-text"
-                    >
-                              <button
-                                        className="btn btn-secondary"
-                                        onClick={[Function]}
-                              >
-                                        Edit
-                              </button>
-                    </p>
+            <p
+              className="card-text"
+            >
+              You have two factor authentication enabled 
+              using an app
+            </p>
+            <p
+              className="card-text"
+            >
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+              >
+                Edit
+              </button>
+            </p>
           </div>
-</div>,
+        </div>,
         false,
       ],
       "className": "container",
@@ -1152,11 +1163,11 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="col-12"
->
+          >
             <h2>
-                        Security
+              Security
             </h2>
-</div>,
+          </div>,
           "className": "row",
         },
         "ref": null,
@@ -1167,7 +1178,7 @@ ShallowWrapper {
           "props": Object {
             "children": <h2>
               Security
-</h2>,
+            </h2>,
             "className": "col-12",
           },
           "ref": null,
@@ -1193,24 +1204,24 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="card-body"
->
+          >
             <p
-                        className="card-text"
+              className="card-text"
             >
-                        You have two factor authentication enabled 
-                        using an app
+              You have two factor authentication enabled 
+              using an app
             </p>
             <p
-                        className="card-text"
+              className="card-text"
             >
-                        <button
-                                    className="btn btn-secondary"
-                                    onClick={[Function]}
-                        >
-                                    Edit
-                        </button>
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+              >
+                Edit
+              </button>
             </p>
-</div>,
+          </div>,
           "className": "card",
         },
         "ref": null,
@@ -1223,20 +1234,20 @@ ShallowWrapper {
               undefined,
               <p
                 className="card-text"
->
+              >
                 You have two factor authentication enabled 
                 using an app
-</p>,
+              </p>,
               <p
                 className="card-text"
->
+              >
                 <button
-                                className="btn btn-secondary"
-                                onClick={[Function]}
+                  className="btn btn-secondary"
+                  onClick={[Function]}
                 >
-                                Edit
+                  Edit
                 </button>
-</p>,
+              </p>,
             ],
             "className": "card-body",
           },
@@ -1269,9 +1280,9 @@ ShallowWrapper {
                 "children": <button
                   className="btn btn-secondary"
                   onClick={[Function]}
->
+                >
                   Edit
-</button>,
+                </button>,
                 "className": "card-text",
               },
               "ref": null,
@@ -1308,39 +1319,39 @@ ShallowWrapper {
         "children": Array [
           <div
             className="row"
->
+          >
             <div
-                        className="col-12"
+              className="col-12"
             >
-                        <h2>
-                                    Security
-                        </h2>
+              <h2>
+                Security
+              </h2>
             </div>
-</div>,
+          </div>,
           <div
             className="card"
->
+          >
             <div
-                        className="card-body"
+              className="card-body"
             >
-                        <p
-                                    className="card-text"
-                        >
-                                    You have two factor authentication enabled 
-                                    using an app
-                        </p>
-                        <p
-                                    className="card-text"
-                        >
-                                    <button
-                                                className="btn btn-secondary"
-                                                onClick={[Function]}
-                                    >
-                                                Edit
-                                    </button>
-                        </p>
+              <p
+                className="card-text"
+              >
+                You have two factor authentication enabled 
+                using an app
+              </p>
+              <p
+                className="card-text"
+              >
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                >
+                  Edit
+                </button>
+              </p>
             </div>
-</div>,
+          </div>,
           false,
         ],
         "className": "container",
@@ -1354,11 +1365,11 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="col-12"
->
+            >
               <h2>
-                            Security
+                Security
               </h2>
-</div>,
+            </div>,
             "className": "row",
           },
           "ref": null,
@@ -1369,7 +1380,7 @@ ShallowWrapper {
             "props": Object {
               "children": <h2>
                 Security
-</h2>,
+              </h2>,
               "className": "col-12",
             },
             "ref": null,
@@ -1395,24 +1406,24 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="card-body"
->
+            >
               <p
-                            className="card-text"
+                className="card-text"
               >
-                            You have two factor authentication enabled 
-                            using an app
+                You have two factor authentication enabled 
+                using an app
               </p>
               <p
-                            className="card-text"
+                className="card-text"
               >
-                            <button
-                                          className="btn btn-secondary"
-                                          onClick={[Function]}
-                            >
-                                          Edit
-                            </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                >
+                  Edit
+                </button>
               </p>
-</div>,
+            </div>,
             "className": "card",
           },
           "ref": null,
@@ -1425,20 +1436,20 @@ ShallowWrapper {
                 undefined,
                 <p
                   className="card-text"
->
+                >
                   You have two factor authentication enabled 
                   using an app
-</p>,
+                </p>,
                 <p
                   className="card-text"
->
+                >
                   <button
-                                    className="btn btn-secondary"
-                                    onClick={[Function]}
+                    className="btn btn-secondary"
+                    onClick={[Function]}
                   >
-                                    Edit
+                    Edit
                   </button>
-</p>,
+                </p>,
               ],
               "className": "card-body",
             },
@@ -1471,9 +1482,9 @@ ShallowWrapper {
                   "children": <button
                     className="btn btn-secondary"
                     onClick={[Function]}
->
+                  >
                     Edit
-</button>,
+                  </button>,
                   "className": "card-text",
                 },
                 "ref": null,
@@ -1506,9 +1517,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -1529,13 +1544,14 @@ ShallowWrapper {
     disableTwoFactor={[Function]}
     getTwoFactorStatus={[Function]}
     location={
-        Object {
-            "search": "?disabled",
-          }
+      Object {
+        "search": "?disabled",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -1549,24 +1565,24 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
->
+      >
         <div
-                className="card-body"
+          className="card-body"
         >
-                <h5
-                        className="card-title"
-                >
-                        <i
-                                className="fas fa-check"
-                        />
-                </h5>
-                <p
-                        className="card-text"
-                >
-                        Two factor authentication has been disabled.
-                </p>
+          <h5
+            className="card-title"
+          >
+            <i
+              className="fas fa-check"
+            />
+          </h5>
+          <p
+            className="card-text"
+          >
+            Two factor authentication has been disabled.
+          </p>
         </div>
-</div>,
+      </div>,
       "className": "container text-center",
     },
     "ref": null,
@@ -1577,20 +1593,20 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card-body"
->
+        >
           <h5
-                    className="card-title"
+            className="card-title"
           >
-                    <i
-                              className="fas fa-check"
-                    />
+            <i
+              className="fas fa-check"
+            />
           </h5>
           <p
-                    className="card-text"
+            className="card-text"
           >
-                    Two factor authentication has been disabled.
+            Two factor authentication has been disabled.
           </p>
-</div>,
+        </div>,
         "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
       },
       "ref": null,
@@ -1602,16 +1618,16 @@ ShallowWrapper {
           "children": Array [
             <h5
               className="card-title"
->
+            >
               <i
-                            className="fas fa-check"
+                className="fas fa-check"
               />
-</h5>,
+            </h5>,
             <p
               className="card-text"
->
+            >
               Two factor authentication has been disabled.
-</p>,
+            </p>,
           ],
           "className": "card-body",
         },
@@ -1624,7 +1640,7 @@ ShallowWrapper {
             "props": Object {
               "children": <i
                 className="fas fa-check"
-/>,
+              />,
               "className": "card-title",
             },
             "ref": null,
@@ -1668,24 +1684,24 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
->
+        >
           <div
-                    className="card-body"
+            className="card-body"
           >
-                    <h5
-                              className="card-title"
-                    >
-                              <i
-                                        className="fas fa-check"
-                              />
-                    </h5>
-                    <p
-                              className="card-text"
-                    >
-                              Two factor authentication has been disabled.
-                    </p>
+            <h5
+              className="card-title"
+            >
+              <i
+                className="fas fa-check"
+              />
+            </h5>
+            <p
+              className="card-text"
+            >
+              Two factor authentication has been disabled.
+            </p>
           </div>
-</div>,
+        </div>,
         "className": "container text-center",
       },
       "ref": null,
@@ -1696,20 +1712,20 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="card-body"
->
+          >
             <h5
-                        className="card-title"
+              className="card-title"
             >
-                        <i
-                                    className="fas fa-check"
-                        />
+              <i
+                className="fas fa-check"
+              />
             </h5>
             <p
-                        className="card-text"
+              className="card-text"
             >
-                        Two factor authentication has been disabled.
+              Two factor authentication has been disabled.
             </p>
-</div>,
+          </div>,
           "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
         },
         "ref": null,
@@ -1721,16 +1737,16 @@ ShallowWrapper {
             "children": Array [
               <h5
                 className="card-title"
->
+              >
                 <i
-                                className="fas fa-check"
+                  className="fas fa-check"
                 />
-</h5>,
+              </h5>,
               <p
                 className="card-text"
->
+              >
                 Two factor authentication has been disabled.
-</p>,
+              </p>,
             ],
             "className": "card-body",
           },
@@ -1743,7 +1759,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <i
                   className="fas fa-check"
-/>,
+                />,
                 "className": "card-title",
               },
               "ref": null,
@@ -1784,9 +1800,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

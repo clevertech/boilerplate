@@ -7,9 +7,10 @@ ShallowWrapper {
     location={Object {}}
     loggedIn={false}
     login={[Function]}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -25,97 +26,98 @@ ShallowWrapper {
         <br />,
         <div
           className="columns is-mobile"
->
+        >
           <div
-                    className="column is-half is-offset-one-fifth"
+            className="column is-half is-offset-one-fifth"
           >
-                    <div
-                              className="box"
+            <div
+              className="box"
+            >
+              <h3>
+                Member Login
+              </h3>
+              <Form
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "email",
+                      "password",
+                    ],
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "classNames": "field",
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
+              >
+                <div
+                  className="field"
+                >
+                  <p
+                    className="control"
+                  >
+                    <button
+                      className="button is-success"
+                      type="submit"
                     >
-                              <h3>
-                                        Member Login
-                              </h3>
-                              <Form
-                                        ErrorList={[Function]}
-                                        liveValidate={false}
-                                        noHtml5Validate={true}
-                                        noValidate={false}
-                                        onSubmit={[Function]}
-                                        safeRenderCompletion={false}
-                                        schema={
-                                                  Object {
-                                                            "properties": Object {
-                                                              "email": Object {
-                                                                "format": "email",
-                                                                "title": "Email",
-                                                                "type": "string",
-                                                              },
-                                                              "password": Object {
-                                                                "title": "Password",
-                                                                "type": "string",
-                                                              },
-                                                            },
-                                                            "required": Array [
-                                                              "email",
-                                                              "password",
-                                                            ],
-                                                            "type": "object",
-                                                          }
-                                        }
-                                        uiSchema={
-                                                  Object {
-                                                            "email": Object {
-                                                              "classNames": "field",
-                                                              "ui:placeholder": "you@example.com",
-                                                            },
-                                                            "password": Object {
-                                                              "ui:widget": "password",
-                                                            },
-                                                          }
-                                        }
-                              >
-                                        <div
-                                                  className="field"
-                                        >
-                                                  <p
-                                                            className="control"
-                                                  >
-                                                            <button
-                                                                      className="button is-success"
-                                                                      type="submit"
-                                                            >
-                                                                      Login
-                                                            </button>
-                                                  </p>
-                                        </div>
-                                        <div
-                                                  className="field is-grouped"
-                                        >
-                                                  <p
-                                                            className="control"
-                                                  >
-                                                            <Link
-                                                                      replace={false}
-                                                                      to="/account/forgot-password"
-                                                            >
-                                                                      Forgot your password?
-                                                            </Link>
-                                                  </p>
-                                                  <p
-                                                            className="control"
-                                                  >
-                                                            <Link
-                                                                      replace={false}
-                                                                      to="/account/register"
-                                                            >
-                                                                      Create an account
-                                                            </Link>
-                                                  </p>
-                                        </div>
-                              </Form>
-                    </div>
+                      Login
+                    </button>
+                  </p>
+                </div>
+                <div
+                  className="field is-grouped"
+                >
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/forgot-password"
+                    >
+                      Forgot your password?
+                    </Link>
+                  </p>
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/register"
+                    >
+                      Create an account
+                    </Link>
+                  </p>
+                </div>
+              </Form>
+            </div>
           </div>
-</div>,
+        </div>,
       ],
     },
     "ref": null,
@@ -136,93 +138,94 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="column is-half is-offset-one-fifth"
->
+          >
             <div
-                        className="box"
+              className="box"
             >
-                        <h3>
-                                    Member Login
-                        </h3>
-                        <Form
-                                    ErrorList={[Function]}
-                                    liveValidate={false}
-                                    noHtml5Validate={true}
-                                    noValidate={false}
-                                    onSubmit={[Function]}
-                                    safeRenderCompletion={false}
-                                    schema={
-                                                Object {
-                                                            "properties": Object {
-                                                              "email": Object {
-                                                                "format": "email",
-                                                                "title": "Email",
-                                                                "type": "string",
-                                                              },
-                                                              "password": Object {
-                                                                "title": "Password",
-                                                                "type": "string",
-                                                              },
-                                                            },
-                                                            "required": Array [
-                                                              "email",
-                                                              "password",
-                                                            ],
-                                                            "type": "object",
-                                                          }
-                                    }
-                                    uiSchema={
-                                                Object {
-                                                            "email": Object {
-                                                              "classNames": "field",
-                                                              "ui:placeholder": "you@example.com",
-                                                            },
-                                                            "password": Object {
-                                                              "ui:widget": "password",
-                                                            },
-                                                          }
-                                    }
-                        >
-                                    <div
-                                                className="field"
-                                    >
-                                                <p
-                                                            className="control"
-                                                >
-                                                            <button
-                                                                        className="button is-success"
-                                                                        type="submit"
-                                                            >
-                                                                        Login
-                                                            </button>
-                                                </p>
-                                    </div>
-                                    <div
-                                                className="field is-grouped"
-                                    >
-                                                <p
-                                                            className="control"
-                                                >
-                                                            <Link
-                                                                        replace={false}
-                                                                        to="/account/forgot-password"
-                                                            >
-                                                                        Forgot your password?
-                                                            </Link>
-                                                </p>
-                                                <p
-                                                            className="control"
-                                                >
-                                                            <Link
-                                                                        replace={false}
-                                                                        to="/account/register"
-                                                            >
-                                                                        Create an account
-                                                            </Link>
-                                                </p>
-                                    </div>
-                        </Form>
+              <h3>
+                Member Login
+              </h3>
+              <Form
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "email",
+                      "password",
+                    ],
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "classNames": "field",
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
+              >
+                <div
+                  className="field"
+                >
+                  <p
+                    className="control"
+                  >
+                    <button
+                      className="button is-success"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </p>
+                </div>
+                <div
+                  className="field is-grouped"
+                >
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/forgot-password"
+                    >
+                      Forgot your password?
+                    </Link>
+                  </p>
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/register"
+                    >
+                      Create an account
+                    </Link>
+                  </p>
+                </div>
+              </Form>
             </div>
-</div>,
+          </div>,
           "className": "columns is-mobile",
         },
         "ref": null,
@@ -233,89 +236,90 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="box"
->
+            >
               <h3>
-                            Member Login
+                Member Login
               </h3>
               <Form
-                            ErrorList={[Function]}
-                            liveValidate={false}
-                            noHtml5Validate={true}
-                            noValidate={false}
-                            onSubmit={[Function]}
-                            safeRenderCompletion={false}
-                            schema={
-                                          Object {
-                                                        "properties": Object {
-                                                          "email": Object {
-                                                            "format": "email",
-                                                            "title": "Email",
-                                                            "type": "string",
-                                                          },
-                                                          "password": Object {
-                                                            "title": "Password",
-                                                            "type": "string",
-                                                          },
-                                                        },
-                                                        "required": Array [
-                                                          "email",
-                                                          "password",
-                                                        ],
-                                                        "type": "object",
-                                                      }
-                            }
-                            uiSchema={
-                                          Object {
-                                                        "email": Object {
-                                                          "classNames": "field",
-                                                          "ui:placeholder": "you@example.com",
-                                                        },
-                                                        "password": Object {
-                                                          "ui:widget": "password",
-                                                        },
-                                                      }
-                            }
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "email",
+                      "password",
+                    ],
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "classNames": "field",
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
               >
-                            <div
-                                          className="field"
-                            >
-                                          <p
-                                                        className="control"
-                                          >
-                                                        <button
-                                                                      className="button is-success"
-                                                                      type="submit"
-                                                        >
-                                                                      Login
-                                                        </button>
-                                          </p>
-                            </div>
-                            <div
-                                          className="field is-grouped"
-                            >
-                                          <p
-                                                        className="control"
-                                          >
-                                                        <Link
-                                                                      replace={false}
-                                                                      to="/account/forgot-password"
-                                                        >
-                                                                      Forgot your password?
-                                                        </Link>
-                                          </p>
-                                          <p
-                                                        className="control"
-                                          >
-                                                        <Link
-                                                                      replace={false}
-                                                                      to="/account/register"
-                                                        >
-                                                                      Create an account
-                                                        </Link>
-                                          </p>
-                            </div>
+                <div
+                  className="field"
+                >
+                  <p
+                    className="control"
+                  >
+                    <button
+                      className="button is-success"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </p>
+                </div>
+                <div
+                  className="field is-grouped"
+                >
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/forgot-password"
+                    >
+                      Forgot your password?
+                    </Link>
+                  </p>
+                  <p
+                    className="control"
+                  >
+                    <Link
+                      replace={false}
+                      to="/account/register"
+                    >
+                      Create an account
+                    </Link>
+                  </p>
+                </div>
               </Form>
-</div>,
+            </div>,
             "className": "column is-half is-offset-one-fifth",
           },
           "ref": null,
@@ -327,86 +331,87 @@ ShallowWrapper {
               "children": Array [
                 <h3>
                   Member Login
-</h3>,
+                </h3>,
                 undefined,
                 <Form
                   ErrorList={[Function]}
+                  disabled={false}
                   liveValidate={false}
                   noHtml5Validate={true}
                   noValidate={false}
                   onSubmit={[Function]}
                   safeRenderCompletion={false}
                   schema={
-                                    Object {
-                                                      "properties": Object {
-                                                        "email": Object {
-                                                          "format": "email",
-                                                          "title": "Email",
-                                                          "type": "string",
-                                                        },
-                                                        "password": Object {
-                                                          "title": "Password",
-                                                          "type": "string",
-                                                        },
-                                                      },
-                                                      "required": Array [
-                                                        "email",
-                                                        "password",
-                                                      ],
-                                                      "type": "object",
-                                                    }
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "email",
+                        "password",
+                      ],
+                      "type": "object",
+                    }
                   }
                   uiSchema={
-                                    Object {
-                                                      "email": Object {
-                                                        "classNames": "field",
-                                                        "ui:placeholder": "you@example.com",
-                                                      },
-                                                      "password": Object {
-                                                        "ui:widget": "password",
-                                                      },
-                                                    }
+                    Object {
+                      "email": Object {
+                        "classNames": "field",
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:widget": "password",
+                      },
+                    }
                   }
->
+                >
                   <div
-                                    className="field"
+                    className="field"
                   >
-                                    <p
-                                                      className="control"
-                                    >
-                                                      <button
-                                                                        className="button is-success"
-                                                                        type="submit"
-                                                      >
-                                                                        Login
-                                                      </button>
-                                    </p>
+                    <p
+                      className="control"
+                    >
+                      <button
+                        className="button is-success"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </p>
                   </div>
                   <div
-                                    className="field is-grouped"
+                    className="field is-grouped"
                   >
-                                    <p
-                                                      className="control"
-                                    >
-                                                      <Link
-                                                                        replace={false}
-                                                                        to="/account/forgot-password"
-                                                      >
-                                                                        Forgot your password?
-                                                      </Link>
-                                    </p>
-                                    <p
-                                                      className="control"
-                                    >
-                                                      <Link
-                                                                        replace={false}
-                                                                        to="/account/register"
-                                                      >
-                                                                        Create an account
-                                                      </Link>
-                                    </p>
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/forgot-password"
+                      >
+                        Forgot your password?
+                      </Link>
+                    </p>
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/register"
+                      >
+                        Create an account
+                      </Link>
+                    </p>
                   </div>
-</Form>,
+                </Form>,
               ],
               "className": "box",
             },
@@ -433,43 +438,44 @@ ShallowWrapper {
                   "children": Array [
                     <div
                       className="field"
->
+                    >
                       <p
-                                            className="control"
+                        className="control"
                       >
-                                            <button
-                                                                  className="button is-success"
-                                                                  type="submit"
-                                            >
-                                                                  Login
-                                            </button>
+                        <button
+                          className="button is-success"
+                          type="submit"
+                        >
+                          Login
+                        </button>
                       </p>
-</div>,
+                    </div>,
                     <div
                       className="field is-grouped"
->
+                    >
                       <p
-                                            className="control"
+                        className="control"
                       >
-                                            <Link
-                                                                  replace={false}
-                                                                  to="/account/forgot-password"
-                                            >
-                                                                  Forgot your password?
-                                            </Link>
+                        <Link
+                          replace={false}
+                          to="/account/forgot-password"
+                        >
+                          Forgot your password?
+                        </Link>
                       </p>
                       <p
-                                            className="control"
+                        className="control"
                       >
-                                            <Link
-                                                                  replace={false}
-                                                                  to="/account/register"
-                                            >
-                                                                  Create an account
-                                            </Link>
+                        <Link
+                          replace={false}
+                          to="/account/register"
+                        >
+                          Create an account
+                        </Link>
                       </p>
-</div>,
+                    </div>,
                   ],
+                  "disabled": false,
                   "liveValidate": false,
                   "noHtml5Validate": true,
                   "noValidate": false,
@@ -512,14 +518,14 @@ ShallowWrapper {
                     "props": Object {
                       "children": <p
                         className="control"
->
+                      >
                         <button
-                                                className="button is-success"
-                                                type="submit"
+                          className="button is-success"
+                          type="submit"
                         >
-                                                Login
+                          Login
                         </button>
-</p>,
+                      </p>,
                       "className": "field",
                     },
                     "ref": null,
@@ -531,9 +537,9 @@ ShallowWrapper {
                         "children": <button
                           className="button is-success"
                           type="submit"
->
+                        >
                           Login
-</button>,
+                        </button>,
                         "className": "control",
                       },
                       "ref": null,
@@ -562,24 +568,24 @@ ShallowWrapper {
                       "children": Array [
                         <p
                           className="control"
->
+                        >
                           <Link
-                                                    replace={false}
-                                                    to="/account/forgot-password"
+                            replace={false}
+                            to="/account/forgot-password"
                           >
-                                                    Forgot your password?
+                            Forgot your password?
                           </Link>
-</p>,
+                        </p>,
                         <p
                           className="control"
->
+                        >
                           <Link
-                                                    replace={false}
-                                                    to="/account/register"
+                            replace={false}
+                            to="/account/register"
                           >
-                                                    Create an account
+                            Create an account
                           </Link>
-</p>,
+                        </p>,
                       ],
                       "className": "field is-grouped",
                     },
@@ -593,9 +599,9 @@ ShallowWrapper {
                           "children": <Link
                             replace={false}
                             to="/account/forgot-password"
->
+                          >
                             Forgot your password?
-</Link>,
+                          </Link>,
                           "className": "control",
                         },
                         "ref": null,
@@ -622,9 +628,9 @@ ShallowWrapper {
                           "children": <Link
                             replace={false}
                             to="/account/register"
->
+                          >
                             Create an account
-</Link>,
+                          </Link>,
                           "className": "control",
                         },
                         "ref": null,
@@ -669,97 +675,98 @@ ShallowWrapper {
           <br />,
           <div
             className="columns is-mobile"
->
+          >
             <div
-                        className="column is-half is-offset-one-fifth"
+              className="column is-half is-offset-one-fifth"
             >
-                        <div
-                                    className="box"
-                        >
-                                    <h3>
-                                                Member Login
-                                    </h3>
-                                    <Form
-                                                ErrorList={[Function]}
-                                                liveValidate={false}
-                                                noHtml5Validate={true}
-                                                noValidate={false}
-                                                onSubmit={[Function]}
-                                                safeRenderCompletion={false}
-                                                schema={
-                                                            Object {
-                                                                        "properties": Object {
-                                                                          "email": Object {
-                                                                            "format": "email",
-                                                                            "title": "Email",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "password": Object {
-                                                                            "title": "Password",
-                                                                            "type": "string",
-                                                                          },
-                                                                        },
-                                                                        "required": Array [
-                                                                          "email",
-                                                                          "password",
-                                                                        ],
-                                                                        "type": "object",
-                                                                      }
-                                                }
-                                                uiSchema={
-                                                            Object {
-                                                                        "email": Object {
-                                                                          "classNames": "field",
-                                                                          "ui:placeholder": "you@example.com",
-                                                                        },
-                                                                        "password": Object {
-                                                                          "ui:widget": "password",
-                                                                        },
-                                                                      }
-                                                }
-                                    >
-                                                <div
-                                                            className="field"
-                                                >
-                                                            <p
-                                                                        className="control"
-                                                            >
-                                                                        <button
-                                                                                    className="button is-success"
-                                                                                    type="submit"
-                                                                        >
-                                                                                    Login
-                                                                        </button>
-                                                            </p>
-                                                </div>
-                                                <div
-                                                            className="field is-grouped"
-                                                >
-                                                            <p
-                                                                        className="control"
-                                                            >
-                                                                        <Link
-                                                                                    replace={false}
-                                                                                    to="/account/forgot-password"
-                                                                        >
-                                                                                    Forgot your password?
-                                                                        </Link>
-                                                            </p>
-                                                            <p
-                                                                        className="control"
-                                                            >
-                                                                        <Link
-                                                                                    replace={false}
-                                                                                    to="/account/register"
-                                                                        >
-                                                                                    Create an account
-                                                                        </Link>
-                                                            </p>
-                                                </div>
-                                    </Form>
-                        </div>
+              <div
+                className="box"
+              >
+                <h3>
+                  Member Login
+                </h3>
+                <Form
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "email",
+                        "password",
+                      ],
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "classNames": "field",
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
+                >
+                  <div
+                    className="field"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <button
+                        className="button is-success"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                  <div
+                    className="field is-grouped"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/forgot-password"
+                      >
+                        Forgot your password?
+                      </Link>
+                    </p>
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/register"
+                      >
+                        Create an account
+                      </Link>
+                    </p>
+                  </div>
+                </Form>
+              </div>
             </div>
-</div>,
+          </div>,
         ],
       },
       "ref": null,
@@ -780,93 +787,94 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="column is-half is-offset-one-fifth"
->
+            >
               <div
-                            className="box"
+                className="box"
               >
-                            <h3>
-                                          Member Login
-                            </h3>
-                            <Form
-                                          ErrorList={[Function]}
-                                          liveValidate={false}
-                                          noHtml5Validate={true}
-                                          noValidate={false}
-                                          onSubmit={[Function]}
-                                          safeRenderCompletion={false}
-                                          schema={
-                                                        Object {
-                                                                      "properties": Object {
-                                                                        "email": Object {
-                                                                          "format": "email",
-                                                                          "title": "Email",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "password": Object {
-                                                                          "title": "Password",
-                                                                          "type": "string",
-                                                                        },
-                                                                      },
-                                                                      "required": Array [
-                                                                        "email",
-                                                                        "password",
-                                                                      ],
-                                                                      "type": "object",
-                                                                    }
-                                          }
-                                          uiSchema={
-                                                        Object {
-                                                                      "email": Object {
-                                                                        "classNames": "field",
-                                                                        "ui:placeholder": "you@example.com",
-                                                                      },
-                                                                      "password": Object {
-                                                                        "ui:widget": "password",
-                                                                      },
-                                                                    }
-                                          }
-                            >
-                                          <div
-                                                        className="field"
-                                          >
-                                                        <p
-                                                                      className="control"
-                                                        >
-                                                                      <button
-                                                                                    className="button is-success"
-                                                                                    type="submit"
-                                                                      >
-                                                                                    Login
-                                                                      </button>
-                                                        </p>
-                                          </div>
-                                          <div
-                                                        className="field is-grouped"
-                                          >
-                                                        <p
-                                                                      className="control"
-                                                        >
-                                                                      <Link
-                                                                                    replace={false}
-                                                                                    to="/account/forgot-password"
-                                                                      >
-                                                                                    Forgot your password?
-                                                                      </Link>
-                                                        </p>
-                                                        <p
-                                                                      className="control"
-                                                        >
-                                                                      <Link
-                                                                                    replace={false}
-                                                                                    to="/account/register"
-                                                                      >
-                                                                                    Create an account
-                                                                      </Link>
-                                                        </p>
-                                          </div>
-                            </Form>
+                <h3>
+                  Member Login
+                </h3>
+                <Form
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "email",
+                        "password",
+                      ],
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "classNames": "field",
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
+                >
+                  <div
+                    className="field"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <button
+                        className="button is-success"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                  <div
+                    className="field is-grouped"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/forgot-password"
+                      >
+                        Forgot your password?
+                      </Link>
+                    </p>
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/register"
+                      >
+                        Create an account
+                      </Link>
+                    </p>
+                  </div>
+                </Form>
               </div>
-</div>,
+            </div>,
             "className": "columns is-mobile",
           },
           "ref": null,
@@ -877,89 +885,90 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="box"
->
+              >
                 <h3>
-                                Member Login
+                  Member Login
                 </h3>
                 <Form
-                                ErrorList={[Function]}
-                                liveValidate={false}
-                                noHtml5Validate={true}
-                                noValidate={false}
-                                onSubmit={[Function]}
-                                safeRenderCompletion={false}
-                                schema={
-                                                Object {
-                                                                "properties": Object {
-                                                                  "email": Object {
-                                                                    "format": "email",
-                                                                    "title": "Email",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "password": Object {
-                                                                    "title": "Password",
-                                                                    "type": "string",
-                                                                  },
-                                                                },
-                                                                "required": Array [
-                                                                  "email",
-                                                                  "password",
-                                                                ],
-                                                                "type": "object",
-                                                              }
-                                }
-                                uiSchema={
-                                                Object {
-                                                                "email": Object {
-                                                                  "classNames": "field",
-                                                                  "ui:placeholder": "you@example.com",
-                                                                },
-                                                                "password": Object {
-                                                                  "ui:widget": "password",
-                                                                },
-                                                              }
-                                }
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "email",
+                        "password",
+                      ],
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "classNames": "field",
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
                 >
-                                <div
-                                                className="field"
-                                >
-                                                <p
-                                                                className="control"
-                                                >
-                                                                <button
-                                                                                className="button is-success"
-                                                                                type="submit"
-                                                                >
-                                                                                Login
-                                                                </button>
-                                                </p>
-                                </div>
-                                <div
-                                                className="field is-grouped"
-                                >
-                                                <p
-                                                                className="control"
-                                                >
-                                                                <Link
-                                                                                replace={false}
-                                                                                to="/account/forgot-password"
-                                                                >
-                                                                                Forgot your password?
-                                                                </Link>
-                                                </p>
-                                                <p
-                                                                className="control"
-                                                >
-                                                                <Link
-                                                                                replace={false}
-                                                                                to="/account/register"
-                                                                >
-                                                                                Create an account
-                                                                </Link>
-                                                </p>
-                                </div>
+                  <div
+                    className="field"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <button
+                        className="button is-success"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                  <div
+                    className="field is-grouped"
+                  >
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/forgot-password"
+                      >
+                        Forgot your password?
+                      </Link>
+                    </p>
+                    <p
+                      className="control"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/register"
+                      >
+                        Create an account
+                      </Link>
+                    </p>
+                  </div>
                 </Form>
-</div>,
+              </div>,
               "className": "column is-half is-offset-one-fifth",
             },
             "ref": null,
@@ -971,86 +980,87 @@ ShallowWrapper {
                 "children": Array [
                   <h3>
                     Member Login
-</h3>,
+                  </h3>,
                   undefined,
                   <Form
                     ErrorList={[Function]}
+                    disabled={false}
                     liveValidate={false}
                     noHtml5Validate={true}
                     noValidate={false}
                     onSubmit={[Function]}
                     safeRenderCompletion={false}
                     schema={
-                                        Object {
-                                                            "properties": Object {
-                                                              "email": Object {
-                                                                "format": "email",
-                                                                "title": "Email",
-                                                                "type": "string",
-                                                              },
-                                                              "password": Object {
-                                                                "title": "Password",
-                                                                "type": "string",
-                                                              },
-                                                            },
-                                                            "required": Array [
-                                                              "email",
-                                                              "password",
-                                                            ],
-                                                            "type": "object",
-                                                          }
+                      Object {
+                        "properties": Object {
+                          "email": Object {
+                            "format": "email",
+                            "title": "Email",
+                            "type": "string",
+                          },
+                          "password": Object {
+                            "title": "Password",
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "email",
+                          "password",
+                        ],
+                        "type": "object",
+                      }
                     }
                     uiSchema={
-                                        Object {
-                                                            "email": Object {
-                                                              "classNames": "field",
-                                                              "ui:placeholder": "you@example.com",
-                                                            },
-                                                            "password": Object {
-                                                              "ui:widget": "password",
-                                                            },
-                                                          }
+                      Object {
+                        "email": Object {
+                          "classNames": "field",
+                          "ui:placeholder": "you@example.com",
+                        },
+                        "password": Object {
+                          "ui:widget": "password",
+                        },
+                      }
                     }
->
+                  >
                     <div
-                                        className="field"
+                      className="field"
                     >
-                                        <p
-                                                            className="control"
-                                        >
-                                                            <button
-                                                                                className="button is-success"
-                                                                                type="submit"
-                                                            >
-                                                                                Login
-                                                            </button>
-                                        </p>
+                      <p
+                        className="control"
+                      >
+                        <button
+                          className="button is-success"
+                          type="submit"
+                        >
+                          Login
+                        </button>
+                      </p>
                     </div>
                     <div
-                                        className="field is-grouped"
+                      className="field is-grouped"
                     >
-                                        <p
-                                                            className="control"
-                                        >
-                                                            <Link
-                                                                                replace={false}
-                                                                                to="/account/forgot-password"
-                                                            >
-                                                                                Forgot your password?
-                                                            </Link>
-                                        </p>
-                                        <p
-                                                            className="control"
-                                        >
-                                                            <Link
-                                                                                replace={false}
-                                                                                to="/account/register"
-                                                            >
-                                                                                Create an account
-                                                            </Link>
-                                        </p>
+                      <p
+                        className="control"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/forgot-password"
+                        >
+                          Forgot your password?
+                        </Link>
+                      </p>
+                      <p
+                        className="control"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/register"
+                        >
+                          Create an account
+                        </Link>
+                      </p>
                     </div>
-</Form>,
+                  </Form>,
                 ],
                 "className": "box",
               },
@@ -1077,43 +1087,44 @@ ShallowWrapper {
                     "children": Array [
                       <div
                         className="field"
->
+                      >
                         <p
-                                                className="control"
+                          className="control"
                         >
-                                                <button
-                                                                        className="button is-success"
-                                                                        type="submit"
-                                                >
-                                                                        Login
-                                                </button>
+                          <button
+                            className="button is-success"
+                            type="submit"
+                          >
+                            Login
+                          </button>
                         </p>
-</div>,
+                      </div>,
                       <div
                         className="field is-grouped"
->
+                      >
                         <p
-                                                className="control"
+                          className="control"
                         >
-                                                <Link
-                                                                        replace={false}
-                                                                        to="/account/forgot-password"
-                                                >
-                                                                        Forgot your password?
-                                                </Link>
+                          <Link
+                            replace={false}
+                            to="/account/forgot-password"
+                          >
+                            Forgot your password?
+                          </Link>
                         </p>
                         <p
-                                                className="control"
+                          className="control"
                         >
-                                                <Link
-                                                                        replace={false}
-                                                                        to="/account/register"
-                                                >
-                                                                        Create an account
-                                                </Link>
+                          <Link
+                            replace={false}
+                            to="/account/register"
+                          >
+                            Create an account
+                          </Link>
                         </p>
-</div>,
+                      </div>,
                     ],
+                    "disabled": false,
                     "liveValidate": false,
                     "noHtml5Validate": true,
                     "noValidate": false,
@@ -1156,14 +1167,14 @@ ShallowWrapper {
                       "props": Object {
                         "children": <p
                           className="control"
->
+                        >
                           <button
-                                                    className="button is-success"
-                                                    type="submit"
+                            className="button is-success"
+                            type="submit"
                           >
-                                                    Login
+                            Login
                           </button>
-</p>,
+                        </p>,
                         "className": "field",
                       },
                       "ref": null,
@@ -1175,9 +1186,9 @@ ShallowWrapper {
                           "children": <button
                             className="button is-success"
                             type="submit"
->
+                          >
                             Login
-</button>,
+                          </button>,
                           "className": "control",
                         },
                         "ref": null,
@@ -1206,24 +1217,24 @@ ShallowWrapper {
                         "children": Array [
                           <p
                             className="control"
->
+                          >
                             <Link
-                                                        replace={false}
-                                                        to="/account/forgot-password"
+                              replace={false}
+                              to="/account/forgot-password"
                             >
-                                                        Forgot your password?
+                              Forgot your password?
                             </Link>
-</p>,
+                          </p>,
                           <p
                             className="control"
->
+                          >
                             <Link
-                                                        replace={false}
-                                                        to="/account/register"
+                              replace={false}
+                              to="/account/register"
                             >
-                                                        Create an account
+                              Create an account
                             </Link>
-</p>,
+                          </p>,
                         ],
                         "className": "field is-grouped",
                       },
@@ -1237,9 +1248,9 @@ ShallowWrapper {
                             "children": <Link
                               replace={false}
                               to="/account/forgot-password"
->
+                            >
                               Forgot your password?
-</Link>,
+                            </Link>,
                             "className": "control",
                           },
                           "ref": null,
@@ -1266,9 +1277,9 @@ ShallowWrapper {
                             "children": <Link
                               replace={false}
                               to="/account/register"
->
+                            >
                               Create an account
-</Link>,
+                            </Link>,
                             "className": "control",
                           },
                           "ref": null,
@@ -1308,9 +1319,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

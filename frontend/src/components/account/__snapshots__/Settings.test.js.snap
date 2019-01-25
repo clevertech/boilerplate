@@ -5,9 +5,10 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Settings
     getAccount={[Function]}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -21,69 +22,69 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="row"
->
+      >
         <div
-                className="col-3"
+          className="col-3"
         >
-                <div
-                        className="list-group"
-                >
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                exact={true}
-                                to="/account/settings"
-                        >
-                                Profile
-                        </NavLink>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                to="/account/settings/change-password"
-                        >
-                                Change password
-                        </NavLink>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                to="/account/settings/2fa"
-                        >
-                                Security
-                        </NavLink>
-                </div>
+          <div
+            className="list-group"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="list-group-item list-group-item-action"
+              exact={true}
+              to="/account/settings"
+            >
+              Profile
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="list-group-item list-group-item-action"
+              to="/account/settings/change-password"
+            >
+              Change password
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="list-group-item list-group-item-action"
+              to="/account/settings/2fa"
+            >
+              Security
+            </NavLink>
+          </div>
         </div>
         <div
-                className="col-9"
+          className="col-9"
         >
-                <Switch>
-                        <Route
-                                component={[Function]}
-                                exact={true}
-                                path="/account/settings"
-                        />
-                        <Route
-                                component={[Function]}
-                                path="/account/settings/change-password"
-                        />
-                        <Route
-                                component={[Function]}
-                                exact={true}
-                                path="/account/settings/2fa"
-                        />
-                        <Route
-                                component={[Function]}
-                                path="/account/settings/2fa/sms"
-                        />
-                        <Route
-                                component={[Function]}
-                                path="/account/settings/2fa/app"
-                        />
-                </Switch>
+          <Switch>
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/account/settings"
+            />
+            <Route
+              component={[Function]}
+              path="/account/settings/change-password"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/account/settings/2fa"
+            />
+            <Route
+              component={[Function]}
+              path="/account/settings/2fa/sms"
+            />
+            <Route
+              component={[Function]}
+              path="/account/settings/2fa/app"
+            />
+          </Switch>
         </div>
-</div>,
+      </div>,
       "className": "container",
     },
     "ref": null,
@@ -95,65 +96,65 @@ ShallowWrapper {
         "children": Array [
           <div
             className="col-3"
->
+          >
             <div
-                        className="list-group"
+              className="list-group"
             >
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="list-group-item list-group-item-action"
-                                    exact={true}
-                                    to="/account/settings"
-                        >
-                                    Profile
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="list-group-item list-group-item-action"
-                                    to="/account/settings/change-password"
-                        >
-                                    Change password
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="list-group-item list-group-item-action"
-                                    to="/account/settings/2fa"
-                        >
-                                    Security
-                        </NavLink>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                exact={true}
+                to="/account/settings"
+              >
+                Profile
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/change-password"
+              >
+                Change password
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/2fa"
+              >
+                Security
+              </NavLink>
             </div>
-</div>,
+          </div>,
           <div
             className="col-9"
->
+          >
             <Switch>
-                        <Route
-                                    component={[Function]}
-                                    exact={true}
-                                    path="/account/settings"
-                        />
-                        <Route
-                                    component={[Function]}
-                                    path="/account/settings/change-password"
-                        />
-                        <Route
-                                    component={[Function]}
-                                    exact={true}
-                                    path="/account/settings/2fa"
-                        />
-                        <Route
-                                    component={[Function]}
-                                    path="/account/settings/2fa/sms"
-                        />
-                        <Route
-                                    component={[Function]}
-                                    path="/account/settings/2fa/app"
-                        />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/account/settings"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/change-password"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/account/settings/2fa"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/2fa/sms"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/2fa/app"
+              />
             </Switch>
-</div>,
+          </div>,
         ],
         "className": "row",
       },
@@ -166,33 +167,33 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="list-group"
->
+            >
               <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="list-group-item list-group-item-action"
-                            exact={true}
-                            to="/account/settings"
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                exact={true}
+                to="/account/settings"
               >
-                            Profile
+                Profile
               </NavLink>
               <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="list-group-item list-group-item-action"
-                            to="/account/settings/change-password"
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/change-password"
               >
-                            Change password
+                Change password
               </NavLink>
               <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="list-group-item list-group-item-action"
-                            to="/account/settings/2fa"
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/2fa"
               >
-                            Security
+                Security
               </NavLink>
-</div>,
+            </div>,
             "className": "col-3",
           },
           "ref": null,
@@ -204,29 +205,29 @@ ShallowWrapper {
               "children": Array [
                 <NavLink
                   activeClassName="active"
-                  ariaCurrent="true"
+                  aria-current="page"
                   className="list-group-item list-group-item-action"
                   exact={true}
                   to="/account/settings"
->
+                >
                   Profile
-</NavLink>,
+                </NavLink>,
                 <NavLink
                   activeClassName="active"
-                  ariaCurrent="true"
+                  aria-current="page"
                   className="list-group-item list-group-item-action"
                   to="/account/settings/change-password"
->
+                >
                   Change password
-</NavLink>,
+                </NavLink>,
                 <NavLink
                   activeClassName="active"
-                  ariaCurrent="true"
+                  aria-current="page"
                   className="list-group-item list-group-item-action"
                   to="/account/settings/2fa"
->
+                >
                   Security
-</NavLink>,
+                </NavLink>,
               ],
               "className": "list-group",
             },
@@ -238,7 +239,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "activeClassName": "active",
-                  "ariaCurrent": "true",
+                  "aria-current": "page",
                   "children": "Profile",
                   "className": "list-group-item list-group-item-action",
                   "exact": true,
@@ -254,7 +255,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "activeClassName": "active",
-                  "ariaCurrent": "true",
+                  "aria-current": "page",
                   "children": "Change password",
                   "className": "list-group-item list-group-item-action",
                   "to": "/account/settings/change-password",
@@ -269,7 +270,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "activeClassName": "active",
-                  "ariaCurrent": "true",
+                  "aria-current": "page",
                   "children": "Security",
                   "className": "list-group-item list-group-item-action",
                   "to": "/account/settings/2fa",
@@ -290,28 +291,28 @@ ShallowWrapper {
           "props": Object {
             "children": <Switch>
               <Route
-                            component={[Function]}
-                            exact={true}
-                            path="/account/settings"
+                component={[Function]}
+                exact={true}
+                path="/account/settings"
               />
               <Route
-                            component={[Function]}
-                            path="/account/settings/change-password"
+                component={[Function]}
+                path="/account/settings/change-password"
               />
               <Route
-                            component={[Function]}
-                            exact={true}
-                            path="/account/settings/2fa"
+                component={[Function]}
+                exact={true}
+                path="/account/settings/2fa"
               />
               <Route
-                            component={[Function]}
-                            path="/account/settings/2fa/sms"
+                component={[Function]}
+                path="/account/settings/2fa/sms"
               />
               <Route
-                            component={[Function]}
-                            path="/account/settings/2fa/app"
+                component={[Function]}
+                path="/account/settings/2fa/app"
               />
-</Switch>,
+            </Switch>,
             "className": "col-9",
           },
           "ref": null,
@@ -325,24 +326,24 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/account/settings"
-/>,
+                />,
                 <Route
                   component={[Function]}
                   path="/account/settings/change-password"
-/>,
+                />,
                 <Route
                   component={[Function]}
                   exact={true}
                   path="/account/settings/2fa"
-/>,
+                />,
                 <Route
                   component={[Function]}
                   path="/account/settings/2fa/sms"
-/>,
+                />,
                 <Route
                   component={[Function]}
                   path="/account/settings/2fa/app"
-/>,
+                />,
               ],
             },
             "ref": null,
@@ -427,69 +428,69 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="row"
->
+        >
           <div
-                    className="col-3"
+            className="col-3"
           >
-                    <div
-                              className="list-group"
-                    >
-                              <NavLink
-                                        activeClassName="active"
-                                        ariaCurrent="true"
-                                        className="list-group-item list-group-item-action"
-                                        exact={true}
-                                        to="/account/settings"
-                              >
-                                        Profile
-                              </NavLink>
-                              <NavLink
-                                        activeClassName="active"
-                                        ariaCurrent="true"
-                                        className="list-group-item list-group-item-action"
-                                        to="/account/settings/change-password"
-                              >
-                                        Change password
-                              </NavLink>
-                              <NavLink
-                                        activeClassName="active"
-                                        ariaCurrent="true"
-                                        className="list-group-item list-group-item-action"
-                                        to="/account/settings/2fa"
-                              >
-                                        Security
-                              </NavLink>
-                    </div>
+            <div
+              className="list-group"
+            >
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                exact={true}
+                to="/account/settings"
+              >
+                Profile
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/change-password"
+              >
+                Change password
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="list-group-item list-group-item-action"
+                to="/account/settings/2fa"
+              >
+                Security
+              </NavLink>
+            </div>
           </div>
           <div
-                    className="col-9"
+            className="col-9"
           >
-                    <Switch>
-                              <Route
-                                        component={[Function]}
-                                        exact={true}
-                                        path="/account/settings"
-                              />
-                              <Route
-                                        component={[Function]}
-                                        path="/account/settings/change-password"
-                              />
-                              <Route
-                                        component={[Function]}
-                                        exact={true}
-                                        path="/account/settings/2fa"
-                              />
-                              <Route
-                                        component={[Function]}
-                                        path="/account/settings/2fa/sms"
-                              />
-                              <Route
-                                        component={[Function]}
-                                        path="/account/settings/2fa/app"
-                              />
-                    </Switch>
+            <Switch>
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/account/settings"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/change-password"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/account/settings/2fa"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/2fa/sms"
+              />
+              <Route
+                component={[Function]}
+                path="/account/settings/2fa/app"
+              />
+            </Switch>
           </div>
-</div>,
+        </div>,
         "className": "container",
       },
       "ref": null,
@@ -501,65 +502,65 @@ ShallowWrapper {
           "children": Array [
             <div
               className="col-3"
->
+            >
               <div
-                            className="list-group"
+                className="list-group"
               >
-                            <NavLink
-                                          activeClassName="active"
-                                          ariaCurrent="true"
-                                          className="list-group-item list-group-item-action"
-                                          exact={true}
-                                          to="/account/settings"
-                            >
-                                          Profile
-                            </NavLink>
-                            <NavLink
-                                          activeClassName="active"
-                                          ariaCurrent="true"
-                                          className="list-group-item list-group-item-action"
-                                          to="/account/settings/change-password"
-                            >
-                                          Change password
-                            </NavLink>
-                            <NavLink
-                                          activeClassName="active"
-                                          ariaCurrent="true"
-                                          className="list-group-item list-group-item-action"
-                                          to="/account/settings/2fa"
-                            >
-                                          Security
-                            </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  exact={true}
+                  to="/account/settings"
+                >
+                  Profile
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  to="/account/settings/change-password"
+                >
+                  Change password
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  to="/account/settings/2fa"
+                >
+                  Security
+                </NavLink>
               </div>
-</div>,
+            </div>,
             <div
               className="col-9"
->
+            >
               <Switch>
-                            <Route
-                                          component={[Function]}
-                                          exact={true}
-                                          path="/account/settings"
-                            />
-                            <Route
-                                          component={[Function]}
-                                          path="/account/settings/change-password"
-                            />
-                            <Route
-                                          component={[Function]}
-                                          exact={true}
-                                          path="/account/settings/2fa"
-                            />
-                            <Route
-                                          component={[Function]}
-                                          path="/account/settings/2fa/sms"
-                            />
-                            <Route
-                                          component={[Function]}
-                                          path="/account/settings/2fa/app"
-                            />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/account/settings"
+                />
+                <Route
+                  component={[Function]}
+                  path="/account/settings/change-password"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/account/settings/2fa"
+                />
+                <Route
+                  component={[Function]}
+                  path="/account/settings/2fa/sms"
+                />
+                <Route
+                  component={[Function]}
+                  path="/account/settings/2fa/app"
+                />
               </Switch>
-</div>,
+            </div>,
           ],
           "className": "row",
         },
@@ -572,33 +573,33 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="list-group"
->
+              >
                 <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                exact={true}
-                                to="/account/settings"
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  exact={true}
+                  to="/account/settings"
                 >
-                                Profile
+                  Profile
                 </NavLink>
                 <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                to="/account/settings/change-password"
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  to="/account/settings/change-password"
                 >
-                                Change password
+                  Change password
                 </NavLink>
                 <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="list-group-item list-group-item-action"
-                                to="/account/settings/2fa"
+                  activeClassName="active"
+                  aria-current="page"
+                  className="list-group-item list-group-item-action"
+                  to="/account/settings/2fa"
                 >
-                                Security
+                  Security
                 </NavLink>
-</div>,
+              </div>,
               "className": "col-3",
             },
             "ref": null,
@@ -610,29 +611,29 @@ ShallowWrapper {
                 "children": Array [
                   <NavLink
                     activeClassName="active"
-                    ariaCurrent="true"
+                    aria-current="page"
                     className="list-group-item list-group-item-action"
                     exact={true}
                     to="/account/settings"
->
+                  >
                     Profile
-</NavLink>,
+                  </NavLink>,
                   <NavLink
                     activeClassName="active"
-                    ariaCurrent="true"
+                    aria-current="page"
                     className="list-group-item list-group-item-action"
                     to="/account/settings/change-password"
->
+                  >
                     Change password
-</NavLink>,
+                  </NavLink>,
                   <NavLink
                     activeClassName="active"
-                    ariaCurrent="true"
+                    aria-current="page"
                     className="list-group-item list-group-item-action"
                     to="/account/settings/2fa"
->
+                  >
                     Security
-</NavLink>,
+                  </NavLink>,
                 ],
                 "className": "list-group",
               },
@@ -644,7 +645,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "activeClassName": "active",
-                    "ariaCurrent": "true",
+                    "aria-current": "page",
                     "children": "Profile",
                     "className": "list-group-item list-group-item-action",
                     "exact": true,
@@ -660,7 +661,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "activeClassName": "active",
-                    "ariaCurrent": "true",
+                    "aria-current": "page",
                     "children": "Change password",
                     "className": "list-group-item list-group-item-action",
                     "to": "/account/settings/change-password",
@@ -675,7 +676,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "activeClassName": "active",
-                    "ariaCurrent": "true",
+                    "aria-current": "page",
                     "children": "Security",
                     "className": "list-group-item list-group-item-action",
                     "to": "/account/settings/2fa",
@@ -696,28 +697,28 @@ ShallowWrapper {
             "props": Object {
               "children": <Switch>
                 <Route
-                                component={[Function]}
-                                exact={true}
-                                path="/account/settings"
+                  component={[Function]}
+                  exact={true}
+                  path="/account/settings"
                 />
                 <Route
-                                component={[Function]}
-                                path="/account/settings/change-password"
+                  component={[Function]}
+                  path="/account/settings/change-password"
                 />
                 <Route
-                                component={[Function]}
-                                exact={true}
-                                path="/account/settings/2fa"
+                  component={[Function]}
+                  exact={true}
+                  path="/account/settings/2fa"
                 />
                 <Route
-                                component={[Function]}
-                                path="/account/settings/2fa/sms"
+                  component={[Function]}
+                  path="/account/settings/2fa/sms"
                 />
                 <Route
-                                component={[Function]}
-                                path="/account/settings/2fa/app"
+                  component={[Function]}
+                  path="/account/settings/2fa/app"
                 />
-</Switch>,
+              </Switch>,
               "className": "col-9",
             },
             "ref": null,
@@ -731,24 +732,24 @@ ShallowWrapper {
                     component={[Function]}
                     exact={true}
                     path="/account/settings"
-/>,
+                  />,
                   <Route
                     component={[Function]}
                     path="/account/settings/change-password"
-/>,
+                  />,
                   <Route
                     component={[Function]}
                     exact={true}
                     path="/account/settings/2fa"
-/>,
+                  />,
                   <Route
                     component={[Function]}
                     path="/account/settings/2fa/sms"
-/>,
+                  />,
                   <Route
                     component={[Function]}
                     path="/account/settings/2fa/app"
-/>,
+                  />,
                 ],
               },
               "ref": null,
@@ -830,9 +831,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

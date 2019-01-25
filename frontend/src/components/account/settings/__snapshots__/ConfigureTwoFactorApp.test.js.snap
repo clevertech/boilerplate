@@ -7,18 +7,19 @@ ShallowWrapper {
     configureTwoFactorQR={[Function]}
     generateTwoFactorQR={[Function]}
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
     user={
-        Object {
-            "email": "user@example.com",
-          }
+      Object {
+        "email": "user@example.com",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -33,53 +34,54 @@ ShallowWrapper {
       "children": Array [
         <div
           className="col-8"
->
+        >
           <Form
-                    ErrorList={[Function]}
-                    liveValidate={false}
-                    noHtml5Validate={true}
-                    noValidate={false}
-                    onSubmit={[Function]}
-                    safeRenderCompletion={false}
-                    schema={
-                              Object {
-                                        "properties": Object {
-                                          "token": Object {
-                                            "title": "Code",
-                                            "type": "string",
-                                          },
-                                        },
-                                        "required": Array [
-                                          "token",
-                                        ],
-                                        "title": "Enter Verification Code",
-                                        "type": "object",
-                                      }
-                    }
-                    uiSchema={
-                              Object {
-                                        "token": Object {
-                                          "ui:help": "Enter the 6-digit verification code generated in the app",
-                                        },
-                                      }
-                    }
+            ErrorList={[Function]}
+            disabled={false}
+            liveValidate={false}
+            noHtml5Validate={true}
+            noValidate={false}
+            onSubmit={[Function]}
+            safeRenderCompletion={false}
+            schema={
+              Object {
+                "properties": Object {
+                  "token": Object {
+                    "title": "Code",
+                    "type": "string",
+                  },
+                },
+                "required": Array [
+                  "token",
+                ],
+                "title": "Enter Verification Code",
+                "type": "object",
+              }
+            }
+            uiSchema={
+              Object {
+                "token": Object {
+                  "ui:help": "Enter the 6-digit verification code generated in the app",
+                },
+              }
+            }
           >
-                    Generating QR...
-                    <fieldset>
-                              <button
-                                        className="btn btn-primary"
-                                        type="submit"
-                              >
-                                        Verify Code
-                              </button>
-                    </fieldset>
+            Generating QR...
+            <fieldset>
+              <button
+                className="btn btn-primary"
+                type="submit"
+              >
+                Verify Code
+              </button>
+            </fieldset>
           </Form>
-</div>,
+        </div>,
         <div
           className="col-4 d-flex justify-content-center align-items-center"
->
+        >
           Generating QR...
-</div>,
+        </div>,
       ],
       "className": "row",
     },
@@ -92,44 +94,45 @@ ShallowWrapper {
         "props": Object {
           "children": <Form
             ErrorList={[Function]}
+            disabled={false}
             liveValidate={false}
             noHtml5Validate={true}
             noValidate={false}
             onSubmit={[Function]}
             safeRenderCompletion={false}
             schema={
-                        Object {
-                                    "properties": Object {
-                                      "token": Object {
-                                        "title": "Code",
-                                        "type": "string",
-                                      },
-                                    },
-                                    "required": Array [
-                                      "token",
-                                    ],
-                                    "title": "Enter Verification Code",
-                                    "type": "object",
-                                  }
+              Object {
+                "properties": Object {
+                  "token": Object {
+                    "title": "Code",
+                    "type": "string",
+                  },
+                },
+                "required": Array [
+                  "token",
+                ],
+                "title": "Enter Verification Code",
+                "type": "object",
+              }
             }
             uiSchema={
-                        Object {
-                                    "token": Object {
-                                      "ui:help": "Enter the 6-digit verification code generated in the app",
-                                    },
-                                  }
+              Object {
+                "token": Object {
+                  "ui:help": "Enter the 6-digit verification code generated in the app",
+                },
+              }
             }
->
+          >
             Generating QR...
             <fieldset>
-                        <button
-                                    className="btn btn-primary"
-                                    type="submit"
-                        >
-                                    Verify Code
-                        </button>
+              <button
+                className="btn btn-primary"
+                type="submit"
+              >
+                Verify Code
+              </button>
             </fieldset>
-</Form>,
+          </Form>,
           "className": "col-8",
         },
         "ref": null,
@@ -145,13 +148,14 @@ ShallowWrapper {
               undefined,
               <fieldset>
                 <button
-                                className="btn btn-primary"
-                                type="submit"
+                  className="btn btn-primary"
+                  type="submit"
                 >
-                                Verify Code
+                  Verify Code
                 </button>
-</fieldset>,
+              </fieldset>,
             ],
+            "disabled": false,
             "liveValidate": false,
             "noHtml5Validate": true,
             "noValidate": false,
@@ -189,9 +193,9 @@ ShallowWrapper {
                 "children": <button
                   className="btn btn-primary"
                   type="submit"
->
+                >
                   Verify Code
-</button>,
+                </button>,
               },
               "ref": null,
               "rendered": Object {
@@ -244,53 +248,54 @@ ShallowWrapper {
         "children": Array [
           <div
             className="col-8"
->
+          >
             <Form
-                        ErrorList={[Function]}
-                        liveValidate={false}
-                        noHtml5Validate={true}
-                        noValidate={false}
-                        onSubmit={[Function]}
-                        safeRenderCompletion={false}
-                        schema={
-                                    Object {
-                                                "properties": Object {
-                                                  "token": Object {
-                                                    "title": "Code",
-                                                    "type": "string",
-                                                  },
-                                                },
-                                                "required": Array [
-                                                  "token",
-                                                ],
-                                                "title": "Enter Verification Code",
-                                                "type": "object",
-                                              }
-                        }
-                        uiSchema={
-                                    Object {
-                                                "token": Object {
-                                                  "ui:help": "Enter the 6-digit verification code generated in the app",
-                                                },
-                                              }
-                        }
+              ErrorList={[Function]}
+              disabled={false}
+              liveValidate={false}
+              noHtml5Validate={true}
+              noValidate={false}
+              onSubmit={[Function]}
+              safeRenderCompletion={false}
+              schema={
+                Object {
+                  "properties": Object {
+                    "token": Object {
+                      "title": "Code",
+                      "type": "string",
+                    },
+                  },
+                  "required": Array [
+                    "token",
+                  ],
+                  "title": "Enter Verification Code",
+                  "type": "object",
+                }
+              }
+              uiSchema={
+                Object {
+                  "token": Object {
+                    "ui:help": "Enter the 6-digit verification code generated in the app",
+                  },
+                }
+              }
             >
-                        Generating QR...
-                        <fieldset>
-                                    <button
-                                                className="btn btn-primary"
-                                                type="submit"
-                                    >
-                                                Verify Code
-                                    </button>
-                        </fieldset>
+              Generating QR...
+              <fieldset>
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Verify Code
+                </button>
+              </fieldset>
             </Form>
-</div>,
+          </div>,
           <div
             className="col-4 d-flex justify-content-center align-items-center"
->
+          >
             Generating QR...
-</div>,
+          </div>,
         ],
         "className": "row",
       },
@@ -303,44 +308,45 @@ ShallowWrapper {
           "props": Object {
             "children": <Form
               ErrorList={[Function]}
+              disabled={false}
               liveValidate={false}
               noHtml5Validate={true}
               noValidate={false}
               onSubmit={[Function]}
               safeRenderCompletion={false}
               schema={
-                            Object {
-                                          "properties": Object {
-                                            "token": Object {
-                                              "title": "Code",
-                                              "type": "string",
-                                            },
-                                          },
-                                          "required": Array [
-                                            "token",
-                                          ],
-                                          "title": "Enter Verification Code",
-                                          "type": "object",
-                                        }
+                Object {
+                  "properties": Object {
+                    "token": Object {
+                      "title": "Code",
+                      "type": "string",
+                    },
+                  },
+                  "required": Array [
+                    "token",
+                  ],
+                  "title": "Enter Verification Code",
+                  "type": "object",
+                }
               }
               uiSchema={
-                            Object {
-                                          "token": Object {
-                                            "ui:help": "Enter the 6-digit verification code generated in the app",
-                                          },
-                                        }
+                Object {
+                  "token": Object {
+                    "ui:help": "Enter the 6-digit verification code generated in the app",
+                  },
+                }
               }
->
+            >
               Generating QR...
               <fieldset>
-                            <button
-                                          className="btn btn-primary"
-                                          type="submit"
-                            >
-                                          Verify Code
-                            </button>
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Verify Code
+                </button>
               </fieldset>
-</Form>,
+            </Form>,
             "className": "col-8",
           },
           "ref": null,
@@ -356,13 +362,14 @@ ShallowWrapper {
                 undefined,
                 <fieldset>
                   <button
-                                    className="btn btn-primary"
-                                    type="submit"
+                    className="btn btn-primary"
+                    type="submit"
                   >
-                                    Verify Code
+                    Verify Code
                   </button>
-</fieldset>,
+                </fieldset>,
               ],
+              "disabled": false,
               "liveValidate": false,
               "noHtml5Validate": true,
               "noValidate": false,
@@ -400,9 +407,9 @@ ShallowWrapper {
                   "children": <button
                     className="btn btn-primary"
                     type="submit"
->
+                  >
                     Verify Code
-</button>,
+                  </button>,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -451,9 +458,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -474,18 +485,19 @@ ShallowWrapper {
     configureTwoFactorQR={[Function]}
     generateTwoFactorQR={[Function]}
     location={
-        Object {
-            "search": "?ok",
-          }
+      Object {
+        "search": "?ok",
+      }
     }
     user={
-        Object {
-            "email": "user@example.com",
-          }
+      Object {
+        "email": "user@example.com",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -499,28 +511,28 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
->
+      >
         <div
-                className="card-body"
+          className="card-body"
         >
-                <h5
-                        className="card-title"
-                >
-                        <i
-                                className="fas fa-check"
-                        />
-                </h5>
-                <p
-                        className="card-text"
-                >
-                        Two factor authentication using an app is now enabled in your account.
-                </p>
-                <RecoveryCodes
-                        codes={Array []}
-                        email="user@example.com"
-                />
+          <h5
+            className="card-title"
+          >
+            <i
+              className="fas fa-check"
+            />
+          </h5>
+          <p
+            className="card-text"
+          >
+            Two factor authentication using an app is now enabled in your account.
+          </p>
+          <RecoveryCodes
+            codes={Array []}
+            email="user@example.com"
+          />
         </div>
-</div>,
+      </div>,
       "className": "container text-center",
     },
     "ref": null,
@@ -531,24 +543,24 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card-body"
->
+        >
           <h5
-                    className="card-title"
+            className="card-title"
           >
-                    <i
-                              className="fas fa-check"
-                    />
+            <i
+              className="fas fa-check"
+            />
           </h5>
           <p
-                    className="card-text"
+            className="card-text"
           >
-                    Two factor authentication using an app is now enabled in your account.
+            Two factor authentication using an app is now enabled in your account.
           </p>
           <RecoveryCodes
-                    codes={Array []}
-                    email="user@example.com"
+            codes={Array []}
+            email="user@example.com"
           />
-</div>,
+        </div>,
         "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
       },
       "ref": null,
@@ -560,20 +572,20 @@ ShallowWrapper {
           "children": Array [
             <h5
               className="card-title"
->
+            >
               <i
-                            className="fas fa-check"
+                className="fas fa-check"
               />
-</h5>,
+            </h5>,
             <p
               className="card-text"
->
+            >
               Two factor authentication using an app is now enabled in your account.
-</p>,
+            </p>,
             <RecoveryCodes
               codes={Array []}
               email="user@example.com"
-/>,
+            />,
           ],
           "className": "card-body",
         },
@@ -586,7 +598,7 @@ ShallowWrapper {
             "props": Object {
               "children": <i
                 className="fas fa-check"
-/>,
+              />,
               "className": "card-title",
             },
             "ref": null,
@@ -642,28 +654,28 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
->
+        >
           <div
-                    className="card-body"
+            className="card-body"
           >
-                    <h5
-                              className="card-title"
-                    >
-                              <i
-                                        className="fas fa-check"
-                              />
-                    </h5>
-                    <p
-                              className="card-text"
-                    >
-                              Two factor authentication using an app is now enabled in your account.
-                    </p>
-                    <RecoveryCodes
-                              codes={Array []}
-                              email="user@example.com"
-                    />
+            <h5
+              className="card-title"
+            >
+              <i
+                className="fas fa-check"
+              />
+            </h5>
+            <p
+              className="card-text"
+            >
+              Two factor authentication using an app is now enabled in your account.
+            </p>
+            <RecoveryCodes
+              codes={Array []}
+              email="user@example.com"
+            />
           </div>
-</div>,
+        </div>,
         "className": "container text-center",
       },
       "ref": null,
@@ -674,24 +686,24 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="card-body"
->
+          >
             <h5
-                        className="card-title"
+              className="card-title"
             >
-                        <i
-                                    className="fas fa-check"
-                        />
+              <i
+                className="fas fa-check"
+              />
             </h5>
             <p
-                        className="card-text"
+              className="card-text"
             >
-                        Two factor authentication using an app is now enabled in your account.
+              Two factor authentication using an app is now enabled in your account.
             </p>
             <RecoveryCodes
-                        codes={Array []}
-                        email="user@example.com"
+              codes={Array []}
+              email="user@example.com"
             />
-</div>,
+          </div>,
           "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
         },
         "ref": null,
@@ -703,20 +715,20 @@ ShallowWrapper {
             "children": Array [
               <h5
                 className="card-title"
->
+              >
                 <i
-                                className="fas fa-check"
+                  className="fas fa-check"
                 />
-</h5>,
+              </h5>,
               <p
                 className="card-text"
->
+              >
                 Two factor authentication using an app is now enabled in your account.
-</p>,
+              </p>,
               <RecoveryCodes
                 codes={Array []}
                 email="user@example.com"
-/>,
+              />,
             ],
             "className": "card-body",
           },
@@ -729,7 +741,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <i
                   className="fas fa-check"
-/>,
+                />,
                 "className": "card-title",
               },
               "ref": null,
@@ -782,9 +794,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

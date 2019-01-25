@@ -5,14 +5,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
     register={[Function]}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -28,103 +29,104 @@ ShallowWrapper {
         <br />,
         <div
           className="columns is-mobile"
->
+        >
           <div
-                    className="column is-half is-offset-one-fifth"
+            className="column is-half is-offset-one-fifth"
           >
+            <div
+              className="box"
+            >
+              <Form
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "firstName": Object {
+                        "title": "First name",
+                        "type": "string",
+                      },
+                      "lastName": Object {
+                        "title": "Last name",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                      "repassword": Object {
+                        "title": "Re-enter password",
+                        "type": "string",
+                      },
+                      "username": Object {
+                        "title": "Username",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "username",
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "password",
+                      "repassword",
+                    ],
+                    "title": "Register",
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:help": "Make it strong!",
+                      "ui:widget": "password",
+                    },
+                    "repassword": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
+                validate={[Function]}
+              >
+                <fieldset>
+                  <button
+                    className="btn btn-primary btn-block btn-lg"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                  <div
+                    className="mt-2"
+                  >
                     <div
-                              className="box"
+                      className="float-left"
                     >
-                              <Form
-                                        ErrorList={[Function]}
-                                        liveValidate={false}
-                                        noHtml5Validate={true}
-                                        noValidate={false}
-                                        onSubmit={[Function]}
-                                        safeRenderCompletion={false}
-                                        schema={
-                                                  Object {
-                                                            "properties": Object {
-                                                              "email": Object {
-                                                                "format": "email",
-                                                                "title": "Email",
-                                                                "type": "string",
-                                                              },
-                                                              "firstName": Object {
-                                                                "title": "First name",
-                                                                "type": "string",
-                                                              },
-                                                              "lastName": Object {
-                                                                "title": "Last name",
-                                                                "type": "string",
-                                                              },
-                                                              "password": Object {
-                                                                "title": "Password",
-                                                                "type": "string",
-                                                              },
-                                                              "repassword": Object {
-                                                                "title": "Re-enter password",
-                                                                "type": "string",
-                                                              },
-                                                              "username": Object {
-                                                                "title": "Username",
-                                                                "type": "string",
-                                                              },
-                                                            },
-                                                            "required": Array [
-                                                              "username",
-                                                              "firstName",
-                                                              "lastName",
-                                                              "email",
-                                                              "password",
-                                                              "repassword",
-                                                            ],
-                                                            "title": "Register",
-                                                            "type": "object",
-                                                          }
-                                        }
-                                        uiSchema={
-                                                  Object {
-                                                            "email": Object {
-                                                              "ui:placeholder": "you@example.com",
-                                                            },
-                                                            "password": Object {
-                                                              "ui:help": "Make it strong!",
-                                                              "ui:widget": "password",
-                                                            },
-                                                            "repassword": Object {
-                                                              "ui:widget": "password",
-                                                            },
-                                                          }
-                                        }
-                                        validate={[Function]}
-                              >
-                                        <fieldset>
-                                                  <button
-                                                            className="btn btn-primary btn-block btn-lg"
-                                                            type="submit"
-                                                  >
-                                                            Register
-                                                  </button>
-                                                  <div
-                                                            className="mt-2"
-                                                  >
-                                                            <div
-                                                                      className="float-left"
-                                                            >
-                                                                      <Link
-                                                                                replace={false}
-                                                                                to="/account/login"
-                                                                      >
-                                                                                Log in to your account
-                                                                      </Link>
-                                                            </div>
-                                                  </div>
-                                        </fieldset>
-                              </Form>
+                      <Link
+                        replace={false}
+                        to="/account/login"
+                      >
+                        Log in to your account
+                      </Link>
                     </div>
+                  </div>
+                </fieldset>
+              </Form>
+            </div>
           </div>
-</div>,
+        </div>,
       ],
     },
     "ref": null,
@@ -145,99 +147,100 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="column is-half is-offset-one-fifth"
->
+          >
             <div
-                        className="box"
+              className="box"
             >
-                        <Form
-                                    ErrorList={[Function]}
-                                    liveValidate={false}
-                                    noHtml5Validate={true}
-                                    noValidate={false}
-                                    onSubmit={[Function]}
-                                    safeRenderCompletion={false}
-                                    schema={
-                                                Object {
-                                                            "properties": Object {
-                                                              "email": Object {
-                                                                "format": "email",
-                                                                "title": "Email",
-                                                                "type": "string",
-                                                              },
-                                                              "firstName": Object {
-                                                                "title": "First name",
-                                                                "type": "string",
-                                                              },
-                                                              "lastName": Object {
-                                                                "title": "Last name",
-                                                                "type": "string",
-                                                              },
-                                                              "password": Object {
-                                                                "title": "Password",
-                                                                "type": "string",
-                                                              },
-                                                              "repassword": Object {
-                                                                "title": "Re-enter password",
-                                                                "type": "string",
-                                                              },
-                                                              "username": Object {
-                                                                "title": "Username",
-                                                                "type": "string",
-                                                              },
-                                                            },
-                                                            "required": Array [
-                                                              "username",
-                                                              "firstName",
-                                                              "lastName",
-                                                              "email",
-                                                              "password",
-                                                              "repassword",
-                                                            ],
-                                                            "title": "Register",
-                                                            "type": "object",
-                                                          }
-                                    }
-                                    uiSchema={
-                                                Object {
-                                                            "email": Object {
-                                                              "ui:placeholder": "you@example.com",
-                                                            },
-                                                            "password": Object {
-                                                              "ui:help": "Make it strong!",
-                                                              "ui:widget": "password",
-                                                            },
-                                                            "repassword": Object {
-                                                              "ui:widget": "password",
-                                                            },
-                                                          }
-                                    }
-                                    validate={[Function]}
-                        >
-                                    <fieldset>
-                                                <button
-                                                            className="btn btn-primary btn-block btn-lg"
-                                                            type="submit"
-                                                >
-                                                            Register
-                                                </button>
-                                                <div
-                                                            className="mt-2"
-                                                >
-                                                            <div
-                                                                        className="float-left"
-                                                            >
-                                                                        <Link
-                                                                                    replace={false}
-                                                                                    to="/account/login"
-                                                                        >
-                                                                                    Log in to your account
-                                                                        </Link>
-                                                            </div>
-                                                </div>
-                                    </fieldset>
-                        </Form>
+              <Form
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "firstName": Object {
+                        "title": "First name",
+                        "type": "string",
+                      },
+                      "lastName": Object {
+                        "title": "Last name",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                      "repassword": Object {
+                        "title": "Re-enter password",
+                        "type": "string",
+                      },
+                      "username": Object {
+                        "title": "Username",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "username",
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "password",
+                      "repassword",
+                    ],
+                    "title": "Register",
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:help": "Make it strong!",
+                      "ui:widget": "password",
+                    },
+                    "repassword": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
+                validate={[Function]}
+              >
+                <fieldset>
+                  <button
+                    className="btn btn-primary btn-block btn-lg"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                  <div
+                    className="mt-2"
+                  >
+                    <div
+                      className="float-left"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/login"
+                      >
+                        Log in to your account
+                      </Link>
+                    </div>
+                  </div>
+                </fieldset>
+              </Form>
             </div>
-</div>,
+          </div>,
           "className": "columns is-mobile",
         },
         "ref": null,
@@ -248,95 +251,96 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="box"
->
+            >
               <Form
-                            ErrorList={[Function]}
-                            liveValidate={false}
-                            noHtml5Validate={true}
-                            noValidate={false}
-                            onSubmit={[Function]}
-                            safeRenderCompletion={false}
-                            schema={
-                                          Object {
-                                                        "properties": Object {
-                                                          "email": Object {
-                                                            "format": "email",
-                                                            "title": "Email",
-                                                            "type": "string",
-                                                          },
-                                                          "firstName": Object {
-                                                            "title": "First name",
-                                                            "type": "string",
-                                                          },
-                                                          "lastName": Object {
-                                                            "title": "Last name",
-                                                            "type": "string",
-                                                          },
-                                                          "password": Object {
-                                                            "title": "Password",
-                                                            "type": "string",
-                                                          },
-                                                          "repassword": Object {
-                                                            "title": "Re-enter password",
-                                                            "type": "string",
-                                                          },
-                                                          "username": Object {
-                                                            "title": "Username",
-                                                            "type": "string",
-                                                          },
-                                                        },
-                                                        "required": Array [
-                                                          "username",
-                                                          "firstName",
-                                                          "lastName",
-                                                          "email",
-                                                          "password",
-                                                          "repassword",
-                                                        ],
-                                                        "title": "Register",
-                                                        "type": "object",
-                                                      }
-                            }
-                            uiSchema={
-                                          Object {
-                                                        "email": Object {
-                                                          "ui:placeholder": "you@example.com",
-                                                        },
-                                                        "password": Object {
-                                                          "ui:help": "Make it strong!",
-                                                          "ui:widget": "password",
-                                                        },
-                                                        "repassword": Object {
-                                                          "ui:widget": "password",
-                                                        },
-                                                      }
-                            }
-                            validate={[Function]}
+                ErrorList={[Function]}
+                disabled={false}
+                liveValidate={false}
+                noHtml5Validate={true}
+                noValidate={false}
+                onSubmit={[Function]}
+                safeRenderCompletion={false}
+                schema={
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "firstName": Object {
+                        "title": "First name",
+                        "type": "string",
+                      },
+                      "lastName": Object {
+                        "title": "Last name",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                      "repassword": Object {
+                        "title": "Re-enter password",
+                        "type": "string",
+                      },
+                      "username": Object {
+                        "title": "Username",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "username",
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "password",
+                      "repassword",
+                    ],
+                    "title": "Register",
+                    "type": "object",
+                  }
+                }
+                uiSchema={
+                  Object {
+                    "email": Object {
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:help": "Make it strong!",
+                      "ui:widget": "password",
+                    },
+                    "repassword": Object {
+                      "ui:widget": "password",
+                    },
+                  }
+                }
+                validate={[Function]}
               >
-                            <fieldset>
-                                          <button
-                                                        className="btn btn-primary btn-block btn-lg"
-                                                        type="submit"
-                                          >
-                                                        Register
-                                          </button>
-                                          <div
-                                                        className="mt-2"
-                                          >
-                                                        <div
-                                                                      className="float-left"
-                                                        >
-                                                                      <Link
-                                                                                    replace={false}
-                                                                                    to="/account/login"
-                                                                      >
-                                                                                    Log in to your account
-                                                                      </Link>
-                                                        </div>
-                                          </div>
-                            </fieldset>
+                <fieldset>
+                  <button
+                    className="btn btn-primary btn-block btn-lg"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                  <div
+                    className="mt-2"
+                  >
+                    <div
+                      className="float-left"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/login"
+                      >
+                        Log in to your account
+                      </Link>
+                    </div>
+                  </div>
+                </fieldset>
               </Form>
-</div>,
+            </div>,
             "className": "column is-half is-offset-one-fifth",
           },
           "ref": null,
@@ -347,91 +351,92 @@ ShallowWrapper {
             "props": Object {
               "children": <Form
                 ErrorList={[Function]}
+                disabled={false}
                 liveValidate={false}
                 noHtml5Validate={true}
                 noValidate={false}
                 onSubmit={[Function]}
                 safeRenderCompletion={false}
                 schema={
-                                Object {
-                                                "properties": Object {
-                                                  "email": Object {
-                                                    "format": "email",
-                                                    "title": "Email",
-                                                    "type": "string",
-                                                  },
-                                                  "firstName": Object {
-                                                    "title": "First name",
-                                                    "type": "string",
-                                                  },
-                                                  "lastName": Object {
-                                                    "title": "Last name",
-                                                    "type": "string",
-                                                  },
-                                                  "password": Object {
-                                                    "title": "Password",
-                                                    "type": "string",
-                                                  },
-                                                  "repassword": Object {
-                                                    "title": "Re-enter password",
-                                                    "type": "string",
-                                                  },
-                                                  "username": Object {
-                                                    "title": "Username",
-                                                    "type": "string",
-                                                  },
-                                                },
-                                                "required": Array [
-                                                  "username",
-                                                  "firstName",
-                                                  "lastName",
-                                                  "email",
-                                                  "password",
-                                                  "repassword",
-                                                ],
-                                                "title": "Register",
-                                                "type": "object",
-                                              }
+                  Object {
+                    "properties": Object {
+                      "email": Object {
+                        "format": "email",
+                        "title": "Email",
+                        "type": "string",
+                      },
+                      "firstName": Object {
+                        "title": "First name",
+                        "type": "string",
+                      },
+                      "lastName": Object {
+                        "title": "Last name",
+                        "type": "string",
+                      },
+                      "password": Object {
+                        "title": "Password",
+                        "type": "string",
+                      },
+                      "repassword": Object {
+                        "title": "Re-enter password",
+                        "type": "string",
+                      },
+                      "username": Object {
+                        "title": "Username",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "username",
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "password",
+                      "repassword",
+                    ],
+                    "title": "Register",
+                    "type": "object",
+                  }
                 }
                 uiSchema={
-                                Object {
-                                                "email": Object {
-                                                  "ui:placeholder": "you@example.com",
-                                                },
-                                                "password": Object {
-                                                  "ui:help": "Make it strong!",
-                                                  "ui:widget": "password",
-                                                },
-                                                "repassword": Object {
-                                                  "ui:widget": "password",
-                                                },
-                                              }
+                  Object {
+                    "email": Object {
+                      "ui:placeholder": "you@example.com",
+                    },
+                    "password": Object {
+                      "ui:help": "Make it strong!",
+                      "ui:widget": "password",
+                    },
+                    "repassword": Object {
+                      "ui:widget": "password",
+                    },
+                  }
                 }
                 validate={[Function]}
->
+              >
                 <fieldset>
-                                <button
-                                                className="btn btn-primary btn-block btn-lg"
-                                                type="submit"
-                                >
-                                                Register
-                                </button>
-                                <div
-                                                className="mt-2"
-                                >
-                                                <div
-                                                                className="float-left"
-                                                >
-                                                                <Link
-                                                                                replace={false}
-                                                                                to="/account/login"
-                                                                >
-                                                                                Log in to your account
-                                                                </Link>
-                                                </div>
-                                </div>
+                  <button
+                    className="btn btn-primary btn-block btn-lg"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                  <div
+                    className="mt-2"
+                  >
+                    <div
+                      className="float-left"
+                    >
+                      <Link
+                        replace={false}
+                        to="/account/login"
+                      >
+                        Log in to your account
+                      </Link>
+                    </div>
+                  </div>
                 </fieldset>
-</Form>,
+              </Form>,
               "className": "box",
             },
             "ref": null,
@@ -445,27 +450,28 @@ ShallowWrapper {
                   undefined,
                   <fieldset>
                     <button
-                                        className="btn btn-primary btn-block btn-lg"
-                                        type="submit"
+                      className="btn btn-primary btn-block btn-lg"
+                      type="submit"
                     >
-                                        Register
+                      Register
                     </button>
                     <div
-                                        className="mt-2"
+                      className="mt-2"
                     >
-                                        <div
-                                                            className="float-left"
-                                        >
-                                                            <Link
-                                                                                replace={false}
-                                                                                to="/account/login"
-                                                            >
-                                                                                Log in to your account
-                                                            </Link>
-                                        </div>
+                      <div
+                        className="float-left"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/login"
+                        >
+                          Log in to your account
+                        </Link>
+                      </div>
                     </div>
-</fieldset>,
+                  </fieldset>,
                 ],
+                "disabled": false,
                 "liveValidate": false,
                 "noHtml5Validate": true,
                 "noValidate": false,
@@ -536,23 +542,23 @@ ShallowWrapper {
                       <button
                         className="btn btn-primary btn-block btn-lg"
                         type="submit"
->
+                      >
                         Register
-</button>,
+                      </button>,
                       <div
                         className="mt-2"
->
+                      >
                         <div
-                                                className="float-left"
+                          className="float-left"
                         >
-                                                <Link
-                                                                        replace={false}
-                                                                        to="/account/login"
-                                                >
-                                                                        Log in to your account
-                                                </Link>
+                          <Link
+                            replace={false}
+                            to="/account/login"
+                          >
+                            Log in to your account
+                          </Link>
                         </div>
-</div>,
+                      </div>,
                     ],
                   },
                   "ref": null,
@@ -577,14 +583,14 @@ ShallowWrapper {
                       "props": Object {
                         "children": <div
                           className="float-left"
->
+                        >
                           <Link
-                                                    replace={false}
-                                                    to="/account/login"
+                            replace={false}
+                            to="/account/login"
                           >
-                                                    Log in to your account
+                            Log in to your account
                           </Link>
-</div>,
+                        </div>,
                         "className": "mt-2",
                       },
                       "ref": null,
@@ -596,9 +602,9 @@ ShallowWrapper {
                           "children": <Link
                             replace={false}
                             to="/account/login"
->
+                          >
                             Log in to your account
-</Link>,
+                          </Link>,
                           "className": "float-left",
                         },
                         "ref": null,
@@ -644,103 +650,104 @@ ShallowWrapper {
           <br />,
           <div
             className="columns is-mobile"
->
+          >
             <div
-                        className="column is-half is-offset-one-fifth"
+              className="column is-half is-offset-one-fifth"
             >
-                        <div
-                                    className="box"
+              <div
+                className="box"
+              >
+                <Form
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "firstName": Object {
+                          "title": "First name",
+                          "type": "string",
+                        },
+                        "lastName": Object {
+                          "title": "Last name",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                        "repassword": Object {
+                          "title": "Re-enter password",
+                          "type": "string",
+                        },
+                        "username": Object {
+                          "title": "Username",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "username",
+                        "firstName",
+                        "lastName",
+                        "email",
+                        "password",
+                        "repassword",
+                      ],
+                      "title": "Register",
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:help": "Make it strong!",
+                        "ui:widget": "password",
+                      },
+                      "repassword": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
+                  validate={[Function]}
+                >
+                  <fieldset>
+                    <button
+                      className="btn btn-primary btn-block btn-lg"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                    <div
+                      className="mt-2"
+                    >
+                      <div
+                        className="float-left"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/login"
                         >
-                                    <Form
-                                                ErrorList={[Function]}
-                                                liveValidate={false}
-                                                noHtml5Validate={true}
-                                                noValidate={false}
-                                                onSubmit={[Function]}
-                                                safeRenderCompletion={false}
-                                                schema={
-                                                            Object {
-                                                                        "properties": Object {
-                                                                          "email": Object {
-                                                                            "format": "email",
-                                                                            "title": "Email",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "firstName": Object {
-                                                                            "title": "First name",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "lastName": Object {
-                                                                            "title": "Last name",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "password": Object {
-                                                                            "title": "Password",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "repassword": Object {
-                                                                            "title": "Re-enter password",
-                                                                            "type": "string",
-                                                                          },
-                                                                          "username": Object {
-                                                                            "title": "Username",
-                                                                            "type": "string",
-                                                                          },
-                                                                        },
-                                                                        "required": Array [
-                                                                          "username",
-                                                                          "firstName",
-                                                                          "lastName",
-                                                                          "email",
-                                                                          "password",
-                                                                          "repassword",
-                                                                        ],
-                                                                        "title": "Register",
-                                                                        "type": "object",
-                                                                      }
-                                                }
-                                                uiSchema={
-                                                            Object {
-                                                                        "email": Object {
-                                                                          "ui:placeholder": "you@example.com",
-                                                                        },
-                                                                        "password": Object {
-                                                                          "ui:help": "Make it strong!",
-                                                                          "ui:widget": "password",
-                                                                        },
-                                                                        "repassword": Object {
-                                                                          "ui:widget": "password",
-                                                                        },
-                                                                      }
-                                                }
-                                                validate={[Function]}
-                                    >
-                                                <fieldset>
-                                                            <button
-                                                                        className="btn btn-primary btn-block btn-lg"
-                                                                        type="submit"
-                                                            >
-                                                                        Register
-                                                            </button>
-                                                            <div
-                                                                        className="mt-2"
-                                                            >
-                                                                        <div
-                                                                                    className="float-left"
-                                                                        >
-                                                                                    <Link
-                                                                                                replace={false}
-                                                                                                to="/account/login"
-                                                                                    >
-                                                                                                Log in to your account
-                                                                                    </Link>
-                                                                        </div>
-                                                            </div>
-                                                </fieldset>
-                                    </Form>
-                        </div>
+                          Log in to your account
+                        </Link>
+                      </div>
+                    </div>
+                  </fieldset>
+                </Form>
+              </div>
             </div>
-</div>,
+          </div>,
         ],
       },
       "ref": null,
@@ -761,99 +768,100 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="column is-half is-offset-one-fifth"
->
+            >
               <div
-                            className="box"
+                className="box"
               >
-                            <Form
-                                          ErrorList={[Function]}
-                                          liveValidate={false}
-                                          noHtml5Validate={true}
-                                          noValidate={false}
-                                          onSubmit={[Function]}
-                                          safeRenderCompletion={false}
-                                          schema={
-                                                        Object {
-                                                                      "properties": Object {
-                                                                        "email": Object {
-                                                                          "format": "email",
-                                                                          "title": "Email",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "firstName": Object {
-                                                                          "title": "First name",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "lastName": Object {
-                                                                          "title": "Last name",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "password": Object {
-                                                                          "title": "Password",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "repassword": Object {
-                                                                          "title": "Re-enter password",
-                                                                          "type": "string",
-                                                                        },
-                                                                        "username": Object {
-                                                                          "title": "Username",
-                                                                          "type": "string",
-                                                                        },
-                                                                      },
-                                                                      "required": Array [
-                                                                        "username",
-                                                                        "firstName",
-                                                                        "lastName",
-                                                                        "email",
-                                                                        "password",
-                                                                        "repassword",
-                                                                      ],
-                                                                      "title": "Register",
-                                                                      "type": "object",
-                                                                    }
-                                          }
-                                          uiSchema={
-                                                        Object {
-                                                                      "email": Object {
-                                                                        "ui:placeholder": "you@example.com",
-                                                                      },
-                                                                      "password": Object {
-                                                                        "ui:help": "Make it strong!",
-                                                                        "ui:widget": "password",
-                                                                      },
-                                                                      "repassword": Object {
-                                                                        "ui:widget": "password",
-                                                                      },
-                                                                    }
-                                          }
-                                          validate={[Function]}
-                            >
-                                          <fieldset>
-                                                        <button
-                                                                      className="btn btn-primary btn-block btn-lg"
-                                                                      type="submit"
-                                                        >
-                                                                      Register
-                                                        </button>
-                                                        <div
-                                                                      className="mt-2"
-                                                        >
-                                                                      <div
-                                                                                    className="float-left"
-                                                                      >
-                                                                                    <Link
-                                                                                                  replace={false}
-                                                                                                  to="/account/login"
-                                                                                    >
-                                                                                                  Log in to your account
-                                                                                    </Link>
-                                                                      </div>
-                                                        </div>
-                                          </fieldset>
-                            </Form>
+                <Form
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "firstName": Object {
+                          "title": "First name",
+                          "type": "string",
+                        },
+                        "lastName": Object {
+                          "title": "Last name",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                        "repassword": Object {
+                          "title": "Re-enter password",
+                          "type": "string",
+                        },
+                        "username": Object {
+                          "title": "Username",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "username",
+                        "firstName",
+                        "lastName",
+                        "email",
+                        "password",
+                        "repassword",
+                      ],
+                      "title": "Register",
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:help": "Make it strong!",
+                        "ui:widget": "password",
+                      },
+                      "repassword": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
+                  validate={[Function]}
+                >
+                  <fieldset>
+                    <button
+                      className="btn btn-primary btn-block btn-lg"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                    <div
+                      className="mt-2"
+                    >
+                      <div
+                        className="float-left"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/login"
+                        >
+                          Log in to your account
+                        </Link>
+                      </div>
+                    </div>
+                  </fieldset>
+                </Form>
               </div>
-</div>,
+            </div>,
             "className": "columns is-mobile",
           },
           "ref": null,
@@ -864,95 +872,96 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="box"
->
+              >
                 <Form
-                                ErrorList={[Function]}
-                                liveValidate={false}
-                                noHtml5Validate={true}
-                                noValidate={false}
-                                onSubmit={[Function]}
-                                safeRenderCompletion={false}
-                                schema={
-                                                Object {
-                                                                "properties": Object {
-                                                                  "email": Object {
-                                                                    "format": "email",
-                                                                    "title": "Email",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "firstName": Object {
-                                                                    "title": "First name",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "lastName": Object {
-                                                                    "title": "Last name",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "password": Object {
-                                                                    "title": "Password",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "repassword": Object {
-                                                                    "title": "Re-enter password",
-                                                                    "type": "string",
-                                                                  },
-                                                                  "username": Object {
-                                                                    "title": "Username",
-                                                                    "type": "string",
-                                                                  },
-                                                                },
-                                                                "required": Array [
-                                                                  "username",
-                                                                  "firstName",
-                                                                  "lastName",
-                                                                  "email",
-                                                                  "password",
-                                                                  "repassword",
-                                                                ],
-                                                                "title": "Register",
-                                                                "type": "object",
-                                                              }
-                                }
-                                uiSchema={
-                                                Object {
-                                                                "email": Object {
-                                                                  "ui:placeholder": "you@example.com",
-                                                                },
-                                                                "password": Object {
-                                                                  "ui:help": "Make it strong!",
-                                                                  "ui:widget": "password",
-                                                                },
-                                                                "repassword": Object {
-                                                                  "ui:widget": "password",
-                                                                },
-                                                              }
-                                }
-                                validate={[Function]}
+                  ErrorList={[Function]}
+                  disabled={false}
+                  liveValidate={false}
+                  noHtml5Validate={true}
+                  noValidate={false}
+                  onSubmit={[Function]}
+                  safeRenderCompletion={false}
+                  schema={
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "firstName": Object {
+                          "title": "First name",
+                          "type": "string",
+                        },
+                        "lastName": Object {
+                          "title": "Last name",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                        "repassword": Object {
+                          "title": "Re-enter password",
+                          "type": "string",
+                        },
+                        "username": Object {
+                          "title": "Username",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "username",
+                        "firstName",
+                        "lastName",
+                        "email",
+                        "password",
+                        "repassword",
+                      ],
+                      "title": "Register",
+                      "type": "object",
+                    }
+                  }
+                  uiSchema={
+                    Object {
+                      "email": Object {
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:help": "Make it strong!",
+                        "ui:widget": "password",
+                      },
+                      "repassword": Object {
+                        "ui:widget": "password",
+                      },
+                    }
+                  }
+                  validate={[Function]}
                 >
-                                <fieldset>
-                                                <button
-                                                                className="btn btn-primary btn-block btn-lg"
-                                                                type="submit"
-                                                >
-                                                                Register
-                                                </button>
-                                                <div
-                                                                className="mt-2"
-                                                >
-                                                                <div
-                                                                                className="float-left"
-                                                                >
-                                                                                <Link
-                                                                                                replace={false}
-                                                                                                to="/account/login"
-                                                                                >
-                                                                                                Log in to your account
-                                                                                </Link>
-                                                                </div>
-                                                </div>
-                                </fieldset>
+                  <fieldset>
+                    <button
+                      className="btn btn-primary btn-block btn-lg"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                    <div
+                      className="mt-2"
+                    >
+                      <div
+                        className="float-left"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/login"
+                        >
+                          Log in to your account
+                        </Link>
+                      </div>
+                    </div>
+                  </fieldset>
                 </Form>
-</div>,
+              </div>,
               "className": "column is-half is-offset-one-fifth",
             },
             "ref": null,
@@ -963,91 +972,92 @@ ShallowWrapper {
               "props": Object {
                 "children": <Form
                   ErrorList={[Function]}
+                  disabled={false}
                   liveValidate={false}
                   noHtml5Validate={true}
                   noValidate={false}
                   onSubmit={[Function]}
                   safeRenderCompletion={false}
                   schema={
-                                    Object {
-                                                      "properties": Object {
-                                                        "email": Object {
-                                                          "format": "email",
-                                                          "title": "Email",
-                                                          "type": "string",
-                                                        },
-                                                        "firstName": Object {
-                                                          "title": "First name",
-                                                          "type": "string",
-                                                        },
-                                                        "lastName": Object {
-                                                          "title": "Last name",
-                                                          "type": "string",
-                                                        },
-                                                        "password": Object {
-                                                          "title": "Password",
-                                                          "type": "string",
-                                                        },
-                                                        "repassword": Object {
-                                                          "title": "Re-enter password",
-                                                          "type": "string",
-                                                        },
-                                                        "username": Object {
-                                                          "title": "Username",
-                                                          "type": "string",
-                                                        },
-                                                      },
-                                                      "required": Array [
-                                                        "username",
-                                                        "firstName",
-                                                        "lastName",
-                                                        "email",
-                                                        "password",
-                                                        "repassword",
-                                                      ],
-                                                      "title": "Register",
-                                                      "type": "object",
-                                                    }
+                    Object {
+                      "properties": Object {
+                        "email": Object {
+                          "format": "email",
+                          "title": "Email",
+                          "type": "string",
+                        },
+                        "firstName": Object {
+                          "title": "First name",
+                          "type": "string",
+                        },
+                        "lastName": Object {
+                          "title": "Last name",
+                          "type": "string",
+                        },
+                        "password": Object {
+                          "title": "Password",
+                          "type": "string",
+                        },
+                        "repassword": Object {
+                          "title": "Re-enter password",
+                          "type": "string",
+                        },
+                        "username": Object {
+                          "title": "Username",
+                          "type": "string",
+                        },
+                      },
+                      "required": Array [
+                        "username",
+                        "firstName",
+                        "lastName",
+                        "email",
+                        "password",
+                        "repassword",
+                      ],
+                      "title": "Register",
+                      "type": "object",
+                    }
                   }
                   uiSchema={
-                                    Object {
-                                                      "email": Object {
-                                                        "ui:placeholder": "you@example.com",
-                                                      },
-                                                      "password": Object {
-                                                        "ui:help": "Make it strong!",
-                                                        "ui:widget": "password",
-                                                      },
-                                                      "repassword": Object {
-                                                        "ui:widget": "password",
-                                                      },
-                                                    }
+                    Object {
+                      "email": Object {
+                        "ui:placeholder": "you@example.com",
+                      },
+                      "password": Object {
+                        "ui:help": "Make it strong!",
+                        "ui:widget": "password",
+                      },
+                      "repassword": Object {
+                        "ui:widget": "password",
+                      },
+                    }
                   }
                   validate={[Function]}
->
+                >
                   <fieldset>
-                                    <button
-                                                      className="btn btn-primary btn-block btn-lg"
-                                                      type="submit"
-                                    >
-                                                      Register
-                                    </button>
-                                    <div
-                                                      className="mt-2"
-                                    >
-                                                      <div
-                                                                        className="float-left"
-                                                      >
-                                                                        <Link
-                                                                                          replace={false}
-                                                                                          to="/account/login"
-                                                                        >
-                                                                                          Log in to your account
-                                                                        </Link>
-                                                      </div>
-                                    </div>
+                    <button
+                      className="btn btn-primary btn-block btn-lg"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                    <div
+                      className="mt-2"
+                    >
+                      <div
+                        className="float-left"
+                      >
+                        <Link
+                          replace={false}
+                          to="/account/login"
+                        >
+                          Log in to your account
+                        </Link>
+                      </div>
+                    </div>
                   </fieldset>
-</Form>,
+                </Form>,
                 "className": "box",
               },
               "ref": null,
@@ -1061,27 +1071,28 @@ ShallowWrapper {
                     undefined,
                     <fieldset>
                       <button
-                                            className="btn btn-primary btn-block btn-lg"
-                                            type="submit"
+                        className="btn btn-primary btn-block btn-lg"
+                        type="submit"
                       >
-                                            Register
+                        Register
                       </button>
                       <div
-                                            className="mt-2"
+                        className="mt-2"
                       >
-                                            <div
-                                                                  className="float-left"
-                                            >
-                                                                  <Link
-                                                                                        replace={false}
-                                                                                        to="/account/login"
-                                                                  >
-                                                                                        Log in to your account
-                                                                  </Link>
-                                            </div>
+                        <div
+                          className="float-left"
+                        >
+                          <Link
+                            replace={false}
+                            to="/account/login"
+                          >
+                            Log in to your account
+                          </Link>
+                        </div>
                       </div>
-</fieldset>,
+                    </fieldset>,
                   ],
+                  "disabled": false,
                   "liveValidate": false,
                   "noHtml5Validate": true,
                   "noValidate": false,
@@ -1152,23 +1163,23 @@ ShallowWrapper {
                         <button
                           className="btn btn-primary btn-block btn-lg"
                           type="submit"
->
+                        >
                           Register
-</button>,
+                        </button>,
                         <div
                           className="mt-2"
->
+                        >
                           <div
-                                                    className="float-left"
+                            className="float-left"
                           >
-                                                    <Link
-                                                                              replace={false}
-                                                                              to="/account/login"
-                                                    >
-                                                                              Log in to your account
-                                                    </Link>
+                            <Link
+                              replace={false}
+                              to="/account/login"
+                            >
+                              Log in to your account
+                            </Link>
                           </div>
-</div>,
+                        </div>,
                       ],
                     },
                     "ref": null,
@@ -1193,14 +1204,14 @@ ShallowWrapper {
                         "props": Object {
                           "children": <div
                             className="float-left"
->
+                          >
                             <Link
-                                                        replace={false}
-                                                        to="/account/login"
+                              replace={false}
+                              to="/account/login"
                             >
-                                                        Log in to your account
+                              Log in to your account
                             </Link>
-</div>,
+                          </div>,
                           "className": "mt-2",
                         },
                         "ref": null,
@@ -1212,9 +1223,9 @@ ShallowWrapper {
                             "children": <Link
                               replace={false}
                               to="/account/login"
->
+                            >
                               Log in to your account
-</Link>,
+                            </Link>,
                             "className": "float-left",
                           },
                           "ref": null,
@@ -1255,9 +1266,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -1276,14 +1291,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
     location={
-        Object {
-            "search": "?ok",
-          }
+      Object {
+        "search": "?ok",
+      }
     }
     register={[Function]}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -1298,29 +1314,29 @@ ShallowWrapper {
       "children": <div
         className="card shadow-lg p-3 mb-5 bg-white rounded"
         style={
-                Object {
-                        "margin": "100px auto",
-                        "width": "20rem",
-                      }
+          Object {
+            "margin": "100px auto",
+            "width": "20rem",
+          }
         }
->
+      >
         <div
-                className="card-body"
+          className="card-body"
         >
-                <h5
-                        className="card-title"
-                >
-                        <i
-                                className="fas fa-envelope"
-                        />
-                </h5>
-                <p
-                        className="card-text"
-                >
-                        Check your inbox, we have sent you an email to confirm your email address.
-                </p>
+          <h5
+            className="card-title"
+          >
+            <i
+              className="fas fa-envelope"
+            />
+          </h5>
+          <p
+            className="card-text"
+          >
+            Check your inbox, we have sent you an email to confirm your email address.
+          </p>
         </div>
-</div>,
+      </div>,
       "className": "container text-center",
     },
     "ref": null,
@@ -1331,20 +1347,20 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card-body"
->
+        >
           <h5
-                    className="card-title"
+            className="card-title"
           >
-                    <i
-                              className="fas fa-envelope"
-                    />
+            <i
+              className="fas fa-envelope"
+            />
           </h5>
           <p
-                    className="card-text"
+            className="card-text"
           >
-                    Check your inbox, we have sent you an email to confirm your email address.
+            Check your inbox, we have sent you an email to confirm your email address.
           </p>
-</div>,
+        </div>,
         "className": "card shadow-lg p-3 mb-5 bg-white rounded",
         "style": Object {
           "margin": "100px auto",
@@ -1360,16 +1376,16 @@ ShallowWrapper {
           "children": Array [
             <h5
               className="card-title"
->
+            >
               <i
-                            className="fas fa-envelope"
+                className="fas fa-envelope"
               />
-</h5>,
+            </h5>,
             <p
               className="card-text"
->
+            >
               Check your inbox, we have sent you an email to confirm your email address.
-</p>,
+            </p>,
           ],
           "className": "card-body",
         },
@@ -1382,7 +1398,7 @@ ShallowWrapper {
             "props": Object {
               "children": <i
                 className="fas fa-envelope"
-/>,
+              />,
               "className": "card-title",
             },
             "ref": null,
@@ -1427,29 +1443,29 @@ ShallowWrapper {
         "children": <div
           className="card shadow-lg p-3 mb-5 bg-white rounded"
           style={
-                    Object {
-                              "margin": "100px auto",
-                              "width": "20rem",
-                            }
+            Object {
+              "margin": "100px auto",
+              "width": "20rem",
+            }
           }
->
+        >
           <div
-                    className="card-body"
+            className="card-body"
           >
-                    <h5
-                              className="card-title"
-                    >
-                              <i
-                                        className="fas fa-envelope"
-                              />
-                    </h5>
-                    <p
-                              className="card-text"
-                    >
-                              Check your inbox, we have sent you an email to confirm your email address.
-                    </p>
+            <h5
+              className="card-title"
+            >
+              <i
+                className="fas fa-envelope"
+              />
+            </h5>
+            <p
+              className="card-text"
+            >
+              Check your inbox, we have sent you an email to confirm your email address.
+            </p>
           </div>
-</div>,
+        </div>,
         "className": "container text-center",
       },
       "ref": null,
@@ -1460,20 +1476,20 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="card-body"
->
+          >
             <h5
-                        className="card-title"
+              className="card-title"
             >
-                        <i
-                                    className="fas fa-envelope"
-                        />
+              <i
+                className="fas fa-envelope"
+              />
             </h5>
             <p
-                        className="card-text"
+              className="card-text"
             >
-                        Check your inbox, we have sent you an email to confirm your email address.
+              Check your inbox, we have sent you an email to confirm your email address.
             </p>
-</div>,
+          </div>,
           "className": "card shadow-lg p-3 mb-5 bg-white rounded",
           "style": Object {
             "margin": "100px auto",
@@ -1489,16 +1505,16 @@ ShallowWrapper {
             "children": Array [
               <h5
                 className="card-title"
->
+              >
                 <i
-                                className="fas fa-envelope"
+                  className="fas fa-envelope"
                 />
-</h5>,
+              </h5>,
               <p
                 className="card-text"
->
+              >
                 Check your inbox, we have sent you an email to confirm your email address.
-</p>,
+              </p>,
             ],
             "className": "card-body",
           },
@@ -1511,7 +1527,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <i
                   className="fas fa-envelope"
-/>,
+                />,
                 "className": "card-title",
               },
               "ref": null,
@@ -1552,9 +1568,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

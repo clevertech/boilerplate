@@ -7,14 +7,15 @@ ShallowWrapper {
     configureTwoFactorSMS={[Function]}
     generateTwoFactorSMS={[Function]}
     location={
-        Object {
-            "search": "",
-          }
+      Object {
+        "search": "",
+      }
     }
     user={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -28,41 +29,42 @@ ShallowWrapper {
     "props": Object {
       "children": <Form
         ErrorList={[Function]}
+        disabled={false}
         liveValidate={false}
         noHtml5Validate={true}
         noValidate={false}
         onSubmit={[Function]}
         safeRenderCompletion={false}
         schema={
-                Object {
-                        "properties": Object {
-                          "phoneNumber": Object {
-                            "title": "What's your phone number",
-                            "type": "string",
-                          },
-                        },
-                        "required": Array [
-                          "phoneNumber",
-                        ],
-                        "title": "Add SMS Authentication",
-                        "type": "object",
-                      }
+          Object {
+            "properties": Object {
+              "phoneNumber": Object {
+                "title": "What's your phone number",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "phoneNumber",
+            ],
+            "title": "Add SMS Authentication",
+            "type": "object",
+          }
         }
         uiSchema={
-                Object {
-                        "phoneNumber": Object {},
-                      }
+          Object {
+            "phoneNumber": Object {},
+          }
         }
->
+      >
         <fieldset>
-                <button
-                        className="btn btn-primary"
-                        type="submit"
-                >
-                        Send authentication code
-                </button>
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Send authentication code
+          </button>
         </fieldset>
-</Form>,
+      </Form>,
     },
     "ref": null,
     "rendered": Object {
@@ -75,13 +77,14 @@ ShallowWrapper {
           undefined,
           <fieldset>
             <button
-                        className="btn btn-primary"
-                        type="submit"
+              className="btn btn-primary"
+              type="submit"
             >
-                        Send authentication code
+              Send authentication code
             </button>
-</fieldset>,
+          </fieldset>,
         ],
+        "disabled": false,
         "liveValidate": false,
         "noHtml5Validate": true,
         "noValidate": false,
@@ -115,9 +118,9 @@ ShallowWrapper {
             "children": <button
               className="btn btn-primary"
               type="submit"
->
+            >
               Send authentication code
-</button>,
+            </button>,
           },
           "ref": null,
           "rendered": Object {
@@ -148,41 +151,42 @@ ShallowWrapper {
       "props": Object {
         "children": <Form
           ErrorList={[Function]}
+          disabled={false}
           liveValidate={false}
           noHtml5Validate={true}
           noValidate={false}
           onSubmit={[Function]}
           safeRenderCompletion={false}
           schema={
-                    Object {
-                              "properties": Object {
-                                "phoneNumber": Object {
-                                  "title": "What's your phone number",
-                                  "type": "string",
-                                },
-                              },
-                              "required": Array [
-                                "phoneNumber",
-                              ],
-                              "title": "Add SMS Authentication",
-                              "type": "object",
-                            }
+            Object {
+              "properties": Object {
+                "phoneNumber": Object {
+                  "title": "What's your phone number",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "phoneNumber",
+              ],
+              "title": "Add SMS Authentication",
+              "type": "object",
+            }
           }
           uiSchema={
-                    Object {
-                              "phoneNumber": Object {},
-                            }
+            Object {
+              "phoneNumber": Object {},
+            }
           }
->
+        >
           <fieldset>
-                    <button
-                              className="btn btn-primary"
-                              type="submit"
-                    >
-                              Send authentication code
-                    </button>
+            <button
+              className="btn btn-primary"
+              type="submit"
+            >
+              Send authentication code
+            </button>
           </fieldset>
-</Form>,
+        </Form>,
       },
       "ref": null,
       "rendered": Object {
@@ -195,13 +199,14 @@ ShallowWrapper {
             undefined,
             <fieldset>
               <button
-                            className="btn btn-primary"
-                            type="submit"
+                className="btn btn-primary"
+                type="submit"
               >
-                            Send authentication code
+                Send authentication code
               </button>
-</fieldset>,
+            </fieldset>,
           ],
+          "disabled": false,
           "liveValidate": false,
           "noHtml5Validate": true,
           "noValidate": false,
@@ -235,9 +240,9 @@ ShallowWrapper {
               "children": <button
                 className="btn btn-primary"
                 type="submit"
->
+              >
                 Send authentication code
-</button>,
+              </button>,
             },
             "ref": null,
             "rendered": Object {
@@ -265,9 +270,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -288,14 +297,15 @@ ShallowWrapper {
     configureTwoFactorSMS={[Function]}
     generateTwoFactorSMS={[Function]}
     location={
-        Object {
-            "search": "?confirm",
-          }
+      Object {
+        "search": "?confirm",
+      }
     }
     user={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -309,41 +319,42 @@ ShallowWrapper {
     "props": Object {
       "children": <Form
         ErrorList={[Function]}
+        disabled={false}
         liveValidate={false}
         noHtml5Validate={true}
         noValidate={false}
         onSubmit={[Function]}
         safeRenderCompletion={false}
         schema={
-                Object {
-                        "properties": Object {
-                          "token": Object {
-                            "title": "Please enter the 6-digit authentication code we just sent you",
-                            "type": "string",
-                          },
-                        },
-                        "required": Array [
-                          "token",
-                        ],
-                        "title": "Add SMS Authentication",
-                        "type": "object",
-                      }
+          Object {
+            "properties": Object {
+              "token": Object {
+                "title": "Please enter the 6-digit authentication code we just sent you",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "token",
+            ],
+            "title": "Add SMS Authentication",
+            "type": "object",
+          }
         }
         uiSchema={
-                Object {
-                        "token": Object {},
-                      }
+          Object {
+            "token": Object {},
+          }
         }
->
+      >
         <fieldset>
-                <button
-                        className="btn btn-primary"
-                        type="submit"
-                >
-                        Verify code
-                </button>
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Verify code
+          </button>
         </fieldset>
-</Form>,
+      </Form>,
     },
     "ref": null,
     "rendered": Object {
@@ -356,13 +367,14 @@ ShallowWrapper {
           undefined,
           <fieldset>
             <button
-                        className="btn btn-primary"
-                        type="submit"
+              className="btn btn-primary"
+              type="submit"
             >
-                        Verify code
+              Verify code
             </button>
-</fieldset>,
+          </fieldset>,
         ],
+        "disabled": false,
         "liveValidate": false,
         "noHtml5Validate": true,
         "noValidate": false,
@@ -396,9 +408,9 @@ ShallowWrapper {
             "children": <button
               className="btn btn-primary"
               type="submit"
->
+            >
               Verify code
-</button>,
+            </button>,
           },
           "ref": null,
           "rendered": Object {
@@ -429,41 +441,42 @@ ShallowWrapper {
       "props": Object {
         "children": <Form
           ErrorList={[Function]}
+          disabled={false}
           liveValidate={false}
           noHtml5Validate={true}
           noValidate={false}
           onSubmit={[Function]}
           safeRenderCompletion={false}
           schema={
-                    Object {
-                              "properties": Object {
-                                "token": Object {
-                                  "title": "Please enter the 6-digit authentication code we just sent you",
-                                  "type": "string",
-                                },
-                              },
-                              "required": Array [
-                                "token",
-                              ],
-                              "title": "Add SMS Authentication",
-                              "type": "object",
-                            }
+            Object {
+              "properties": Object {
+                "token": Object {
+                  "title": "Please enter the 6-digit authentication code we just sent you",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "token",
+              ],
+              "title": "Add SMS Authentication",
+              "type": "object",
+            }
           }
           uiSchema={
-                    Object {
-                              "token": Object {},
-                            }
+            Object {
+              "token": Object {},
+            }
           }
->
+        >
           <fieldset>
-                    <button
-                              className="btn btn-primary"
-                              type="submit"
-                    >
-                              Verify code
-                    </button>
+            <button
+              className="btn btn-primary"
+              type="submit"
+            >
+              Verify code
+            </button>
           </fieldset>
-</Form>,
+        </Form>,
       },
       "ref": null,
       "rendered": Object {
@@ -476,13 +489,14 @@ ShallowWrapper {
             undefined,
             <fieldset>
               <button
-                            className="btn btn-primary"
-                            type="submit"
+                className="btn btn-primary"
+                type="submit"
               >
-                            Verify code
+                Verify code
               </button>
-</fieldset>,
+            </fieldset>,
           ],
+          "disabled": false,
           "liveValidate": false,
           "noHtml5Validate": true,
           "noValidate": false,
@@ -516,9 +530,9 @@ ShallowWrapper {
               "children": <button
                 className="btn btn-primary"
                 type="submit"
->
+              >
                 Verify code
-</button>,
+              </button>,
             },
             "ref": null,
             "rendered": Object {
@@ -546,9 +560,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -569,14 +587,15 @@ ShallowWrapper {
     configureTwoFactorSMS={[Function]}
     generateTwoFactorSMS={[Function]}
     location={
-        Object {
-            "search": "?sent",
-          }
+      Object {
+        "search": "?sent",
+      }
     }
     user={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -590,41 +609,42 @@ ShallowWrapper {
     "props": Object {
       "children": <Form
         ErrorList={[Function]}
+        disabled={false}
         liveValidate={false}
         noHtml5Validate={true}
         noValidate={false}
         onSubmit={[Function]}
         safeRenderCompletion={false}
         schema={
-                Object {
-                        "properties": Object {
-                          "phoneNumber": Object {
-                            "title": "What's your phone number",
-                            "type": "string",
-                          },
-                        },
-                        "required": Array [
-                          "phoneNumber",
-                        ],
-                        "title": "Add SMS Authentication",
-                        "type": "object",
-                      }
+          Object {
+            "properties": Object {
+              "phoneNumber": Object {
+                "title": "What's your phone number",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "phoneNumber",
+            ],
+            "title": "Add SMS Authentication",
+            "type": "object",
+          }
         }
         uiSchema={
-                Object {
-                        "phoneNumber": Object {},
-                      }
+          Object {
+            "phoneNumber": Object {},
+          }
         }
->
+      >
         <fieldset>
-                <button
-                        className="btn btn-primary"
-                        type="submit"
-                >
-                        Send authentication code
-                </button>
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Send authentication code
+          </button>
         </fieldset>
-</Form>,
+      </Form>,
     },
     "ref": null,
     "rendered": Object {
@@ -637,13 +657,14 @@ ShallowWrapper {
           undefined,
           <fieldset>
             <button
-                        className="btn btn-primary"
-                        type="submit"
+              className="btn btn-primary"
+              type="submit"
             >
-                        Send authentication code
+              Send authentication code
             </button>
-</fieldset>,
+          </fieldset>,
         ],
+        "disabled": false,
         "liveValidate": false,
         "noHtml5Validate": true,
         "noValidate": false,
@@ -677,9 +698,9 @@ ShallowWrapper {
             "children": <button
               className="btn btn-primary"
               type="submit"
->
+            >
               Send authentication code
-</button>,
+            </button>,
           },
           "ref": null,
           "rendered": Object {
@@ -710,41 +731,42 @@ ShallowWrapper {
       "props": Object {
         "children": <Form
           ErrorList={[Function]}
+          disabled={false}
           liveValidate={false}
           noHtml5Validate={true}
           noValidate={false}
           onSubmit={[Function]}
           safeRenderCompletion={false}
           schema={
-                    Object {
-                              "properties": Object {
-                                "phoneNumber": Object {
-                                  "title": "What's your phone number",
-                                  "type": "string",
-                                },
-                              },
-                              "required": Array [
-                                "phoneNumber",
-                              ],
-                              "title": "Add SMS Authentication",
-                              "type": "object",
-                            }
+            Object {
+              "properties": Object {
+                "phoneNumber": Object {
+                  "title": "What's your phone number",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "phoneNumber",
+              ],
+              "title": "Add SMS Authentication",
+              "type": "object",
+            }
           }
           uiSchema={
-                    Object {
-                              "phoneNumber": Object {},
-                            }
+            Object {
+              "phoneNumber": Object {},
+            }
           }
->
+        >
           <fieldset>
-                    <button
-                              className="btn btn-primary"
-                              type="submit"
-                    >
-                              Send authentication code
-                    </button>
+            <button
+              className="btn btn-primary"
+              type="submit"
+            >
+              Send authentication code
+            </button>
           </fieldset>
-</Form>,
+        </Form>,
       },
       "ref": null,
       "rendered": Object {
@@ -757,13 +779,14 @@ ShallowWrapper {
             undefined,
             <fieldset>
               <button
-                            className="btn btn-primary"
-                            type="submit"
+                className="btn btn-primary"
+                type="submit"
               >
-                            Send authentication code
+                Send authentication code
               </button>
-</fieldset>,
+            </fieldset>,
           ],
+          "disabled": false,
           "liveValidate": false,
           "noHtml5Validate": true,
           "noValidate": false,
@@ -797,9 +820,9 @@ ShallowWrapper {
               "children": <button
                 className="btn btn-primary"
                 type="submit"
->
+              >
                 Send authentication code
-</button>,
+              </button>,
             },
             "ref": null,
             "rendered": Object {
@@ -827,9 +850,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

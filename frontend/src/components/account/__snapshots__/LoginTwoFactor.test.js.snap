@@ -8,9 +8,10 @@ ShallowWrapper {
     loggedIn={false}
     loginTwoFactor={[Function]}
     twoFactor={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -24,41 +25,42 @@ ShallowWrapper {
     "props": Object {
       "children": <Form
         ErrorList={[Function]}
+        disabled={false}
         liveValidate={false}
         noHtml5Validate={true}
         noValidate={false}
         onSubmit={[Function]}
         safeRenderCompletion={false}
         schema={
-                Object {
-                        "properties": Object {
-                          "token": Object {
-                            "title": "Please enter the 6-digit authentication code or a recovery code",
-                            "type": "string",
-                          },
-                        },
-                        "required": Array [
-                          "token",
-                        ],
-                        "title": "Two Factor Authentication",
-                        "type": "object",
-                      }
+          Object {
+            "properties": Object {
+              "token": Object {
+                "title": "Please enter the 6-digit authentication code or a recovery code",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "token",
+            ],
+            "title": "Two Factor Authentication",
+            "type": "object",
+          }
         }
         uiSchema={
-                Object {
-                        "token": Object {},
-                      }
+          Object {
+            "token": Object {},
+          }
         }
->
+      >
         <fieldset>
-                <button
-                        className="btn btn-primary btn-block btn-lg"
-                        type="submit"
-                >
-                        Log In
-                </button>
+          <button
+            className="btn btn-primary btn-block btn-lg"
+            type="submit"
+          >
+            Log In
+          </button>
         </fieldset>
-</Form>,
+      </Form>,
     },
     "ref": null,
     "rendered": Object {
@@ -73,13 +75,14 @@ ShallowWrapper {
           false,
           <fieldset>
             <button
-                        className="btn btn-primary btn-block btn-lg"
-                        type="submit"
+              className="btn btn-primary btn-block btn-lg"
+              type="submit"
             >
-                        Log In
+              Log In
             </button>
-</fieldset>,
+          </fieldset>,
         ],
+        "disabled": false,
         "liveValidate": false,
         "noHtml5Validate": true,
         "noValidate": false,
@@ -115,9 +118,9 @@ ShallowWrapper {
             "children": <button
               className="btn btn-primary btn-block btn-lg"
               type="submit"
->
+            >
               Log In
-</button>,
+            </button>,
           },
           "ref": null,
           "rendered": Object {
@@ -148,41 +151,42 @@ ShallowWrapper {
       "props": Object {
         "children": <Form
           ErrorList={[Function]}
+          disabled={false}
           liveValidate={false}
           noHtml5Validate={true}
           noValidate={false}
           onSubmit={[Function]}
           safeRenderCompletion={false}
           schema={
-                    Object {
-                              "properties": Object {
-                                "token": Object {
-                                  "title": "Please enter the 6-digit authentication code or a recovery code",
-                                  "type": "string",
-                                },
-                              },
-                              "required": Array [
-                                "token",
-                              ],
-                              "title": "Two Factor Authentication",
-                              "type": "object",
-                            }
+            Object {
+              "properties": Object {
+                "token": Object {
+                  "title": "Please enter the 6-digit authentication code or a recovery code",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "token",
+              ],
+              "title": "Two Factor Authentication",
+              "type": "object",
+            }
           }
           uiSchema={
-                    Object {
-                              "token": Object {},
-                            }
+            Object {
+              "token": Object {},
+            }
           }
->
+        >
           <fieldset>
-                    <button
-                              className="btn btn-primary btn-block btn-lg"
-                              type="submit"
-                    >
-                              Log In
-                    </button>
+            <button
+              className="btn btn-primary btn-block btn-lg"
+              type="submit"
+            >
+              Log In
+            </button>
           </fieldset>
-</Form>,
+        </Form>,
       },
       "ref": null,
       "rendered": Object {
@@ -197,13 +201,14 @@ ShallowWrapper {
             false,
             <fieldset>
               <button
-                            className="btn btn-primary btn-block btn-lg"
-                            type="submit"
+                className="btn btn-primary btn-block btn-lg"
+                type="submit"
               >
-                            Log In
+                Log In
               </button>
-</fieldset>,
+            </fieldset>,
           ],
+          "disabled": false,
           "liveValidate": false,
           "noHtml5Validate": true,
           "noValidate": false,
@@ -239,9 +244,9 @@ ShallowWrapper {
               "children": <button
                 className="btn btn-primary btn-block btn-lg"
                 type="submit"
->
+              >
                 Log In
-</button>,
+              </button>,
             },
             "ref": null,
             "rendered": Object {
@@ -269,9 +274,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

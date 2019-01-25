@@ -5,15 +5,16 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RecoveryCodes
     codes={
-        Array [
-            "00000000",
-            "11111111",
-          ]
+      Array [
+        "00000000",
+        "11111111",
+      ]
     }
     email="user@example.com"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -29,48 +30,46 @@ ShallowWrapper {
         <div
           className="alert alert-primary text-left"
           role="alert"
->
+        >
           If you lose access to your authentication device, you can use one of these backup codes to login to your account. Each code may be used only once. Make a copy of these codes, and store it somewhere safe.
-</div>,
+        </div>,
         <p
           className="card-text text-center"
->
+        >
           <code>
-                    00000000
-                    <br />
+            00000000
+            <br />
           </code>
           <code>
-                    11111111
-                    <br />
+            11111111
+            <br />
           </code>
-</p>,
+        </p>,
         <p
           className="card-text text-right"
->
+        >
           <button
-                    className="btn btn-primary"
-                    onClick={[Function]}
+            className="btn btn-primary"
+            onClick={[Function]}
           >
-                    Print codes
+            Print codes
           </button>
            
           <CopyToClipboard
-                    onCopy={undefined}
-                    options={undefined}
-                    text="Boilerplate
-          Two-Factor Authentication Backup Codes
-          Email: user@example.com
-          
-          00000000
-          11111111"
+            text="Boilerplate
+Two-Factor Authentication Backup Codes
+Email: user@example.com
+
+00000000
+11111111"
           >
-                    <button
-                              className="btn btn-primary"
-                    >
-                              Copy codes
-                    </button>
+            <button
+              className="btn btn-primary"
+            >
+              Copy codes
+            </button>
           </CopyToClipboard>
-</p>,
+        </p>,
       ],
     },
     "ref": null,
@@ -97,11 +96,11 @@ ShallowWrapper {
             <code>
               00000000
               <br />
-</code>,
+            </code>,
             <code>
               11111111
               <br />
-</code>,
+            </code>,
           ],
           "className": "card-text text-center",
         },
@@ -169,26 +168,24 @@ ShallowWrapper {
             <button
               className="btn btn-primary"
               onClick={[Function]}
->
+            >
               Print codes
-</button>,
+            </button>,
             " ",
             <CopyToClipboard
-              onCopy={undefined}
-              options={undefined}
               text="Boilerplate
 Two-Factor Authentication Backup Codes
 Email: user@example.com
 
 00000000
 11111111"
->
+            >
               <button
-                            className="btn btn-primary"
+                className="btn btn-primary"
               >
-                            Copy codes
+                Copy codes
               </button>
-</CopyToClipboard>,
+            </CopyToClipboard>,
           ],
           "className": "card-text text-right",
         },
@@ -215,9 +212,9 @@ Email: user@example.com
             "props": Object {
               "children": <button
                 className="btn btn-primary"
->
+              >
                 Copy codes
-</button>,
+              </button>,
               "onCopy": undefined,
               "options": undefined,
               "text": "Boilerplate
@@ -246,7 +243,7 @@ Email: user@example.com
         "type": "p",
       },
     ],
-    "type": undefined,
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -258,48 +255,46 @@ Email: user@example.com
           <div
             className="alert alert-primary text-left"
             role="alert"
->
+          >
             If you lose access to your authentication device, you can use one of these backup codes to login to your account. Each code may be used only once. Make a copy of these codes, and store it somewhere safe.
-</div>,
+          </div>,
           <p
             className="card-text text-center"
->
+          >
             <code>
-                        00000000
-                        <br />
+              00000000
+              <br />
             </code>
             <code>
-                        11111111
-                        <br />
+              11111111
+              <br />
             </code>
-</p>,
+          </p>,
           <p
             className="card-text text-right"
->
+          >
             <button
-                        className="btn btn-primary"
-                        onClick={[Function]}
+              className="btn btn-primary"
+              onClick={[Function]}
             >
-                        Print codes
+              Print codes
             </button>
              
             <CopyToClipboard
-                        onCopy={undefined}
-                        options={undefined}
-                        text="Boilerplate
-            Two-Factor Authentication Backup Codes
-            Email: user@example.com
-            
-            00000000
-            11111111"
+              text="Boilerplate
+Two-Factor Authentication Backup Codes
+Email: user@example.com
+
+00000000
+11111111"
             >
-                        <button
-                                    className="btn btn-primary"
-                        >
-                                    Copy codes
-                        </button>
+              <button
+                className="btn btn-primary"
+              >
+                Copy codes
+              </button>
             </CopyToClipboard>
-</p>,
+          </p>,
         ],
       },
       "ref": null,
@@ -326,11 +321,11 @@ Email: user@example.com
               <code>
                 00000000
                 <br />
-</code>,
+              </code>,
               <code>
                 11111111
                 <br />
-</code>,
+              </code>,
             ],
             "className": "card-text text-center",
           },
@@ -398,26 +393,24 @@ Email: user@example.com
               <button
                 className="btn btn-primary"
                 onClick={[Function]}
->
+              >
                 Print codes
-</button>,
+              </button>,
               " ",
               <CopyToClipboard
-                onCopy={undefined}
-                options={undefined}
                 text="Boilerplate
 Two-Factor Authentication Backup Codes
 Email: user@example.com
 
 00000000
 11111111"
->
+              >
                 <button
-                                className="btn btn-primary"
+                  className="btn btn-primary"
                 >
-                                Copy codes
+                  Copy codes
                 </button>
-</CopyToClipboard>,
+              </CopyToClipboard>,
             ],
             "className": "card-text text-right",
           },
@@ -444,9 +437,9 @@ Email: user@example.com
               "props": Object {
                 "children": <button
                   className="btn btn-primary"
->
+                >
                   Copy codes
-</button>,
+                </button>,
                 "onCopy": undefined,
                 "options": undefined,
                 "text": "Boilerplate
@@ -475,16 +468,20 @@ Email: user@example.com
           "type": "p",
         },
       ],
-      "type": undefined,
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
