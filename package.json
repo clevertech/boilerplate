@@ -2,8 +2,7 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "private": true,
-  "description":
-    "This package.json file is provided to install local development tools such as eslint and commit hooks",
+  "description": "This package.json file is provided to install local development tools such as eslint and commit hooks",
   "author": "Clevertech <support@clevertech.biz>",
   "scripts": {
     "precommit": "lint-staged",
@@ -12,30 +11,38 @@
     "db-client": "bnr --path=./api/.env db-client"
   },
   "betterScripts": {
-    "db-client":
-      "PGPASSWORD=$DB_PASSWORD psql -h 127.0.0.1 -U $DB_USER $DB_DATABASE"
+    "db-client": "PGPASSWORD=$DB_PASSWORD psql -h 127.0.0.1 -U $DB_USER $DB_DATABASE"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix", "git add"],
-    "*.{json,css,scss,md}": ["prettier --write", "git add"],
-    "*.*": ["findsecrets", "git add"]
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.*": [
+      "findsecrets",
+      "git add"
+    ]
   },
   "devDependencies": {
-    "@clevertech.biz/findsecrets": "^0.1.1",
-    "babel-eslint": "^7.2.3",
-    "better-npm-run": "^0.1.0",
-    "eslint": "^4.1.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-react-app": "^2.0.1",
-    "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-import": "^2.6.0",
-    "eslint-plugin-jest": "^21.5.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-prettier": "^2.4.0",
-    "eslint-plugin-react": "^7.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
-    "prettier": "^1.9.2",
-    "testcafe": "^0.18.6"
+    "@clevertech.biz/findsecrets": "^0.1.3",
+    "babel-eslint": "^10.0.1",
+    "better-npm-run": "^0.1.1",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-react-app": "^3.0.6",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.1",
+    "testcafe": "^0.23.3"
   }
 }
