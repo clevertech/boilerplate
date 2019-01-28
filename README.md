@@ -2,35 +2,35 @@
 
 Clevertech provides an integrated technology stack that
 
-* 📚 Contains a huge amount of best practices already implemented for you
-* 🚀 Provides fast and powerful local application development. Including:
+- 📚 Contains a huge amount of best practices already implemented for you
+- 🚀 Provides fast and powerful local application development. Including:
   hot-reloading, local utilities (npm scripts), dev tools (linters, git hooks),
   etc.
-* 🛠 Implements a solid workflow for building, testing and deploying applications
-* 👤 Secure and complete authentication functionality (including 2FA with either SMS or apps like Google Authenticator)
-* 🎨 Supports SASS/SCSS
+- 🛠 Implements a solid workflow for building, testing and deploying applications
+- 👤 Secure and complete authentication functionality (including 2FA with either SMS or apps like Google Authenticator)
+- 🎨 Supports SASS/SCSS
 
 Some of the best practices include:
 
-* 📦 Caching dependencies for faster builds
-* 🚀 Fast track for faster deploys
-* 🔒 Properly storage of secrets outside the code
-* 💊 Healthcheck implementations
-* ✒️ Linters and code prettifiers
-* 👤 Complete auth infrastructure based on JWT
-* 🏛 Source code architecture that scales
+- 📦 Caching dependencies for faster builds
+- 🚀 Fast track for faster deploys
+- 🔒 Properly storage of secrets outside the code
+- 💊 Healthcheck implementations
+- ✒️ Linters and code prettifiers
+- 👤 Complete auth infrastructure based on JWT
+- 🏛 Source code architecture that scales
 
 Some of the used technologies are:
 
-* [Node.js](https://nodejs.org/en/) for the backend.
-* [React.js](https://reactjs.org/) for the frontend with many other libraries
+- [Node.js](https://nodejs.org/en/) for the backend.
+- [React.js](https://reactjs.org/) for the frontend with many other libraries
   already integrated such as redux, react-router, redux-saga, etc.
-* [Docker](https://www.docker.com) for containers.
-* [Docker Compose](https://docs.docker.com/compose) to run containers locally
+- [Docker](https://www.docker.com) for containers.
+- [Docker Compose](https://docs.docker.com/compose) to run containers locally
   and during the build.
-* [Jenkins](https://jenkins.io) to test, build and deploy the application.
-* [Kubernetes](https://kubernetes.io) to orchestrate the container deployment.
-* [PostgreSQL](https://www.postgresql.org/) or [MySQL](https://www.mysql.com/)
+- [Jenkins](https://jenkins.io) to test, build and deploy the application.
+- [Kubernetes](https://kubernetes.io) to orchestrate the container deployment.
+- [PostgreSQL](https://www.postgresql.org/) or [MySQL](https://www.mysql.com/)
   (see the `create-boilerplate-app` script) as database engines.
 
 Containers offer big advantages in software development, quality assurance and
@@ -60,23 +60,23 @@ _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-* [Local Development](#local-development)
-  * [Local development tools](#local-development-tools)
-  * [Installation](#installation)
-  * [Setting up the environment](#setting-up-the-environment)
-  * [Running the application](#running-the-application)
-  * [Customizing Style](#customizing-style)
-  * [Tests](#tests)
-    * [Running the tests](#running-the-tests)
-    * [Creating new tests](#creating-new-tests)
-  * [Connecting to the database](#connecting-to-the-database)
-  * [Under the hood](#under-the-hood)
-* [Application Health Check](#application-health-check)
-  * [Quick health check](#quick-health-check)
-  * [Long health check](#long-health-check)
-* [Directory structure](#directory-structure)
-  * [Troubleshooting and useful Docker commands](#troubleshooting-and-useful-docker-commands)
-  * [Deploy](#deploy)
+- [Local Development](#local-development)
+  - [Local development tools](#local-development-tools)
+  - [Installation](#installation)
+  - [Setting up the environment](#setting-up-the-environment)
+  - [Running the application](#running-the-application)
+  - [Customizing Style](#customizing-style)
+  - [Tests](#tests)
+    - [Running the tests](#running-the-tests)
+    - [Creating new tests](#creating-new-tests)
+  - [Connecting to the database](#connecting-to-the-database)
+  - [Under the hood](#under-the-hood)
+- [Application Health Check](#application-health-check)
+  - [Quick health check](#quick-health-check)
+  - [Long health check](#long-health-check)
+- [Directory structure](#directory-structure)
+  - [Troubleshooting and useful Docker commands](#troubleshooting-and-useful-docker-commands)
+  - [Deploy](#deploy)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -92,9 +92,9 @@ and without obvious errors.
 
 Local prerequisites are minimal, please follow the
 [installation instructions](INSTALL.md) carefully. We support Linux and MacOS;
-Windows users should use a Linux VM. Review your Docker Advanced settings and
-consider to assign more CPUs and more memory to the Docker process to boost
-performance.
+Windows users can use Docker for Windows with several workarounds or use a Linux VM.
+Review your Docker Advanced settings and consider to assign more CPUs and more memory
+to the Docker process to boost performance.
 
 ### Setting up the environment
 
@@ -208,14 +208,14 @@ the entire application stack. It is called approximately every 1 minute, so it
 can involve computation and light access to external resources. The long health
 check should verify the liveness of every dependent service and:
 
-* Return HTTP 200 if everything is good.
-* Return HTTP 500 and a human-readable error message if something is wrong.
+- Return HTTP 200 if everything is good.
+- Return HTTP 500 and a human-readable error message if something is wrong.
 
 Examples of controlled services:
 
-* Simple query to assess database liveness and connectivity (`SELECT 1;`)
-* Simple query to assess Redis connectivity
-* Simple API call to assess external REST API liveness and connectivity
+- Simple query to assess database liveness and connectivity (`SELECT 1;`)
+- Simple query to assess Redis connectivity
+- Simple API call to assess external REST API liveness and connectivity
 
 A module should also check for a consistent internal state. For example: a
 email-sending worker should check for the sending queue to be less than a
