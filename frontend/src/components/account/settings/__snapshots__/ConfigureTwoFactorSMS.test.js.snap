@@ -1,871 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConfigureTwoFactorSMS /> should render <ConfigureTwoFactorSMS /> without errors 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfigureTwoFactorSMS
-    configureTwoFactorSMS={[Function]}
-    generateTwoFactorSMS={[Function]}
-    location={
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
       Object {
-        "search": "",
+        "properties": Object {
+          "phoneNumber": Object {
+            "title": "What's your phone number",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "phoneNumber",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
       }
     }
-    user={Object {}}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <Form
-        ErrorList={[Function]}
-        disabled={false}
-        liveValidate={false}
-        noHtml5Validate={true}
-        noValidate={false}
-        onSubmit={[Function]}
-        safeRenderCompletion={false}
-        schema={
-          Object {
-            "properties": Object {
-              "phoneNumber": Object {
-                "title": "What's your phone number",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "phoneNumber",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          }
-        }
-        uiSchema={
-          Object {
-            "phoneNumber": Object {},
-          }
-        }
+    uiSchema={
+      Object {
+        "phoneNumber": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
       >
-        <fieldset>
-          <button
-            className="btn btn-primary"
-            type="submit"
-          >
-            Send authentication code
-          </button>
-        </fieldset>
-      </Form>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "ErrorList": [Function],
-        "children": Array [
-          undefined,
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>
-          </fieldset>,
-        ],
-        "disabled": false,
-        "liveValidate": false,
-        "noHtml5Validate": true,
-        "noValidate": false,
-        "onSubmit": [Function],
-        "safeRenderCompletion": false,
-        "schema": Object {
-          "properties": Object {
-            "phoneNumber": Object {
-              "title": "What's your phone number",
-              "type": "string",
-            },
-          },
-          "required": Array [
-            "phoneNumber",
-          ],
-          "title": "Add SMS Authentication",
-          "type": "object",
-        },
-        "uiSchema": Object {
-          "phoneNumber": Object {},
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Send authentication code",
-              "className": "btn btn-primary",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": "Send authentication code",
-            "type": "button",
-          },
-          "type": "fieldset",
-        },
-      ],
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Form
-          ErrorList={[Function]}
-          disabled={false}
-          liveValidate={false}
-          noHtml5Validate={true}
-          noValidate={false}
-          onSubmit={[Function]}
-          safeRenderCompletion={false}
-          schema={
-            Object {
-              "properties": Object {
-                "phoneNumber": Object {
-                  "title": "What's your phone number",
-                  "type": "string",
-                },
-              },
-              "required": Array [
-                "phoneNumber",
-              ],
-              "title": "Add SMS Authentication",
-              "type": "object",
-            }
-          }
-          uiSchema={
-            Object {
-              "phoneNumber": Object {},
-            }
-          }
-        >
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>
-          </fieldset>
-        </Form>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "ErrorList": [Function],
-          "children": Array [
-            undefined,
-            <fieldset>
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Send authentication code
-              </button>
-            </fieldset>,
-          ],
-          "disabled": false,
-          "liveValidate": false,
-          "noHtml5Validate": true,
-          "noValidate": false,
-          "onSubmit": [Function],
-          "safeRenderCompletion": false,
-          "schema": Object {
-            "properties": Object {
-              "phoneNumber": Object {
-                "title": "What's your phone number",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "phoneNumber",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          },
-          "uiSchema": Object {
-            "phoneNumber": Object {},
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          undefined,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Send authentication code
-              </button>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Send authentication code",
-                "className": "btn btn-primary",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": "Send authentication code",
-              "type": "button",
-            },
-            "type": "fieldset",
-          },
-        ],
-        "type": [Function],
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        Send authentication code
+      </button>
+    </fieldset>
+  </Form>
+</div>
 `;
 
 exports[`<ConfigureTwoFactorSMS /> should render the confirm message 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfigureTwoFactorSMS
-    configureTwoFactorSMS={[Function]}
-    generateTwoFactorSMS={[Function]}
-    location={
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
       Object {
-        "search": "?confirm",
+        "properties": Object {
+          "token": Object {
+            "title": "Please enter the 6-digit authentication code we just sent you",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "token",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
       }
     }
-    user={Object {}}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <Form
-        ErrorList={[Function]}
-        disabled={false}
-        liveValidate={false}
-        noHtml5Validate={true}
-        noValidate={false}
-        onSubmit={[Function]}
-        safeRenderCompletion={false}
-        schema={
-          Object {
-            "properties": Object {
-              "token": Object {
-                "title": "Please enter the 6-digit authentication code we just sent you",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "token",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          }
-        }
-        uiSchema={
-          Object {
-            "token": Object {},
-          }
-        }
+    uiSchema={
+      Object {
+        "token": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
       >
-        <fieldset>
-          <button
-            className="btn btn-primary"
-            type="submit"
-          >
-            Verify code
-          </button>
-        </fieldset>
-      </Form>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "ErrorList": [Function],
-        "children": Array [
-          undefined,
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Verify code
-            </button>
-          </fieldset>,
-        ],
-        "disabled": false,
-        "liveValidate": false,
-        "noHtml5Validate": true,
-        "noValidate": false,
-        "onSubmit": [Function],
-        "safeRenderCompletion": false,
-        "schema": Object {
-          "properties": Object {
-            "token": Object {
-              "title": "Please enter the 6-digit authentication code we just sent you",
-              "type": "string",
-            },
-          },
-          "required": Array [
-            "token",
-          ],
-          "title": "Add SMS Authentication",
-          "type": "object",
-        },
-        "uiSchema": Object {
-          "token": Object {},
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Verify code
-            </button>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Verify code",
-              "className": "btn btn-primary",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": "Verify code",
-            "type": "button",
-          },
-          "type": "fieldset",
-        },
-      ],
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Form
-          ErrorList={[Function]}
-          disabled={false}
-          liveValidate={false}
-          noHtml5Validate={true}
-          noValidate={false}
-          onSubmit={[Function]}
-          safeRenderCompletion={false}
-          schema={
-            Object {
-              "properties": Object {
-                "token": Object {
-                  "title": "Please enter the 6-digit authentication code we just sent you",
-                  "type": "string",
-                },
-              },
-              "required": Array [
-                "token",
-              ],
-              "title": "Add SMS Authentication",
-              "type": "object",
-            }
-          }
-          uiSchema={
-            Object {
-              "token": Object {},
-            }
-          }
-        >
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Verify code
-            </button>
-          </fieldset>
-        </Form>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "ErrorList": [Function],
-          "children": Array [
-            undefined,
-            <fieldset>
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Verify code
-              </button>
-            </fieldset>,
-          ],
-          "disabled": false,
-          "liveValidate": false,
-          "noHtml5Validate": true,
-          "noValidate": false,
-          "onSubmit": [Function],
-          "safeRenderCompletion": false,
-          "schema": Object {
-            "properties": Object {
-              "token": Object {
-                "title": "Please enter the 6-digit authentication code we just sent you",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "token",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          },
-          "uiSchema": Object {
-            "token": Object {},
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          undefined,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Verify code
-              </button>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Verify code",
-                "className": "btn btn-primary",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": "Verify code",
-              "type": "button",
-            },
-            "type": "fieldset",
-          },
-        ],
-        "type": [Function],
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        Verify code
+      </button>
+    </fieldset>
+  </Form>
+</div>
 `;
 
 exports[`<ConfigureTwoFactorSMS /> should render the ok message 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfigureTwoFactorSMS
-    configureTwoFactorSMS={[Function]}
-    generateTwoFactorSMS={[Function]}
-    location={
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
       Object {
-        "search": "?sent",
+        "properties": Object {
+          "phoneNumber": Object {
+            "title": "What's your phone number",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "phoneNumber",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
       }
     }
-    user={Object {}}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <Form
-        ErrorList={[Function]}
-        disabled={false}
-        liveValidate={false}
-        noHtml5Validate={true}
-        noValidate={false}
-        onSubmit={[Function]}
-        safeRenderCompletion={false}
-        schema={
-          Object {
-            "properties": Object {
-              "phoneNumber": Object {
-                "title": "What's your phone number",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "phoneNumber",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          }
-        }
-        uiSchema={
-          Object {
-            "phoneNumber": Object {},
-          }
-        }
+    uiSchema={
+      Object {
+        "phoneNumber": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
       >
-        <fieldset>
-          <button
-            className="btn btn-primary"
-            type="submit"
-          >
-            Send authentication code
-          </button>
-        </fieldset>
-      </Form>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "ErrorList": [Function],
-        "children": Array [
-          undefined,
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>
-          </fieldset>,
-        ],
-        "disabled": false,
-        "liveValidate": false,
-        "noHtml5Validate": true,
-        "noValidate": false,
-        "onSubmit": [Function],
-        "safeRenderCompletion": false,
-        "schema": Object {
-          "properties": Object {
-            "phoneNumber": Object {
-              "title": "What's your phone number",
-              "type": "string",
-            },
-          },
-          "required": Array [
-            "phoneNumber",
-          ],
-          "title": "Add SMS Authentication",
-          "type": "object",
-        },
-        "uiSchema": Object {
-          "phoneNumber": Object {},
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Send authentication code",
-              "className": "btn btn-primary",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": "Send authentication code",
-            "type": "button",
-          },
-          "type": "fieldset",
-        },
-      ],
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Form
-          ErrorList={[Function]}
-          disabled={false}
-          liveValidate={false}
-          noHtml5Validate={true}
-          noValidate={false}
-          onSubmit={[Function]}
-          safeRenderCompletion={false}
-          schema={
-            Object {
-              "properties": Object {
-                "phoneNumber": Object {
-                  "title": "What's your phone number",
-                  "type": "string",
-                },
-              },
-              "required": Array [
-                "phoneNumber",
-              ],
-              "title": "Add SMS Authentication",
-              "type": "object",
-            }
-          }
-          uiSchema={
-            Object {
-              "phoneNumber": Object {},
-            }
-          }
-        >
-          <fieldset>
-            <button
-              className="btn btn-primary"
-              type="submit"
-            >
-              Send authentication code
-            </button>
-          </fieldset>
-        </Form>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "ErrorList": [Function],
-          "children": Array [
-            undefined,
-            <fieldset>
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Send authentication code
-              </button>
-            </fieldset>,
-          ],
-          "disabled": false,
-          "liveValidate": false,
-          "noHtml5Validate": true,
-          "noValidate": false,
-          "onSubmit": [Function],
-          "safeRenderCompletion": false,
-          "schema": Object {
-            "properties": Object {
-              "phoneNumber": Object {
-                "title": "What's your phone number",
-                "type": "string",
-              },
-            },
-            "required": Array [
-              "phoneNumber",
-            ],
-            "title": "Add SMS Authentication",
-            "type": "object",
-          },
-          "uiSchema": Object {
-            "phoneNumber": Object {},
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          undefined,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Send authentication code
-              </button>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Send authentication code",
-                "className": "btn btn-primary",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": "Send authentication code",
-              "type": "button",
-            },
-            "type": "fieldset",
-          },
-        ],
-        "type": [Function],
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        Send authentication code
+      </button>
+    </fieldset>
+  </Form>
+</div>
 `;

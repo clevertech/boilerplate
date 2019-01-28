@@ -1,6 +1,10 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:jest/recommended'],
   plugins: ['jest'],
+  globals: {
+    sinon: true,
+    nock: true
+  },
   env: {
     es6: true, // otherwise you cannot use const and many other things
     node: true, // otherwise we get errors for using require, process, etc.

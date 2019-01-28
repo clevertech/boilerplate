@@ -1,815 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConfigureTwoFactorApp /> should render <ConfigureTwoFactorApp /> without errors 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfigureTwoFactorApp
-    configureTwoFactorQR={[Function]}
-    generateTwoFactorQR={[Function]}
-    location={
-      Object {
-        "search": "",
-      }
-    }
-    user={
-      Object {
-        "email": "user@example.com",
-      }
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <div
-          className="col-8"
-        >
-          <Form
-            ErrorList={[Function]}
-            disabled={false}
-            liveValidate={false}
-            noHtml5Validate={true}
-            noValidate={false}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "token": Object {
-                    "title": "Code",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "token",
-                ],
-                "title": "Enter Verification Code",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "token": Object {
-                  "ui:help": "Enter the 6-digit verification code generated in the app",
-                },
-              }
-            }
-          >
-            Generating QR...
-            <fieldset>
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Verify Code
-              </button>
-            </fieldset>
-          </Form>
-        </div>,
-        <div
-          className="col-4 d-flex justify-content-center align-items-center"
-        >
-          Generating QR...
-        </div>,
-      ],
-      "className": "row",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <Form
-            ErrorList={[Function]}
-            disabled={false}
-            liveValidate={false}
-            noHtml5Validate={true}
-            noValidate={false}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "token": Object {
-                    "title": "Code",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "token",
-                ],
-                "title": "Enter Verification Code",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "token": Object {
-                  "ui:help": "Enter the 6-digit verification code generated in the app",
-                },
-              }
-            }
-          >
-            Generating QR...
-            <fieldset>
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Verify Code
-              </button>
-            </fieldset>
-          </Form>,
-          "className": "col-8",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "ErrorList": [Function],
-            "children": Array [
-              undefined,
-              "Generating QR...",
-              undefined,
-              <fieldset>
-                <button
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Verify Code
-                </button>
-              </fieldset>,
-            ],
-            "disabled": false,
-            "liveValidate": false,
-            "noHtml5Validate": true,
-            "noValidate": false,
-            "onSubmit": [Function],
-            "safeRenderCompletion": false,
-            "schema": Object {
-              "properties": Object {
-                "token": Object {
-                  "title": "Code",
-                  "type": "string",
-                },
-              },
-              "required": Array [
-                "token",
-              ],
-              "title": "Enter Verification Code",
-              "type": "object",
-            },
-            "uiSchema": Object {
-              "token": Object {
-                "ui:help": "Enter the 6-digit verification code generated in the app",
-              },
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            undefined,
-            "Generating QR...",
-            undefined,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <button
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Verify Code
-                </button>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Verify Code",
-                  "className": "btn btn-primary",
-                  "type": "submit",
-                },
-                "ref": null,
-                "rendered": "Verify Code",
-                "type": "button",
-              },
-              "type": "fieldset",
-            },
-          ],
-          "type": [Function],
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Generating QR...",
-            undefined,
-          ],
-          "className": "col-4 d-flex justify-content-center align-items-center",
-        },
-        "ref": null,
-        "rendered": Array [
-          "Generating QR...",
-          undefined,
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="col-8"
-          >
-            <Form
-              ErrorList={[Function]}
-              disabled={false}
-              liveValidate={false}
-              noHtml5Validate={true}
-              noValidate={false}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "token": Object {
-                      "title": "Code",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "token",
-                  ],
-                  "title": "Enter Verification Code",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "token": Object {
-                    "ui:help": "Enter the 6-digit verification code generated in the app",
-                  },
-                }
-              }
-            >
-              Generating QR...
-              <fieldset>
-                <button
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Verify Code
-                </button>
-              </fieldset>
-            </Form>
-          </div>,
-          <div
-            className="col-4 d-flex justify-content-center align-items-center"
-          >
-            Generating QR...
-          </div>,
-        ],
-        "className": "row",
-      },
-      "ref": null,
-      "rendered": Array [
+<div
+  className="row"
+>
+  <div
+    className="col-8"
+  >
+    <Form
+      ErrorList={[Function]}
+      disabled={false}
+      liveValidate={false}
+      noHtml5Validate={true}
+      noValidate={false}
+      onSubmit={[Function]}
+      safeRenderCompletion={false}
+      schema={
         Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Form
-              ErrorList={[Function]}
-              disabled={false}
-              liveValidate={false}
-              noHtml5Validate={true}
-              noValidate={false}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "token": Object {
-                      "title": "Code",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "token",
-                  ],
-                  "title": "Enter Verification Code",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "token": Object {
-                    "ui:help": "Enter the 6-digit verification code generated in the app",
-                  },
-                }
-              }
-            >
-              Generating QR...
-              <fieldset>
-                <button
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Verify Code
-                </button>
-              </fieldset>
-            </Form>,
-            "className": "col-8",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "ErrorList": [Function],
-              "children": Array [
-                undefined,
-                "Generating QR...",
-                undefined,
-                <fieldset>
-                  <button
-                    className="btn btn-primary"
-                    type="submit"
-                  >
-                    Verify Code
-                  </button>
-                </fieldset>,
-              ],
-              "disabled": false,
-              "liveValidate": false,
-              "noHtml5Validate": true,
-              "noValidate": false,
-              "onSubmit": [Function],
-              "safeRenderCompletion": false,
-              "schema": Object {
-                "properties": Object {
-                  "token": Object {
-                    "title": "Code",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "token",
-                ],
-                "title": "Enter Verification Code",
-                "type": "object",
-              },
-              "uiSchema": Object {
-                "token": Object {
-                  "ui:help": "Enter the 6-digit verification code generated in the app",
-                },
-              },
+          "properties": Object {
+            "token": Object {
+              "title": "Code",
+              "type": "string",
             },
-            "ref": null,
-            "rendered": Array [
-              undefined,
-              "Generating QR...",
-              undefined,
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <button
-                    className="btn btn-primary"
-                    type="submit"
-                  >
-                    Verify Code
-                  </button>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Verify Code",
-                    "className": "btn btn-primary",
-                    "type": "submit",
-                  },
-                  "ref": null,
-                  "rendered": "Verify Code",
-                  "type": "button",
-                },
-                "type": "fieldset",
-              },
-            ],
-            "type": [Function],
           },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Generating QR...",
-              undefined,
-            ],
-            "className": "col-4 d-flex justify-content-center align-items-center",
-          },
-          "ref": null,
-          "rendered": Array [
-            "Generating QR...",
-            undefined,
+          "required": Array [
+            "token",
           ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
+          "title": "Enter Verification Code",
+          "type": "object",
+        }
+      }
+      uiSchema={
+        Object {
+          "token": Object {
+            "ui:help": "Enter the 6-digit verification code generated in the app",
           },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        }
+      }
+    >
+      Generating QR...
+      <fieldset>
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Verify Code
+        </button>
+      </fieldset>
+    </Form>
+  </div>
+  <div
+    className="col-4 d-flex justify-content-center align-items-center"
+  >
+    Generating QR...
+  </div>
+</div>
 `;
 
 exports[`<ConfigureTwoFactorApp /> should render the success message 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfigureTwoFactorApp
-    configureTwoFactorQR={[Function]}
-    generateTwoFactorQR={[Function]}
-    location={
-      Object {
-        "search": "?ok",
-      }
-    }
-    user={
-      Object {
-        "email": "user@example.com",
-      }
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
       >
-        <div
-          className="card-body"
-        >
-          <h5
-            className="card-title"
-          >
-            <i
-              className="fas fa-check"
-            />
-          </h5>
-          <p
-            className="card-text"
-          >
-            Two factor authentication using an app is now enabled in your account.
-          </p>
-          <RecoveryCodes
-            codes={Array []}
-            email="user@example.com"
-          />
-        </div>
-      </div>,
-      "className": "container text-center",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="card-body"
-        >
-          <h5
-            className="card-title"
-          >
-            <i
-              className="fas fa-check"
-            />
-          </h5>
-          <p
-            className="card-text"
-          >
-            Two factor authentication using an app is now enabled in your account.
-          </p>
-          <RecoveryCodes
-            codes={Array []}
-            email="user@example.com"
-          />
-        </div>,
-        "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-check"
-              />
-            </h5>,
-            <p
-              className="card-text"
-            >
-              Two factor authentication using an app is now enabled in your account.
-            </p>,
-            <RecoveryCodes
-              codes={Array []}
-              email="user@example.com"
-            />,
-          ],
-          "className": "card-body",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <i
-                className="fas fa-check"
-              />,
-              "className": "card-title",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "fas fa-check",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "i",
-            },
-            "type": "h5",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Two factor authentication using an app is now enabled in your account.",
-              "className": "card-text",
-            },
-            "ref": null,
-            "rendered": "Two factor authentication using an app is now enabled in your account.",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "codes": Array [],
-              "email": "user@example.com",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
-        >
-          <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-check"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Two factor authentication using an app is now enabled in your account.
-            </p>
-            <RecoveryCodes
-              codes={Array []}
-              email="user@example.com"
-            />
-          </div>
-        </div>,
-        "className": "container text-center",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-check"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Two factor authentication using an app is now enabled in your account.
-            </p>
-            <RecoveryCodes
-              codes={Array []}
-              email="user@example.com"
-            />
-          </div>,
-          "className": "card shadow-lg p-3 mb-5 bg-white rounded message-box",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h5
-                className="card-title"
-              >
-                <i
-                  className="fas fa-check"
-                />
-              </h5>,
-              <p
-                className="card-text"
-              >
-                Two factor authentication using an app is now enabled in your account.
-              </p>,
-              <RecoveryCodes
-                codes={Array []}
-                email="user@example.com"
-              />,
-            ],
-            "className": "card-body",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <i
-                  className="fas fa-check"
-                />,
-                "className": "card-title",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "fas fa-check",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
-              },
-              "type": "h5",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Two factor authentication using an app is now enabled in your account.",
-                "className": "card-text",
-              },
-              "ref": null,
-              "rendered": "Two factor authentication using an app is now enabled in your account.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "codes": Array [],
-                "email": "user@example.com",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-        "type": "div",
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        <i
+          className="fas fa-check"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Two factor authentication using an app is now enabled in your account.
+      </p>
+      <RecoveryCodes
+        codes={Array []}
+        email="user@example.com"
+      />
+    </div>
+  </div>
+</div>
 `;

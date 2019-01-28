@@ -1,687 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConfirmEmail /> should render <ConfirmEmail /> without errors 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfirmEmail
-    confirmEmail={[Function]}
-    location={
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded"
+    style={
       Object {
-        "search": "",
+        "margin": "100px auto",
+        "width": "20rem",
       }
     }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        undefined,
-        <div
-          className="card shadow-lg p-3 mb-5 bg-white rounded"
-          style={
-            Object {
-              "margin": "100px auto",
-              "width": "20rem",
-            }
-          }
-        >
-          <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-user-cog"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Please, hold on a second...
-            </p>
-          </div>
-        </div>,
-      ],
-      "className": "container text-center",
-    },
-    "ref": null,
-    "rendered": Array [
-      undefined,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-user-cog"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Please, hold on a second...
-            </p>
-          </div>,
-          "className": "card shadow-lg p-3 mb-5 bg-white rounded",
-          "style": Object {
-            "margin": "100px auto",
-            "width": "20rem",
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h5
-                className="card-title"
-              >
-                <i
-                  className="fas fa-user-cog"
-                />
-              </h5>,
-              <p
-                className="card-text"
-              >
-                Please, hold on a second...
-              </p>,
-            ],
-            "className": "card-body",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <i
-                  className="fas fa-user-cog"
-                />,
-                "className": "card-title",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "fas fa-user-cog",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
-              },
-              "type": "h5",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Please, hold on a second...",
-                "className": "card-text",
-              },
-              "ref": null,
-              "rendered": "Please, hold on a second...",
-              "type": "p",
-            },
-          ],
-          "type": "div",
-        },
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          undefined,
-          <div
-            className="card shadow-lg p-3 mb-5 bg-white rounded"
-            style={
-              Object {
-                "margin": "100px auto",
-                "width": "20rem",
-              }
-            }
-          >
-            <div
-              className="card-body"
-            >
-              <h5
-                className="card-title"
-              >
-                <i
-                  className="fas fa-user-cog"
-                />
-              </h5>
-              <p
-                className="card-text"
-              >
-                Please, hold on a second...
-              </p>
-            </div>
-          </div>,
-        ],
-        "className": "container text-center",
-      },
-      "ref": null,
-      "rendered": Array [
-        undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
-              className="card-body"
-            >
-              <h5
-                className="card-title"
-              >
-                <i
-                  className="fas fa-user-cog"
-                />
-              </h5>
-              <p
-                className="card-text"
-              >
-                Please, hold on a second...
-              </p>
-            </div>,
-            "className": "card shadow-lg p-3 mb-5 bg-white rounded",
-            "style": Object {
-              "margin": "100px auto",
-              "width": "20rem",
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h5
-                  className="card-title"
-                >
-                  <i
-                    className="fas fa-user-cog"
-                  />
-                </h5>,
-                <p
-                  className="card-text"
-                >
-                  Please, hold on a second...
-                </p>,
-              ],
-              "className": "card-body",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <i
-                    className="fas fa-user-cog"
-                  />,
-                  "className": "card-title",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "fas fa-user-cog",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "i",
-                },
-                "type": "h5",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Please, hold on a second...",
-                  "className": "card-text",
-                },
-                "ref": null,
-                "rendered": "Please, hold on a second...",
-                "type": "p",
-              },
-            ],
-            "type": "div",
-          },
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-user-cog"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Please, hold on a second...
+      </p>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`<ConfirmEmail /> should render the success message 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConfirmEmail
-    confirmEmail={[Function]}
-    location={
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded"
+    style={
       Object {
-        "search": "?ok",
+        "margin": "100px auto",
+        "width": "20rem",
       }
     }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="card shadow-lg p-3 mb-5 bg-white rounded"
-        style={
-          Object {
-            "margin": "100px auto",
-            "width": "20rem",
-          }
-        }
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
       >
-        <div
-          className="card-body"
-        >
-          <h5
-            className="card-title"
-          >
-            <i
-              className="fas fa-envelope"
-            />
-          </h5>
-          <p
-            className="card-text"
-          >
-            Thanks! You have confirmed your email address successfully
-          </p>
-          <Link
-            className="btn btn-primary"
-            replace={false}
-            to="/account/login"
-          >
-            Log in with your credentials
-          </Link>
-        </div>
-      </div>,
-      "className": "container text-center",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="card-body"
-        >
-          <h5
-            className="card-title"
-          >
-            <i
-              className="fas fa-envelope"
-            />
-          </h5>
-          <p
-            className="card-text"
-          >
-            Thanks! You have confirmed your email address successfully
-          </p>
-          <Link
-            className="btn btn-primary"
-            replace={false}
-            to="/account/login"
-          >
-            Log in with your credentials
-          </Link>
-        </div>,
-        "className": "card shadow-lg p-3 mb-5 bg-white rounded",
-        "style": Object {
-          "margin": "100px auto",
-          "width": "20rem",
-        },
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-envelope"
-              />
-            </h5>,
-            <p
-              className="card-text"
-            >
-              Thanks! You have confirmed your email address successfully
-            </p>,
-            <Link
-              className="btn btn-primary"
-              replace={false}
-              to="/account/login"
-            >
-              Log in with your credentials
-            </Link>,
-          ],
-          "className": "card-body",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <i
-                className="fas fa-envelope"
-              />,
-              "className": "card-title",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "fas fa-envelope",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "i",
-            },
-            "type": "h5",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Thanks! You have confirmed your email address successfully",
-              "className": "card-text",
-            },
-            "ref": null,
-            "rendered": "Thanks! You have confirmed your email address successfully",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Log in with your credentials",
-              "className": "btn btn-primary",
-              "replace": false,
-              "to": "/account/login",
-            },
-            "ref": null,
-            "rendered": "Log in with your credentials",
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="card shadow-lg p-3 mb-5 bg-white rounded"
-          style={
-            Object {
-              "margin": "100px auto",
-              "width": "20rem",
-            }
-          }
-        >
-          <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-envelope"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Thanks! You have confirmed your email address successfully
-            </p>
-            <Link
-              className="btn btn-primary"
-              replace={false}
-              to="/account/login"
-            >
-              Log in with your credentials
-            </Link>
-          </div>
-        </div>,
-        "className": "container text-center",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="card-body"
-          >
-            <h5
-              className="card-title"
-            >
-              <i
-                className="fas fa-envelope"
-              />
-            </h5>
-            <p
-              className="card-text"
-            >
-              Thanks! You have confirmed your email address successfully
-            </p>
-            <Link
-              className="btn btn-primary"
-              replace={false}
-              to="/account/login"
-            >
-              Log in with your credentials
-            </Link>
-          </div>,
-          "className": "card shadow-lg p-3 mb-5 bg-white rounded",
-          "style": Object {
-            "margin": "100px auto",
-            "width": "20rem",
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h5
-                className="card-title"
-              >
-                <i
-                  className="fas fa-envelope"
-                />
-              </h5>,
-              <p
-                className="card-text"
-              >
-                Thanks! You have confirmed your email address successfully
-              </p>,
-              <Link
-                className="btn btn-primary"
-                replace={false}
-                to="/account/login"
-              >
-                Log in with your credentials
-              </Link>,
-            ],
-            "className": "card-body",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <i
-                  className="fas fa-envelope"
-                />,
-                "className": "card-title",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "fas fa-envelope",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
-              },
-              "type": "h5",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Thanks! You have confirmed your email address successfully",
-                "className": "card-text",
-              },
-              "ref": null,
-              "rendered": "Thanks! You have confirmed your email address successfully",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Log in with your credentials",
-                "className": "btn btn-primary",
-                "replace": false,
-                "to": "/account/login",
-              },
-              "ref": null,
-              "rendered": "Log in with your credentials",
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-        "type": "div",
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        <i
+          className="fas fa-envelope"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Thanks! You have confirmed your email address successfully
+      </p>
+      <Link
+        className="btn btn-primary"
+        replace={false}
+        to="/account/login"
+      >
+        Log in with your credentials
+      </Link>
+    </div>
+  </div>
+</div>
 `;

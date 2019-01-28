@@ -52,6 +52,8 @@ jspm_packages
 *.sublime-workspace
 
 *.env
+*.env.integration
+*.env.test
 
 # Docker local cache
 .cache.tgz
