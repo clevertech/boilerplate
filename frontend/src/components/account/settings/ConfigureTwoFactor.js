@@ -182,4 +182,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 ConfigureTwoFactor.propTypes = propTypes;
 export { ConfigureTwoFactor };
-export default withError(connect(mapStateToProps, mapDispatchToProps)(ConfigureTwoFactor));
+export default withError(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ConfigureTwoFactor)
+);

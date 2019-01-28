@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:jest/recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:jest/recommended'],
   plugins: ['jest'],
   env: {
     es6: true, // otherwise you cannot use const and many other things
@@ -27,6 +23,7 @@ module.exports = {
     'max-depth': ['warn', 7],
     'max-lines': ['warn', 750],
     'array-callback-return': 'warn',
+    'prettier/prettier': 'warn',
     complexity: ['warn', { max: 20 }]
   }
 };

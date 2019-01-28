@@ -110,4 +110,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 ForgotPassword.propTypes = propTypes;
 export { ForgotPassword };
-export default withError(connect(mapStateToProps, mapDispatchToProps)(ForgotPassword));
+export default withError(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ForgotPassword)
+);

@@ -10,6 +10,7 @@ module.exports = {
     'max-depth': ['warn', 7],
     'max-lines': ['warn', 750],
     'array-callback-return': 'warn',
+    'prettier/prettier': 'warn',
     complexity: ['warn', { max: 20 }]
   }
 };
