@@ -1,19 +1,16 @@
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { Register } from './Register';
-Enzyme.configure({ adapter: new Adapter() });
 
 const noop = () => {};
 
 describe('<Register />', () => {
   test('should render <Register /> without errors', () => {
-    const wrapper = Enzyme.shallow(<Register location={{ search: '' }} register={noop} />);
+    const wrapper = shallow(<Register location={{ search: '' }} register={noop} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   test('should render the success message', () => {
-    const wrapper = Enzyme.shallow(<Register location={{ search: '?ok' }} register={noop} />);
+    const wrapper = shallow(<Register location={{ search: '?ok' }} register={noop} />);
     expect(wrapper).toMatchSnapshot();
   });
 

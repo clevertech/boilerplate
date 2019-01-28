@@ -1,23 +1,16 @@
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { ChangePassword } from './ChangePassword';
-Enzyme.configure({ adapter: new Adapter() });
 
 const noop = () => {};
 
 describe('<ChangePassword />', () => {
   test('should render <ChangePassword /> without errors', () => {
-    const wrapper = Enzyme.shallow(
-      <ChangePassword location={{ search: '' }} changePassword={noop} />
-    );
+    const wrapper = shallow(<ChangePassword location={{ search: '' }} changePassword={noop} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   test('should render the success message', () => {
-    const wrapper = Enzyme.shallow(
-      <ChangePassword location={{ search: '?ok' }} changePassword={noop} />
-    );
+    const wrapper = shallow(<ChangePassword location={{ search: '?ok' }} changePassword={noop} />);
     expect(wrapper).toMatchSnapshot();
   });
 

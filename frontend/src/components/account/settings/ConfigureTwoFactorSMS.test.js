@@ -1,13 +1,11 @@
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { ConfigureTwoFactorSMS } from './ConfigureTwoFactorSMS';
-Enzyme.configure({ adapter: new Adapter() });
+
 const noop = () => {};
 
 describe('<ConfigureTwoFactorSMS />', () => {
   test('should render <ConfigureTwoFactorSMS /> without errors', () => {
-    const wrapper = Enzyme.shallow(
+    const wrapper = shallow(
       <ConfigureTwoFactorSMS
         location={{ search: '' }}
         generateTwoFactorSMS={noop}
@@ -19,7 +17,7 @@ describe('<ConfigureTwoFactorSMS />', () => {
   });
 
   test('should render the confirm message', () => {
-    const wrapper = Enzyme.shallow(
+    const wrapper = shallow(
       <ConfigureTwoFactorSMS
         location={{ search: '?confirm' }}
         generateTwoFactorSMS={noop}
@@ -31,7 +29,7 @@ describe('<ConfigureTwoFactorSMS />', () => {
   });
 
   test('should render the ok message', () => {
-    const wrapper = Enzyme.shallow(
+    const wrapper = shallow(
       <ConfigureTwoFactorSMS
         location={{ search: '?sent' }}
         generateTwoFactorSMS={noop}
