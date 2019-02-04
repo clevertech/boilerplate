@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Form from 'react-jsonschema-form';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import Form from 'react-jsonschema-form';
 import withError from '../withError';
 import { actions } from '../../redux/modules/account';
-import Box from './Box';
 
 const propTypes = {
   login: PropTypes.func.isRequired,
@@ -16,7 +15,6 @@ const propTypes = {
 
 const login = {
   schema: {
-    title: 'Member Login',
     type: 'object',
     required: ['email', 'password'],
     properties: {
@@ -33,7 +31,8 @@ const login = {
   },
   ui: {
     email: {
-      'ui:placeholder': 'you@example.com'
+      'ui:placeholder': 'you@example.com',
+      classNames: 'field'
     },
     password: {
       'ui:widget': 'password'
@@ -54,24 +53,45 @@ class Login extends Component {
     }
 
     return (
-      <Box>
-        <Form schema={login.schema} uiSchema={login.ui} onSubmit={this.onSubmit} noHtml5Validate>
-          {this.props.error}
-          <fieldset>
-            <button className="btn btn-primary btn-block btn-lg" type="submit">
-              Log In
-            </button>
-            <div className="mt-2">
-              <div className="float-left">
-                <Link to="/account/forgot-password">Forgot your password?</Link>
-              </div>
-              <div className="float-right d-block">
-                <Link to="/account/register">Create an account</Link>
-              </div>
+      <div>
+        <br />
+        <div className="columns is-mobile">
+          <div className="column is-half is-offset-one-fifth">
+            <div className="box">
+              <h3>Member Login</h3>
+              {this.props.error && (
+                <div className="notification is-link">
+                  <button className="delete" />
+                  {this.props.error}
+                </div>
+              )}
+
+              <Form
+                schema={login.schema}
+                uiSchema={login.ui}
+                onSubmit={this.onSubmit}
+                noHtml5Validate
+              >
+                <div className="field">
+                  <p className="control">
+                    <button className="button is-success" type="submit">
+                      Login
+                    </button>
+                  </p>
+                </div>
+                <div className="field is-grouped">
+                  <p className="control">
+                    <Link to="/account/forgot-password">Forgot your password?</Link>
+                  </p>
+                  <p className="control">
+                    <Link to="/account/register">Create an account</Link>
+                  </p>
+                </div>
+              </Form>
             </div>
-          </fieldset>
-        </Form>
-      </Box>
+          </div>
+        </div>
+      </div>
     );
   }
 }

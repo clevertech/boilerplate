@@ -8,6 +8,7 @@ Clevertech provides an integrated technology stack that
   etc.
 * 🛠 Implements a solid workflow for building, testing and deploying applications
 * 👤 Secure and complete authentication functionality (including 2FA with either SMS or apps like Google Authenticator)
+* 🎨 Supports SASS/SCSS
 
 Some of the best practices include:
 
@@ -64,6 +65,7 @@ _generated with [DocToc](https://github.com/thlorenz/doctoc)_
   * [Installation](#installation)
   * [Setting up the environment](#setting-up-the-environment)
   * [Running the application](#running-the-application)
+  * [Customizing Style](#customizing-style)
   * [Tests](#tests)
     * [Running the tests](#running-the-tests)
     * [Creating new tests](#creating-new-tests)
@@ -90,9 +92,9 @@ and without obvious errors.
 
 Local prerequisites are minimal, please follow the
 [installation instructions](INSTALL.md) carefully. We support Linux and MacOS;
-Windows users should use a Linux VM. Review your Docker Advanced settings and
-consider to assign more CPUs and more memory to the Docker process to boost
-performance.
+Windows users can use Docker for Windows with several workarounds or use a Linux VM.
+Review your Docker Advanced settings and consider to assign more CPUs and more memory
+to the Docker process to boost performance.
 
 ### Setting up the environment
 
@@ -102,7 +104,7 @@ Simply copy `.env.example` to `.env` and fill in your credentials as needed. The
 `.env.` file can be used to store sensitive / personal credentials without the
 risk of checking it into source control.
 
-By default [CleverAuth](https://github.com/clevertech/cleverauth) is enabled and some env variables are required for it. Take a look to `api/.env.example` and fill the required values.
+-By default [CleverAuth](https://github.com/clevertech/cleverauth) is enabled and some env variables are required for it. Take a look to `api/.env.example` and fill the required values.
 
 ### Running the application
 
@@ -133,6 +135,10 @@ adding a package), you can do something like:
 ```
 docker-compose exec api yarn add $YOUR_PACKAGE$
 ```
+
+### Customizing Style
+
+The boilerplate supports styling with SASS/SCSS. Just edit `main.scss` on `frontend/src/styles` and the boilerplate will convert it to css on-the-fly so you can take full advantage of all of SASS's features.
 
 ### Tests
 

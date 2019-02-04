@@ -6,12 +6,16 @@ const propTypes = {};
 class Home extends Component {
   render() {
     return (
-      <div>
-        <h1>Boilerplate</h1>
-        <p className="text-muted">
-          Everything you need to <strong>create an awesome</strong> project
-        </p>
-      </div>
+      <section className="hero is-medium is-primary is-bold">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">Welcome to Clevertech's Boilerplate</h1>
+            <p className="subtitle">
+              Everything you need to <strong>create an awesome</strong> project
+            </p>
+          </div>
+        </div>
+      </section>
     );
   }
 }
