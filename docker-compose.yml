@@ -18,7 +18,7 @@ services:
       - /opt/app/node_modules
   frontend:
     build: frontend/.
-    command: npm start
+    command: yarn start
     ports:
       - "0.0.0.0:3000:3000"
       - "0.0.0.0:3001:3001"
