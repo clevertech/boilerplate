@@ -7,6 +7,7 @@
     "bulma": "^0.7.4",
     "bulma-extensions": "^4.1.0",
     "graphql": "^14.1.1",
+    "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-apollo": "^2.4.1",
     "react-dom": "^16.8.1",
