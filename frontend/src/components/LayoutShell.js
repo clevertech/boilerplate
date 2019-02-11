@@ -25,11 +25,9 @@ const LayoutShell = (props) => (
           <Link className="navbar-item" to="/">
             Home
           </Link>
-          {props.user && (
-            <NavLink className="navbar-item" to="/books">
-              Books
-            </NavLink>
-          )}
+          <NavLink className="navbar-item" to="/books">
+            Books
+          </NavLink>
         </div>
 
         <div className="navbar-end">
