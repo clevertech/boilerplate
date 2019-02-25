@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfigureTwoFactor /> should render <ConfigureTwoFactor /> without errors 1`] = `
+<div>
+  <p>
+    Loading two-factor configuration status...
+  </p>
+</div>
+`;
+
+exports[`<ConfigureTwoFactor /> should render after loading the twoFactorStatus and it is disabled 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <h2>
+        Security
+      </h2>
+    </div>
+  </div>
+  <div>
+    <p>
+      There are two ways to configure two factor authentication 
+    </p>
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <h5
+          className="card-title"
+        >
+          SMS text message
+        </h5>
+        <p
+          className="card-text"
+        >
+          Receive a text message to your mobile device
+        </p>
+        <Link
+          replace={false}
+          to="/account/settings/2fa/sms"
+        >
+          <button
+            className="btn btn-primary"
+          >
+            Configure phone
+          </button>
+        </Link>
+      </div>
+    </div>
+    <br />
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <h5
+          className="card-title"
+        >
+          Use an app
+        </h5>
+        <p
+          className="card-text"
+        >
+          Scan a QR code with Google Authentication or similar apps
+        </p>
+        <Link
+          replace={false}
+          to="/account/settings/2fa/app"
+        >
+          <button
+            className="btn btn-primary"
+          >
+            Configure app
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ConfigureTwoFactor /> should render after loading the twoFactorStatus and it is enabled 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <h2>
+        Security
+      </h2>
+    </div>
+  </div>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    >
+      <p
+        className="card-text"
+      >
+        You have two factor authentication enabled 
+        using an app
+      </p>
+      <p
+        className="card-text"
+      >
+        <button
+          className="btn btn-secondary"
+          onClick={[Function]}
+        >
+          Edit
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ConfigureTwoFactor /> should render the disabled message 1`] = `
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-check"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Two factor authentication has been disabled.
+      </p>
+    </div>
+  </div>
+</div>
+`;

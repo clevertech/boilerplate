@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:10-alpine
 LABEL maintainer="Clevertech DevOps <support@clevertech.biz>"
 
 # Update OS

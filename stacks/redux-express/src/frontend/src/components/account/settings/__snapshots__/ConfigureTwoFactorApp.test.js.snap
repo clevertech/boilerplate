@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfigureTwoFactorApp /> should render <ConfigureTwoFactorApp /> without errors 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-8"
+  >
+    <Form
+      ErrorList={[Function]}
+      disabled={false}
+      liveValidate={false}
+      noHtml5Validate={true}
+      noValidate={false}
+      onSubmit={[Function]}
+      safeRenderCompletion={false}
+      schema={
+        Object {
+          "properties": Object {
+            "token": Object {
+              "title": "Code",
+              "type": "string",
+            },
+          },
+          "required": Array [
+            "token",
+          ],
+          "title": "Enter Verification Code",
+          "type": "object",
+        }
+      }
+      uiSchema={
+        Object {
+          "token": Object {
+            "ui:help": "Enter the 6-digit verification code generated in the app",
+          },
+        }
+      }
+    >
+      Generating QR...
+      <fieldset>
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Verify Code
+        </button>
+      </fieldset>
+    </Form>
+  </div>
+  <div
+    className="col-4 d-flex justify-content-center align-items-center"
+  >
+    Generating QR...
+  </div>
+</div>
+`;
+
+exports[`<ConfigureTwoFactorApp /> should render the success message 1`] = `
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded message-box"
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-check"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Two factor authentication using an app is now enabled in your account.
+      </p>
+      <RecoveryCodes
+        codes={Array []}
+        email="user@example.com"
+      />
+    </div>
+  </div>
+</div>
+`;

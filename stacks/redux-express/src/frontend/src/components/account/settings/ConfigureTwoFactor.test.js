@@ -1,4 +1,3 @@
-import { shallow } from 'enzyme';
 import React from 'react';
 import { ConfigureTwoFactor } from './ConfigureTwoFactor';
 

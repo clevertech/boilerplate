@@ -1,4 +1,4 @@
-import reducer, { actions } from './actions';
+import reducer, { actions } from './account';
 
 describe('Account reducer', () => {
   test('login action', () => {

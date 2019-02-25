@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+export NODE_ENV=test
+
+COMPOSE_PROJECT_NAME=biolerplate
+
+# Linux fix
+CONFIG_FILE=docker-compose.yml
+
+BUILD_CMD="docker-compose -f $CONFIG_FILE build db adminer redis"
+UP_CMD="docker-compose -f $CONFIG_FILE up db adminer redis"
+
+$BUILD_CMD
+$UP_CMD

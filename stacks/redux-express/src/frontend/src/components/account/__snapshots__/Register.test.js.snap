@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Register /> should render <Register /> without errors 1`] = `
+<div>
+  <br />
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-half is-offset-one-fifth"
+    >
+      <div
+        className="box"
+      >
+        <Form
+          ErrorList={[Function]}
+          disabled={false}
+          liveValidate={false}
+          noHtml5Validate={true}
+          noValidate={false}
+          onSubmit={[Function]}
+          safeRenderCompletion={false}
+          schema={
+            Object {
+              "properties": Object {
+                "email": Object {
+                  "format": "email",
+                  "title": "Email",
+                  "type": "string",
+                },
+                "firstName": Object {
+                  "title": "First name",
+                  "type": "string",
+                },
+                "lastName": Object {
+                  "title": "Last name",
+                  "type": "string",
+                },
+                "password": Object {
+                  "title": "Password",
+                  "type": "string",
+                },
+                "repassword": Object {
+                  "title": "Re-enter password",
+                  "type": "string",
+                },
+                "username": Object {
+                  "title": "Username",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "username",
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+                "repassword",
+              ],
+              "title": "Register",
+              "type": "object",
+            }
+          }
+          uiSchema={
+            Object {
+              "email": Object {
+                "ui:placeholder": "you@example.com",
+              },
+              "password": Object {
+                "ui:help": "Make it strong!",
+                "ui:widget": "password",
+              },
+              "repassword": Object {
+                "ui:widget": "password",
+              },
+            }
+          }
+          validate={[Function]}
+        >
+          <fieldset>
+            <button
+              className="btn btn-primary btn-block btn-lg"
+              type="submit"
+            >
+              Register
+            </button>
+            <div
+              className="mt-2"
+            >
+              <div
+                className="float-left"
+              >
+                <Link
+                  replace={false}
+                  to="/account/login"
+                >
+                  Log in to your account
+                </Link>
+              </div>
+            </div>
+          </fieldset>
+        </Form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Register /> should render the success message 1`] = `
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded"
+    style={
+      Object {
+        "margin": "100px auto",
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-envelope"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Check your inbox, we have sent you an email to confirm your email address.
+      </p>
+    </div>
+  </div>
+</div>
+`;

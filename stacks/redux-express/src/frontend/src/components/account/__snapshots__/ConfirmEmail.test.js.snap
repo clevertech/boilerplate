@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfirmEmail /> should render <ConfirmEmail /> without errors 1`] = `
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded"
+    style={
+      Object {
+        "margin": "100px auto",
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-user-cog"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Please, hold on a second...
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ConfirmEmail /> should render the success message 1`] = `
+<div
+  className="container text-center"
+>
+  <div
+    className="card shadow-lg p-3 mb-5 bg-white rounded"
+    style={
+      Object {
+        "margin": "100px auto",
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        <i
+          className="fas fa-envelope"
+        />
+      </h5>
+      <p
+        className="card-text"
+      >
+        Thanks! You have confirmed your email address successfully
+      </p>
+      <Link
+        className="btn btn-primary"
+        replace={false}
+        to="/account/login"
+      >
+        Log in with your credentials
+      </Link>
+    </div>
+  </div>
+</div>
+`;

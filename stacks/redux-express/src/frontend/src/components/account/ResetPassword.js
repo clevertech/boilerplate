@@ -91,4 +91,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 ResetPassword.propTypes = propTypes;
 export { ResetPassword };
-export default connect(mapStateToProps, mapDispatchToProps)(ResetPassword);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ResetPassword);

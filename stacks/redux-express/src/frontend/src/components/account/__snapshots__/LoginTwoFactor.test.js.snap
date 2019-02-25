@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginTwoFactor /> should render <LoginTwoFactor /> without errors 1`] = `
+<Box>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
+      Object {
+        "properties": Object {
+          "token": Object {
+            "title": "Please enter the 6-digit authentication code or a recovery code",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "token",
+        ],
+        "title": "Two Factor Authentication",
+        "type": "object",
+      }
+    }
+    uiSchema={
+      Object {
+        "token": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary btn-block btn-lg"
+        type="submit"
+      >
+        Log In
+      </button>
+    </fieldset>
+  </Form>
+</Box>
+`;

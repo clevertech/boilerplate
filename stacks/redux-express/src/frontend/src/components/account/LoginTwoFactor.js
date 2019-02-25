@@ -81,4 +81,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 LoginTwoFactor.propTypes = propTypes;
 export { LoginTwoFactor };
-export default connect(mapStateToProps, mapDispatchToProps)(LoginTwoFactor);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginTwoFactor);
