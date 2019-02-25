@@ -45,6 +45,14 @@ function retrieveYarnCache() {
     RETRIEVE=true
   fi
 
+# Case #3: sizes of the .yarn-cache.tgz are different in the docker and in the host
+  SIZE1=$(docker run --rm --entrypoint ls ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest -l /opt/cache/.yarn-cache.tgz|awk '{print $5}')
+  SIZE2=$(ls -l $SERVICE_DIR/.yarn-cache.tgz|awk '{print $5}')
+  if [ $SIZE1 != $SIZE2 ]; then
+    RETRIEVE=true
+    echo ".yarn-cache.tgz is different"
+  fi
+  
   if [ "$RETRIEVE" = true ]; then
     echo "Retrieving"
     docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /.yarn-cache.tgz > $SERVICE_DIR/.yarn-cache.tgz
