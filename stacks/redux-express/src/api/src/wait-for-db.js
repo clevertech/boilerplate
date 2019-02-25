@@ -1,3 +1,4 @@
+const logger = require('./logger');
 const config = require('../knexfile');
 const db = require('knex')(config);
 
@@ -5,9 +6,9 @@ const maxInterval = 1000 * 5;
 
 const checkConnectivity = async interval => {
   try {
-    console.log('Checking database connectivity...');
+    logger.info('Checking database connectivity...');
     await db.raw('select 1');
-    console.log('Database seems to be up!');
+    logger.info('Database seems to be up!');
   } catch (err) {
     if (err.code === 'ECONNREFUSED') {
       await new Promise(resolve => setTimeout(resolve, interval));

@@ -14,11 +14,32 @@ process.on('unhandledRejection', err => {
 require('../config/env');
 
 const jest = require('jest');
-const argv = process.argv.slice(2);
+const execSync = require('child_process').execSync;
+let argv = process.argv.slice(2);
 
-// Watch unless on CI or in coverage mode
-if (!process.env.CI && argv.indexOf('--coverage') < 0) {
-  argv.push('--watch');
+function isInGitRepository() {
+  try {
+    execSync('git rev-parse --is-inside-work-tree', { stdio: 'ignore' });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function isInMercurialRepository() {
+  try {
+    execSync('hg --cwd . root', { stdio: 'ignore' });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+// Watch unless on CI, in coverage mode, or explicitly running all tests
+if (!process.env.CI && argv.indexOf('--coverage') === -1 && argv.indexOf('--watchAll') === -1) {
+  // https://github.com/facebook/create-react-app/issues/5210
+  const hasSourceControl = isInGitRepository() || isInMercurialRepository();
+  argv.push(hasSourceControl ? '--watch' : '--watchAll');
 }
 
 jest.run(argv);

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> should render <Login /> without errors 1`] = `
+<div>
+  <br />
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-half is-offset-one-fifth"
+    >
+      <div
+        className="box"
+      >
+        <h3>
+          Member Login
+        </h3>
+        <Form
+          ErrorList={[Function]}
+          disabled={false}
+          liveValidate={false}
+          noHtml5Validate={true}
+          noValidate={false}
+          onSubmit={[Function]}
+          safeRenderCompletion={false}
+          schema={
+            Object {
+              "properties": Object {
+                "email": Object {
+                  "format": "email",
+                  "title": "Email",
+                  "type": "string",
+                },
+                "password": Object {
+                  "title": "Password",
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "email",
+                "password",
+              ],
+              "type": "object",
+            }
+          }
+          uiSchema={
+            Object {
+              "email": Object {
+                "classNames": "field",
+                "ui:placeholder": "you@example.com",
+              },
+              "password": Object {
+                "ui:widget": "password",
+              },
+            }
+          }
+        >
+          <div
+            className="field"
+          >
+            <p
+              className="control"
+            >
+              <button
+                className="button is-success"
+                type="submit"
+              >
+                Login
+              </button>
+            </p>
+          </div>
+          <div
+            className="field is-grouped"
+          >
+            <p
+              className="control"
+            >
+              <Link
+                replace={false}
+                to="/account/forgot-password"
+              >
+                Forgot your password?
+              </Link>
+            </p>
+            <p
+              className="control"
+            >
+              <Link
+                replace={false}
+                to="/account/register"
+              >
+                Create an account
+              </Link>
+            </p>
+          </div>
+        </Form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

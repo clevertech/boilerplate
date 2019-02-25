@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecoveryCodes /> should render <RecoveryCodes /> without errors 1`] = `
+<Fragment>
+  <div
+    className="alert alert-primary text-left"
+    role="alert"
+  >
+    If you lose access to your authentication device, you can use one of these backup codes to login to your account. Each code may be used only once. Make a copy of these codes, and store it somewhere safe.
+  </div>
+  <p
+    className="card-text text-center"
+  >
+    <code
+      key="00000000"
+    >
+      00000000
+      <br />
+    </code>
+    <code
+      key="11111111"
+    >
+      11111111
+      <br />
+    </code>
+  </p>
+  <p
+    className="card-text text-right"
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      Print codes
+    </button>
+     
+    <CopyToClipboard
+      text="Boilerplate
+Two-Factor Authentication Backup Codes
+Email: user@example.com
+
+00000000
+11111111"
+    >
+      <button
+        className="btn btn-primary"
+      >
+        Copy codes
+      </button>
+    </CopyToClipboard>
+  </p>
+</Fragment>
+`;

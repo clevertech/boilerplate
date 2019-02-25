@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfigureTwoFactorSMS /> should render <ConfigureTwoFactorSMS /> without errors 1`] = `
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
+      Object {
+        "properties": Object {
+          "phoneNumber": Object {
+            "title": "What's your phone number",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "phoneNumber",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
+      }
+    }
+    uiSchema={
+      Object {
+        "phoneNumber": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Send authentication code
+      </button>
+    </fieldset>
+  </Form>
+</div>
+`;
+
+exports[`<ConfigureTwoFactorSMS /> should render the confirm message 1`] = `
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
+      Object {
+        "properties": Object {
+          "token": Object {
+            "title": "Please enter the 6-digit authentication code we just sent you",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "token",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
+      }
+    }
+    uiSchema={
+      Object {
+        "token": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Verify code
+      </button>
+    </fieldset>
+  </Form>
+</div>
+`;
+
+exports[`<ConfigureTwoFactorSMS /> should render the ok message 1`] = `
+<div>
+  <Form
+    ErrorList={[Function]}
+    disabled={false}
+    liveValidate={false}
+    noHtml5Validate={true}
+    noValidate={false}
+    onSubmit={[Function]}
+    safeRenderCompletion={false}
+    schema={
+      Object {
+        "properties": Object {
+          "phoneNumber": Object {
+            "title": "What's your phone number",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "phoneNumber",
+        ],
+        "title": "Add SMS Authentication",
+        "type": "object",
+      }
+    }
+    uiSchema={
+      Object {
+        "phoneNumber": Object {},
+      }
+    }
+  >
+    <fieldset>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Send authentication code
+      </button>
+    </fieldset>
+  </Form>
+</div>
+`;

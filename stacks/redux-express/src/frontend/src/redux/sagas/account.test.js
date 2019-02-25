@@ -1,8 +1,8 @@
 import { call, put } from 'redux-saga/effects';
 import history from '../../history';
-import { actions, constants } from './actions';
-import * as api from './api';
-import { login, loginTwoFactor } from './sagas';
+import { actions, constants } from '../modules/account';
+import * as api from '../api/account';
+import { login, loginTwoFactor } from '../sagas/account';
 
 describe('Account sagas', () => {
   test('login action', () => {

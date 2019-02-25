@@ -27,7 +27,7 @@ services:
       - ./frontend/.:/opt/app
       - /opt/app/node_modules
   db:
-    image: postgres
+    image: postgres:alpine
     restart: always
     environment:
       POSTGRES_PASSWORD: o5MU9UhWaHNUXfrMqU~Ho
@@ -42,3 +42,5 @@ services:
       - 8081:8080
   redis:
     build: docker/definitions/redis
+    ports:
+      - 6379:6379
