@@ -53,21 +53,21 @@
     "dotenv": "6.2.0",
     "express": "4.16.4",
     "express-session": "1.15.6",
-    "helmet": "3.15.0",
-    "jsonwebtoken": "8.4.0",
+    "helmet": "3.15.1",
+    "jsonwebtoken": "8.5.0",
     "knex": "0.16.3",
     "node-fetch": "2.3.0",
-    "pg": "7.8.0",
+    "pg": "7.8.1",
     "raven": "2.6.4",
     "useragent": "2.3.0",
-    "winston": "3.1.0"
+    "winston": "3.2.1"
   },
   "devDependencies": {
     "better-npm-run": "0.1.1",
     "cpy-cli": "2.0.0",
-    "jest": "24.0.0",
+    "jest": "24.1.0",
     "nock": "^10.0.6",
-    "nodemon": "1.18.9",
-    "sinon": "^7.2.3"
+    "nodemon": "1.18.10",
+    "sinon": "7.2.4"
   }
 }
