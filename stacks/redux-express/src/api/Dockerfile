@@ -1,5 +1,6 @@
 FROM node:10-alpine
 LABEL maintainer="Clevertech DevOps <support@clevertech.biz>"
+ENV TZ=America/New_York
 
 # Update OS
 RUN apk --no-cache add ca-certificates python2 make g++ && update-ca-certificates
