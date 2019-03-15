@@ -24,11 +24,17 @@ api
 ├─ migrations           # Where knex migrations are stored
 ├─ seeds                # Where knex seed files are stored
 └─ src
-   ├─ routes            # Where endpoints are defined
+   ├─ models            # Where objection.js models placed
+   │  routes            # Where Express endpoints are defined
    │  ├─ healthz.js     # Health check endpoints
    │  ├─ robots.js      # Endpoints for robots.txt
    │  ├─ index.js       # Test endpoint
    │  └─ users.js       # Endpoints for user authentication
+   │  schema            # Where GraphQL modules are defined
+   │  ├─ DateTime.js    # Example use of Scalars
+   │  ├─ Global.js      # Common definitions and the base of the GQL Schema
+   │  ├─ index.js       # Merge GQL typeDefs and resolvers form the schema and export to the app
+   │  └─ Sample.js      # Example data type added for the GQL API
    ├─ app.js            # Where the Express app object is created
    ├─ db.js             # File to require to access the db
    ├─ error-tracking.js # Configuration for the error tracking tool
