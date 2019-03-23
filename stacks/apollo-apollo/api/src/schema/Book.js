@@ -24,6 +24,9 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     books: (obj, args, context) => {
+      if (!context.user) {
+        throw new Error('Auth required')
+      }
       const Book = context.dataSources.Book
       return Book.fetchAll()
     }

@@ -34,7 +34,7 @@ api
    │  ├─ DateTime.js    # Example use of Scalars
    │  ├─ Global.js      # Common definitions and the base of the GQL Schema
    │  ├─ index.js       # Merge GQL typeDefs and resolvers form the schema and export to the app
-   │  └─ Sample.js      # Example data type added for the GQL API
+   │  └─ Book.js        # Example data type added for the GQL API
    ├─ app.js            # Where the Express app object is created
    ├─ db.js             # File to require to access the db
    ├─ error-tracking.js # Configuration for the error tracking tool

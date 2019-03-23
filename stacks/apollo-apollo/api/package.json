@@ -15,7 +15,7 @@
   },
   "betterScripts": {
     "start": "knex migrate:latest && node src/index.js",
-    "start-dev": "node src/wait-for-db.js && knex migrate:latest && nodemon --delay 80ms --inspect=0.0.0.0:9229",
+    "start-dev": "node src/wait-for-db.js && knex migrate:latest && nodemon --delay 80ms --inspect=0.0.0.0:9229 src/index.js",
     "knex": "knex",
     "test": {
       "command": "jest",
@@ -56,9 +56,11 @@
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
     "helmet": "^3.9.0",
-    "jsonwebtoken": "^8.1.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.13.0",
     "node-fetch": "^1.7.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "pg": "^7.3.0",
     "raven": "^2.2.1",
     "useragent": "^2.3.0",

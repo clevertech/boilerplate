@@ -22,10 +22,9 @@ const apolloServerConfig = {
   },
 
   // extract data from the express js request and/or express middleware
-  // context: ({ res }) => ({
-  //   accessToken: res.locals.accessToken || null,
-  //   user: res.locals.user || null
-  // })
+  context: ({ req }) => ({
+    user: req.user
+  })
 }
 
 const server = new ApolloServer(apolloServerConfig)

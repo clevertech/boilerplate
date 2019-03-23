@@ -1,33 +1,8 @@
 const express = require('express');
 const app = express();
-const helmet = require('helmet');
-const cors = require('cors');
-const bodyParser = require('body-parser');
 
-const { apiErrorHandler } = require('./utils/errors');
+const passportAuth = require('./middleware/passportAuth')
 
-// Security HTTP headers
-// See https://helmetjs.github.io/docs/
-app.use(helmet());
-
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// Session handling
-require('./sessions')(app);
-
-// Routes
-require('./routes/healthz')(app);
-require('./routes/robots')(app);
-require('./routes/index')(app);
-
-// API routes
-const api = express.Router();
-require('./routes/account')(api);
-require('./routes/products')(api);
-
-api.use(apiErrorHandler);
-app.use('/api', api);
+app.use('/graphql', passportAuth)
 
 module.exports = app;

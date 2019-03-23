@@ -12,22 +12,22 @@ const {
 } = require('./DateTime')
 
 const {
-  typeDefs: SampleTypeDefs,
-  resolvers: SampleResolvers
-} = require('./Sample')
+  typeDefs: BookTypeDefs,
+  resolvers: BookResolvers
+} = require('./Book')
 
 // merge resolvers
 const resolvers = {
   ...GlobalResolvers,
   ...DateTimeResolvers,
-  ...SampleResolvers
+  ...BookResolvers
 }
 
 // merge graphql type definitions
 const typeDefs = [
   GlobalTypeDefs,
   DateTimeTypeDefs,
-  SampleTypeDefs
+  BookTypeDefs
 ]
 
 // export utils from the schema for use by the ApolloServer config
