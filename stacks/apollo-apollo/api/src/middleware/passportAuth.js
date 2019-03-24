@@ -1,41 +1,34 @@
 const passport = require('passport')
 const passportJWT = require('passport-jwt')
-const jwt = require('jsonwebtoken')
-const { Unauthorized } = require('../utils/errors')
+const getUsers = require('../services/getUsers')
+const signJwt = require('../services/signJwt')
 
 const { JWT_SECRET } = process.env
 const { Strategy, ExtractJwt } = passportJWT
 
-// static list of users
-const users = [
-  {
-    id: 1,
-    name: 'John',
-    email: 'john@mail.com',
-    password: 'john123'
-  }
-]
+// TODO Remove this: the purpose is to demonstrate how to use the token with GraphQL Playground
+getUsers().then((users) => {
+  // get a token for debugging
+  const token = signJwt(users[0])
 
-// generate a jwt token for testing purposes
-// in GraphQL Playground the HTTP Header can be used like so...
-// { "Authorization": "Bearer abc.123.xyz" }
-console.log(jwt.sign(users[0], JWT_SECRET))
+  // log how to use this for demo
+  console.log('Use the following HTTP HEADER for auth...')
+  console.log(`{ "Authorization": "Bearer ${token}" }`)
+})
 
+// Refer to Passport auth strategies
+// http://www.passportjs.org/packages/
 const params = {
   secretOrKey: JWT_SECRET,
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
 }
 
-const strategy = new Strategy(params, (payload, done) => {
+const strategy = new Strategy(params, async (payload, done) => {
   // load the user from the data source for your users
+  const users = await getUsers()
   const user = users.find(user => user.id === payload.id) || null
 
-  let err = null
-  if (!user) {
-     err = new Unauthorized('Authorization header failed verification')
-  }
-
-  return done(err, user)
+  return done(null, user)
 })
 
 passport.use(strategy)
@@ -51,6 +44,7 @@ module.exports = function passportAuth(req, res, next) {
     } else {
       // pass a null user: allows graphql at least in part be public
       req.user = null
+
       // or throw an error: blocks all access to graphql for non-public
       // return next(new Unauthorized('Authorization header failed verification'))
     }

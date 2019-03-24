@@ -7,6 +7,11 @@ const {
 } = require('./Global')
 
 const {
+  typeDefs: AuthTypeDefs,
+  resolvers: AuthResolvers
+} = require('./Auth')
+
+const {
   typeDefs: DateTimeTypeDefs,
   resolvers: DateTimeResolvers
 } = require('./DateTime')
@@ -20,12 +25,19 @@ const {
 const resolvers = {
   ...GlobalResolvers,
   ...DateTimeResolvers,
-  ...BookResolvers
+  Query: {
+    ...AuthResolvers.Query,
+    ...BookResolvers.Query
+  },
+  Mutation: {
+    ...AuthResolvers.Mutation,
+  }
 }
 
 // merge graphql type definitions
 const typeDefs = [
   GlobalTypeDefs,
+  AuthTypeDefs,
   DateTimeTypeDefs,
   BookTypeDefs
 ]
