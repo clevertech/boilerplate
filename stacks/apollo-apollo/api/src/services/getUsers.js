@@ -4,8 +4,9 @@ const Promise = require('promise')
 const users = [
   {
     id: 1,
-    name: 'CleverTech',
+    display: 'Clever Tech',
     email: 'clever@example.com',
+    username: 'clevertech',
     password: 'cleverpass'
   }
 ]

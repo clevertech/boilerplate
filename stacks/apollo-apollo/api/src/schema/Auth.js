@@ -1,13 +1,23 @@
 const { gql } = require('apollo-server-express')
+const jwtSign = require('../services/jwt/sign')
+const jwtCheck = require('../services/jwt/check')
+const getUsers = require('../services/getUsers')
+const { find, lowerCase } = require('lodash')
 
 const typeDefs = gql`
+
+  type AuthInfo {
+    result: Boolean!
+    authToken: String
+  }
+  
   extend type Query {
     isLogin: Boolean!
   }
 
   extend type Mutation {
-    login(username: String!, pwd: String!): Boolean!
-    signup(username: String!, pwd: String!): Boolean!
+    login(username: String!, password: String!): AuthInfo!
+    signup(username: String!, password: String!): AuthInfo!
   }
 `
 
@@ -19,15 +29,41 @@ const resolvers = {
   },
 
   Mutation: {
-    signup: async (parent, {username, pwd}, context) => {
-      // register users per app requirements
-      return true
+    signup: async (parent, { username, password }, context) => {
+      // TODO register users per app requirements, use the saved user here
+      const user = {
+        id: 2,
+        username,
+        password
+      }
+
+      const authToken = jwtSign(user)
+
+      return {
+        result: true,
+        authToken
+      }
     },
 
-    login: async (parent, {username, pwd}, {req}) => {
-      // check a users credentials
+    login: async (parent, { username, password }, {req}) => {
+      // fetch users from storage
+      const users = await getUsers()
+      const user = find(users, { username: lowerCase(username), password })
+
+      // failed login
+      if (!user) {
+        return {
+          result: false
+        }
+      }
+
+      const authToken = jwtSign(user)
+
       // return the Authorization token used for the bearer token
-      return true
+      return {
+        result: true,
+        authToken
+      }
     }
   }
 }
