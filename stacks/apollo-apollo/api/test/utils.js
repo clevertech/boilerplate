@@ -2,7 +2,7 @@ const app = require('../src/app');
 const fetch = require('node-fetch');
 const querystring = require('querystring');
 const http = require('http');
-const db = require('../src/db');
+const db = require('../src/services/db');
 
 const integrationTests = !!process.env.TEST_INTEGRATION;
 

@@ -1,21 +1,9 @@
 const passport = require('passport')
 const passportJWT = require('passport-jwt')
-const getUsers = require('../services/getUsers')
-const { find } = require('lodash')
+const { User } = require('../services/models')
 
 const { JWT_SECRET } = process.env
 const { Strategy, ExtractJwt } = passportJWT
-
-// TODO Remove this: the purpose is to demonstrate how to use the token with GraphQL Playground
-const jwtSign = require('../services/jwt/sign')
-getUsers().then((users) => {
-  // get a token for debugging
-  const token = jwtSign(users[0])
-
-  // log how to use this for demo
-  console.log('Use the following HTTP HEADER for auth...')
-  console.log(`{ "Authorization": "Bearer ${token}" }`)
-})
 
 // Refer to Passport auth strategies
 // http://www.passportjs.org/packages/
@@ -26,10 +14,13 @@ const params = {
 
 const strategy = new Strategy(params, async (payload, done) => {
   // load the user from the data source for your users
-  const users = await getUsers()
-  const user = find(users, { id: payload.id })
-
-  return done(null, user)
+  return User.query().findById(payload.id).then((user) => {
+    // return found user for passport authenticate handler
+    done(null, user)
+  }).catch((e) => {
+    // user not found
+    done()
+  })
 })
 
 passport.use(strategy)
@@ -38,8 +29,7 @@ passport.initialize()
 // middleware to check for auth in Express
 // req object will be available to Apollo via the context
 module.exports = function passportAuth(req, res, next) {
-  passport.authenticate('jwt', { session: false }, (err, user, info) => {
-    console.log('auth', {err, user, info})
+  passport.authenticate('jwt', { session: false }, (err, user) => {
     // check for the user, this will be populated as result of the passport strategy
     if (user) {
       req.user = user

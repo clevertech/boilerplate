@@ -8,8 +8,8 @@ const typeDefs = gql`
 
   # This "Book" type can be used in other type declarations.
   type Book {
-    title: String
-    author: String
+    title: String!
+    author: String!
     pubdate: DateTime
   }
 
@@ -28,7 +28,9 @@ const resolvers = {
         throw new Error('Auth required')
       }
       const Book = context.dataSources.Book
-      return Book.fetchAll()
+
+      //  fetch via objection model
+      return Book.query()
     }
   }
 }

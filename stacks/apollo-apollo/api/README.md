@@ -150,3 +150,4 @@ describe('App', () => {
 The `integration` function is just either jest's `it` or `it.skip`. With this
 utility when running only unit tests, integration tests will be skipped
 transparently for you.
+

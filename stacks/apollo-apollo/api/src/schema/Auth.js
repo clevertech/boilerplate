@@ -1,14 +1,22 @@
 const { gql } = require('apollo-server-express')
 const jwtSign = require('../services/jwt/sign')
-const jwtCheck = require('../services/jwt/check')
-const getUsers = require('../services/getUsers')
-const { find, lowerCase } = require('lodash')
+const checkPassword = require('../services/auth/checkPassword')
+const hashPassword = require('../services/auth/hashPassword')
+const { lowerCase } = require('lodash')
 
 const typeDefs = gql`
 
   type AuthInfo {
     result: Boolean!
     authToken: String
+    message: String
+  }
+  
+  input RegisterUserInput {
+    username: String!
+    password: String!
+    email: String!
+    display: String
   }
   
   extend type Query {
@@ -17,7 +25,7 @@ const typeDefs = gql`
 
   extend type Mutation {
     login(username: String!, password: String!): AuthInfo!
-    signup(username: String!, password: String!): AuthInfo!
+    signup(user: RegisterUserInput): AuthInfo!
   }
 `
 
@@ -29,41 +37,61 @@ const resolvers = {
   },
 
   Mutation: {
-    signup: async (parent, { username, password }, context) => {
-      // TODO register users per app requirements, use the saved user here
-      const user = {
-        id: 2,
-        username,
-        password
-      }
+    signup: async (parent, { user: registerUser }, { dataSources }) => {
 
-      const authToken = jwtSign(user)
+      // check for existing user
+      const existingUser = await dataSources.User.query()
+        .whereRaw('lower(username) = ? or email = ?', [registerUser.username, registerUser.email ])
+        .first()
 
-      return {
-        result: true,
-        authToken
-      }
-    },
-
-    login: async (parent, { username, password }, {req}) => {
-      // fetch users from storage
-      const users = await getUsers()
-      const user = find(users, { username: lowerCase(username), password })
-
-      // failed login
-      if (!user) {
+      if (existingUser) {
         return {
-          result: false
+          result: false,
+          message: "A user with that username or email already exists."
         }
       }
 
-      const authToken = jwtSign(user)
+      // try to create the user
+      registerUser.password = hashPassword(registerUser.password)
 
-      // return the Authorization token used for the bearer token
-      return {
-        result: true,
-        authToken
+      return dataSources.User.query().insertGraph(registerUser).then((newUser) => {
+        const authToken = jwtSign(newUser)
+        return {
+          result: true,
+          authToken
+        }
+      }).catch((e) => {
+        return {
+          result: false,
+          message: e.message
+        }
+      })
+    },
+
+    login: async (parent, { username, password }, { dataSources }) => {
+      // fetch users from storage
+      username = lowerCase(username)
+
+      const user = await dataSources.User.query()
+        .whereRaw('lower(username) = ?', username)
+        .first()
+
+      if (user) {
+        // check password
+        if (checkPassword(password, user.password)) {
+          // return the Authorization token used for the bearer token
+          return {
+            result: true,
+            authToken: jwtSign(user)
+          }
+        }
       }
+
+      // failed login, no user found or failed password check
+      return {
+        result: false
+      }
+
     }
   }
 }
