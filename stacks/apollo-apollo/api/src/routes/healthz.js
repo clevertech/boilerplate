@@ -1,4 +1,4 @@
-const { db } = require('../db');
+const { db } = require('../services/db');
 const { HEALTH_CHECK_SECRET } = process.env;
 
 module.exports = app => {

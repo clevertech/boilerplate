@@ -15,7 +15,7 @@
   },
   "betterScripts": {
     "start": "knex migrate:latest && node src/index.js",
-    "start-dev": "node src/wait-for-db.js && knex migrate:latest && nodemon --delay 80ms --inspect=0.0.0.0:9229",
+    "start-dev": "node src/wait-for-db.js && knex migrate:latest && nodemon --delay 80ms --inspect=0.0.0.0:9229 src/index.js",
     "knex": "knex",
     "test": {
       "command": "jest",
@@ -46,7 +46,8 @@
   "dependencies": {
     "@clevertech.biz/auth-core": "0.1.3",
     "apollo-server": "^2.4.0",
-    "apollo-server-express": "^2.4.0",
+    "apollo-server-express": "^2.4.8",
+    "bcrypt": "^3.0.5",
     "body-parser": "^1.18.2",
     "connect-redis": "^3.3.2",
     "cors": "^2.8.4",
@@ -56,9 +57,12 @@
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
     "helmet": "^3.9.0",
-    "jsonwebtoken": "^8.1.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.13.0",
     "node-fetch": "^1.7.3",
+    "objection": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "pg": "^7.3.0",
     "raven": "^2.2.1",
     "useragent": "^2.3.0",

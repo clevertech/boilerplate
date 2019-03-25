@@ -1,5 +1,4 @@
-const config = require('../knexfile');
-const db = require('knex')(config);
+const db = require('./services/db')
 
 const maxInterval = 1000 * 5;
 
