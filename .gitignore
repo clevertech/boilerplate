@@ -56,7 +56,7 @@ jspm_packages
 
 # Docker local cache
 .cache.tgz
-.yarn-cache.tgz
+#.yarn-cache.tgz
 
 # Vagrant
 Vagrantfile
