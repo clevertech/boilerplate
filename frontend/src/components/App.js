@@ -8,8 +8,24 @@ import { actions } from '../redux/modules/account';
 const propTypes = {};
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      burgerOpen: false
+    };
+    this.addBurgerOpenClass = this.addBurgerOpenClass.bind(this);
+  }
+
+  addBurgerOpenClass(classes) {
+    const { burgerOpen } = this.state;
+    if (burgerOpen) {
+      classes = [...classes, 'is-active'];
+    }
+    return classes.join(' ');
+  }
+
   render() {
-    const { props } = this;
+    const { props, state: { burgerOpen } } = this;
     return (
       <div>
         <nav className="navbar is-transparent">
@@ -22,14 +38,21 @@ class App extends Component {
                 height="28"
               />
             </Link>
-            <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <div
+              className={this.addBurgerOpenClass(['navbar-burger', 'burger'])}
+              data-target="navbarExampleTransparentExample"
+              onClick={() => this.setState({ burgerOpen: !burgerOpen })}
+            >
               <span />
               <span />
               <span />
             </div>
           </div>
 
-          <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div
+            id="navbarExampleTransparentExample"
+            className={this.addBurgerOpenClass(['navbar-menu'])}
+          >
             <div className="navbar-start">
               <Link className="navbar-item" to="/">
                 Home
