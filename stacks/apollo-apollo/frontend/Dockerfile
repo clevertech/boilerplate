@@ -14,10 +14,10 @@ COPY package.json yarn.lock /cache/
 # Copy cache contents (if any) from local machine
 ADD .yarn-cache.tgz /
 
+COPY . /opt/app
+
 # Install packages + Prepare cache file
 RUN yarn
-
-COPY . /opt/app
 
 EXPOSE 3000
 CMD ["yarn", "start"]
