@@ -19,8 +19,8 @@ module.exports = {
   rules: {
     // prevent lint errors if you don't use some function arguments
     'no-unused-vars': ['error', { vars: 'all', args: 'none' }],
-    'no-console': ['off'], // I like to use the console
-
+    'no-console': ['off'],
+    'semi': [2, 'never'],
     'max-params': ['warn', 5],
     'max-nested-callbacks': ['warn', 5],
     'max-statements': ['warn', 20],
