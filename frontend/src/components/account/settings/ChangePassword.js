@@ -98,4 +98,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 ChangePassword.propTypes = propTypes;
 export { ChangePassword };
-export default withError(connect(mapStateToProps, mapDispatchToProps)(ChangePassword));
+export default withError(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ChangePassword)
+);
