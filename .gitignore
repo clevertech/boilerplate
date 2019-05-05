@@ -1,0 +1,6 @@
+node_modules
+api/node_modules
+frontend/node_modules
+tests/node_modules
+*.swo
+*.swp
