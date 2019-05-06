@@ -1,0 +1,36 @@
+version: "3"
+services:
+  frontend:
+    build: frontend
+    command: yarn start
+    depends_on:
+    - api
+    env_file:
+      - frontend/.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/.:/opt/frontend
+      - ./frontend/internal_node_modules:/opt/frontend/node_modules/
+  api:
+    build: api
+    command: yarn start
+    depends_on:
+      - db
+    env_file:
+      - api/.env
+    ports:
+      - '8080:3000'
+    volumes:
+      - ./api/.:/opt/app
+      - ./api/internal_node_modules:/opt/app/node_modules/
+  db:
+    image: postgres:11
+    environment:
+      - POSTGRES_PASSWORD=localdev
+      - POSTGRES_DB=rpg
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data/pgdata
+    ports:
+      - '8001:5432'

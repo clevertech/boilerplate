@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "webpack index.js -o build/index.js --target='node' && node build/index.js"
+    "start": "webpack index.js -o build/index.js --mode=development --target='node' && node build/index.js",
+    "build": "webpack index.js -o dist/index.js --mode=production --target='node'"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

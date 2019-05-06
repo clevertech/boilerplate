@@ -4,3 +4,8 @@ frontend/node_modules
 tests/node_modules
 *.swo
 *.swp
+postgres-data
+api/dist
+api/build
+frontend/dist
+
