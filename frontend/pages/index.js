@@ -1,5 +1,7 @@
+import MainTemplate from '../templates/MainTemplate'
+
 function Home() {
-  return <div>Welcome to Next.js!</div>
+  return <MainTemplate>Welcome to Next.js!</MainTemplate>
 }
 
 export default Home
