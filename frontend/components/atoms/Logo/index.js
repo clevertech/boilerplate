@@ -1,3 +1,3 @@
 export default () => (
-  <img src="/static/logo.png" />
+  <img alt="Brand Logo" src="/static/logo.png" />
 )
