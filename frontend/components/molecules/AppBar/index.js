@@ -1,3 +1,4 @@
+import Logo from '../../atoms/Logo'
 import Link from 'next/link'
 
 const AppBar = () => (
