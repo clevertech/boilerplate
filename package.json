@@ -1,13 +1,9 @@
 {
-  "scripts": {
-    "test": "npm run unit && npm run integration && npm run e2e",
-    "unit": "npm run api:unit && npm run frontend:unit", 
-    "integration": "npm run api:integration && npm run frontend:integration", 
-    "api:unit": "NODE_ENV=production jest api --collectCoverageFrom=/api/**/*.js", 
-    "api:integration": "NODE_ENV=production run-api-integration.sh",
-    "frontend:unit": "NODE_ENV=production jest frontend --collectCoverageFrom=/frontend/**/*.js", 
-    "frontend:integration": "NODE_ENV=production run-frontend-integration.sh",
-    "e2e": "NODE_ENV=production run-e2e.sh"
-  }
+  "name": "rpg-next",
+  "version": "1.0.0",
+  "description": "Relay-Postgres-Graphql Application Starter using NextJS.  Built with a focus on minimalism, accessibility, and ease of development.",
+  "main": "index.js",
+  "author": "Chad <chad@clevertech.biz>",
+  "license": "MIT",
+  "private": true
 }
-  
