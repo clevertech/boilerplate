@@ -1,18 +1,17 @@
 import Meta from '../../components/atoms/Meta'
 import AppBar from '../../components/molecules/AppBar'
-import { Provider } from 'reakit' // we use Provider to make sure SSR is still accessible
+import React from 'react'
 import "regenerator-runtime/runtime"
 
 import "./index.scss"
 
 const MainTemplate = (props) => (
-  <Provider>
-    <div className="main-template">
-      <Meta />
-      <AppBar />
-      {props.children}
-    </div>
-  </Provider>
+  <div className="main-template">
+    <React.StrictMode />
+    <Meta />
+    (props.appBar ? <AppBar /> : '')
+    {props.children}
+  </div>
 )
   
 export default MainTemplate
