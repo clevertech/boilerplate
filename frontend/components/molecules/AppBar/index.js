@@ -8,13 +8,13 @@ const AppBar = () => (
         <Link href="/"><a><Logo /></a></Link>
       </div>
       <div className="level-item has-text-centered">
-        <Link href="/login"><a>Login</a></Link>
+        <Link href="/dashboard"><a>Dashboard</a></Link>
       </div>
       <div className="level-item has-text-centered">
-        <Link href="/signup"><a>Signup</a></Link>
+        <Link href="/posts"><a>Posts</a></Link>
       </div>
       <div className="level-item has-text-centered">
-        <Link href="/password-reset"><a>Reset Password</a></Link>
+        <Link href="/logout"><a>Logout</a></Link>
       </div>
     </div>
   </div>
