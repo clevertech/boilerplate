@@ -5,19 +5,16 @@ const AppBar = () => (
   <div className="primary-nav">
     <div className="level">
       <div className="level-left">
-        <Logo />
+        <Link href="/"><a><Logo /></a></Link>
       </div>
       <div className="level-item has-text-centered">
         <Link href="/login"><a>Login</a></Link>
       </div>
       <div className="level-item has-text-centered">
-        <Link href="/login"><a>Signup</a></Link>
+        <Link href="/signup"><a>Signup</a></Link>
       </div>
       <div className="level-item has-text-centered">
-        <Link href="/login"><a>Reset Password</a></Link>
-      </div>
-      <div className="level-item has-text-centered">
-        <Link href="/login"><a>Homepage</a></Link>
+        <Link href="/password-reset"><a>Reset Password</a></Link>
       </div>
     </div>
   </div>
