@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const LoginLinks = () => {
   return <div className="login-links">
     <div className="level">

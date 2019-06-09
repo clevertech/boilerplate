@@ -9,7 +9,7 @@ const LabeledInput = (props) => {
              placeholder={props.placeholder ? props.placeholder : ''}
       />
     </div>
-    (props.help ? <p className={"help is-danger"}>{props.help}</p> : '')
+    {props.help ? <p className={"help is-danger"}>{props.help}</p> : ''}
   </div>
 }
 
