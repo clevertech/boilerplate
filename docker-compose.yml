@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     env_file:
-      - api/.env
+      - ./api/.env
     ports:
       - '8080:3000'
     volumes:

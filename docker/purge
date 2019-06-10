@@ -1,0 +1,13 @@
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -aq)
+docker system prune --volumes
+docker rmi -f $(docker images -aq)
+docker rmi -f $(docker images -aq)
+rm -rf frontend/node_modules
+rm -rf api/node_modules
+rm -rf frontend/.yarn-cache.tgz
+rm -rf api/.yarn-cache.tgz
+touch frontend/.yarn-cache.tgz
+touch api/.yarn-cache.tgz
+chown -R $USER ./*

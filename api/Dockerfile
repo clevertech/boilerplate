@@ -5,11 +5,7 @@ ARG NODE_ENV=production
 ENV NODE_ENV=$NODE_ENV
 
 # Update OS
-# NOTE: postgresql is included for pg-native bindings
-RUN apk update && apk upgrade && apk --no-cache add \
-  ca-certificates \
-  postgresql  \
-  && update-ca-certificates
+RUN apk update && apk upgrade && apk --no-cache add ca-certificates && update-ca-certificates
 
 # Create the working dir
 RUN mkdir -p /opt/app
@@ -19,6 +15,7 @@ COPY . /opt/app
 
 WORKDIR /opt/app
 
+# We don't need to build in most cases since docker-compose command does it for us
 RUN set -ex; \
   if [ "$NODE_ENV" = "production" ]; then \
     yarn install --frozen-lockfile --production; \
@@ -31,8 +28,8 @@ RUN set -ex; \
   else \
     yarn install --frozen-lockfile; \
   fi; 
-# We don't need to build in most cases since docker-compose command does it for us
 
 EXPOSE 3000
+
 # note this gets overridden by docker-compose during local development
 CMD ["node", "dist/index.js"]

@@ -5,7 +5,7 @@ import LoginLinks from '../components/molecules/LoginLinks'
 import NarrowContainer from '../components/molecules/NarrowContainer'
 
 function Login() {
-  return <MainTemplate appBar="false">
+  return <MainTemplate appBar={false}>
     <NarrowContainer>
       <LoginForm />
       <LoginLinks />

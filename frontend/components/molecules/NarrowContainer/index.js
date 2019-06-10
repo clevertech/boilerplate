@@ -1,6 +1,6 @@
 const NarrowContainer = (props) => {
-  return <div className="section narrow-container-section">
-    <div className="container narrow-container">
+  return <div className="narrow-container">
+    <div className="container">
       {props.children}
     </div>
   </div>
