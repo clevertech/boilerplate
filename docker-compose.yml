@@ -2,7 +2,8 @@ version: "3"
 services:
   frontend:
     build: frontend
-    command: yarn start
+    image: frontend:local
+    command: yarn dev
     depends_on:
     - api
     env_file:
@@ -13,8 +14,12 @@ services:
       - ./frontend/.:/opt/frontend
       - ./frontend/internal_node_modules:/opt/frontend/node_modules/
   api:
-    build: api
-    command: yarn start
+    build:
+      context: api
+      args:
+        NODE_ENV: "development"
+    image: api:local
+    command: yarn run start
     depends_on:
       - db
     env_file:
@@ -22,8 +27,9 @@ services:
     ports:
       - '8080:3000'
     volumes:
-      - ./api/.:/opt/app
-      - ./api/internal_node_modules:/opt/app/node_modules/
+      - ./api:/opt/app
+      - ./api/package.json:/opt/app/package.json
+      - ./api/yarn.lock:/opt/app/yarn.lock
   db:
     image: postgres:11
     environment:

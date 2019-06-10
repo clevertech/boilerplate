@@ -7,12 +7,13 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.5",
-    "dotenv": "^8.0.0",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2"
+    "dotenv": "^8.0.0"
   },
   "dependencies": {
     "express": "^4.16.4",
-    "postgraphile": "^4.4.0"
+    "pg": "^7.11.0",
+    "postgraphile": "^4.4.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
   }
 }
