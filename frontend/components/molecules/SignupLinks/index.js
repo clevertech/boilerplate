@@ -1,18 +1,17 @@
-import Link from "next/link"
 import ForgotPasswordLink from '../../atoms/ForgotPasswordLink'
-import NeedAccountLink from '../../atoms/NeedAccountLink'
+import HaveAccountLink from '../../atoms/HaveAccountLink'
 
-const LoginLinks = () => {
-  return <div className="login-links">
+const SignupLinks = () => {
+  return <div className="signup-links">
     <div className="level">
       <div className="level-item has-text-centered">
         <ForgotPasswordLink/>
       </div>
       <div className="level-item has-text-centered">
-        <NeedAccountLink/>
+        <HaveAccountLink/>
       </div>
     </div>
   </div>
 }
 
-export default LoginLinks
+export default SignupLinks

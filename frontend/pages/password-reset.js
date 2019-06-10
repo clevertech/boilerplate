@@ -1,5 +1,4 @@
 import MainTemplate from '../templates/MainTemplate'
-import PasswordResetForm from '../components/organisms/PasswordResetForm'
 import NarrowContainer from '../components/molecules/NarrowContainer'
 
 const PasswordReset = () => {
@@ -8,7 +7,6 @@ const PasswordReset = () => {
   // todo: supplies password reset token to password reset form for submission
   return <MainTemplate appBar="false">
     <NarrowContainer>
-      <PasswordResetForm/>
     </NarrowContainer>
   </MainTemplate>
 }
