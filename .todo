@@ -1,15 +1,3 @@
-<?xml version="1.0"?>
-<todo version="0.1.20">
-    <note priority="veryhigh" time="1557795976">
-        add a login page with a form
-    </note>
-    <note priority="veryhigh" time="1557796003">
-        add a custom routing layer for dynamic routes
-    </note>
-    <note priority="veryhigh" time="1557796068">
-        hook rpg-next into cba script
-    </note>
-    <note priority="veryhigh" time="1557796082">
-        write integration tests for rpg-next in cba script
-    </note>
-</todo>
+re 2 - yes, that and potential risk for when `/userDetails` worked on my local but doesn't after I've pushed. Is there mapping? does it fetch userdetails.js? if I had both `userdetails.js` and `userDetails.js` will they have separate routes? is it `/login` or `/Iogin` with an uppercase `i`? - you can see how I'm winding this up a bit and going paranoid, all stemming from the main concern around case handling
+re 3 - suppose you're working on a new, refreshed, dashboard - `dashboard-v2.js` and there's a test account that should see that new dashboard instead of the old one, this gets tricky with nextjs and route-to-file mapping. In a way this is not dissimilar from A/B testing. With nextjs, the only way I found this possible was using a browser-level solution, like one of the react A/B testing tools
+re 4 - 2 projects back I actually worked on a website that needed to route in EN and FR using `.com/en/potato` and `.com/fr/baguette` for *all* pages, and their local url strings were kept in the db. Aside from that the whole project wasn't hugely complex but that use case alone feels impossible with nextjs file based routing
