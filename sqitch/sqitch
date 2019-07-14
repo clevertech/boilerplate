@@ -1,0 +1,5 @@
+docker build \
+  --build-arg HOST_USER_UID=`id -u` \
+  --build-arg HOST_USER_GID=`id -g` \
+  -t sqitch . 
+docker run -v $(pwd):/src -ti sqitch "$@"
