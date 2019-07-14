@@ -9,5 +9,5 @@ api/dist
 api/build
 frontend/dist
 .idea
-api/.yarn-cache.tar.gz
-frontend/.yarn-cache.tar.gz
+api/.yarn-cache.tgz
+frontend/.yarn-cache.tgz
