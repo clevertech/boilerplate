@@ -1,14 +1,10 @@
 import express from "express"
-import { postgraphile } from "postgraphile"
+import { executeDbQuery } from './helpers/db'
+import installPostgraphile from './middleware/installPostgraphile'
 
 const app = express()
 
-console.log(process.env)
-const db = process.env.DATABASE_URL
-const schemas = process.env.POSTGRAPHILE_SCHEMAS
-const options = process.env.POSTGRAPHILE_OPTIONS
-
-app.use(postgraphile(db, schemas, options))
+installPostgraphile(app, { executeDbQuery })
 
 app.listen(process.env.PORT)
 

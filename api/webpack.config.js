@@ -1,3 +1,7 @@
 module.exports = {
-  "externals": ["pg-native"]
+  externals: ["pg-native"],
+  target: "node",
+  node: {
+    __dirname: true,
+  }
 }
