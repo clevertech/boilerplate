@@ -11,8 +11,6 @@ RUN apk update && apk upgrade && apk --no-cache add ca-certificates && update-ca
 RUN mkdir -p /opt/app
 COPY . /opt/app
 
-# TODO: set user to node
-
 WORKDIR /opt/app
 
 # We don't need to build in most cases since docker-compose command does it for us
@@ -30,6 +28,12 @@ RUN set -ex; \
   fi; 
 
 EXPOSE 3000
+
+RUN set -ex; \
+  touch /opt/app/schema.gql; \
+  chown node:node /opt/app/schema.gql;
+
+USER node
 
 # note this gets overridden by docker-compose during local development
 CMD ["node", "dist/index.js"]

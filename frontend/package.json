@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "node server/index.js",
+    "dev": "NODE_ENV=development node server/index.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server/index.js"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

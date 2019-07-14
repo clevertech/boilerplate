@@ -4,8 +4,11 @@ import { postgraphile } from "postgraphile"
 const app = express()
 
 console.log(process.env)
+const db = process.env.DATABASE_URL
+const schemas = process.env.POSTGRAPHILE_SCHEMAS
+const options = process.env.POSTGRAPHILE_OPTIONS
 
-app.use(postgraphile(process.env.DATABASE_URL))
+app.use(postgraphile(db, schemas, options))
 
 app.listen(process.env.PORT)
 

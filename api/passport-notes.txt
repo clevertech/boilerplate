@@ -1,0 +1,3 @@
+https://github.com/graphile/examples/blob/master/server-koa2/middleware/installPostGraphile.js#
+https://github.com/graphile/examples/blob/master/server-koa2/middleware/installPassport.js
+https://github.com/graphile/examples/blob/master/shared/plugins/PassportLoginPlugin.js
