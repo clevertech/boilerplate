@@ -11,3 +11,4 @@ frontend/dist
 .idea
 api/.yarn-cache.tgz
 frontend/.yarn-cache.tgz
+api/build/*
