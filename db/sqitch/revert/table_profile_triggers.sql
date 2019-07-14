@@ -2,6 +2,6 @@
 
 BEGIN;
 
-  drop trigger profile_updated_at;
+  drop trigger profile_updated_at on account.profile cascade;
 
 COMMIT;

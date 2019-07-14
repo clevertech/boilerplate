@@ -7,7 +7,7 @@ BEGIN;
       display_name text not null,
       created_at timestamp without time zone default now() not null,
       updated_at timestamp without time zone default now() not null,
-      constraint name_length check (char_length(display_name) < 80 and char_length(display_name) > 0),
+      constraint name_length check (char_length(display_name) < 80 and char_length(display_name) > 0)
   );
 
   comment on table account.profile is 'account profiles contain display information for accounts.  every account has one profile.  profiles serve as a central reference point for accounts across datatypes.';

@@ -1,0 +1,25 @@
+%syntax-version=1.0.0
+%project=boilerplate
+
+privileges 2019-07-14T02:37:07Z notroot <notroot@2bc5444ad73d> # default privileges revoked from all functions
+extension_citext 2019-07-13T23:38:19Z notroot <notroot@551d8dd3470d> # Case-insensitive text field, useful for email login and other case-insensitive operations
+extension_pgcrypto 2019-07-13T23:38:52Z notroot <notroot@5dfde4aeb91e> # Cryptographic postgres extension used for passwords and other sensitive operations
+extension_uuidOssp 2019-07-13T23:40:18Z notroot <notroot@392eab9f81a9> # UUIDs are used to identify all records in the database
+role_anonymous 2019-07-14T02:15:25Z notroot <notroot@9aedc9cd2910> # The default role for unauthenticated users
+role_authenticated 2019-07-14T02:16:45Z notroot <notroot@920a7f2859f3> # The default role for authenticated users
+schema_account 2019-07-13T23:23:01Z notroot <notroot@a5d0105833cf> # Public account schema for holding profiles and other account information that users should be able to query through the API
+schema_account_private 2019-07-13T23:23:54Z notroot <notroot@032cdd36e60b> # Private account schema for holding credentials, account tokens, and other account related information which should only be accessible through stored procedures
+schema_utils 2019-07-14T00:38:59Z notroot <notroot@b9ebb1c059e0> # private schema where utility functions are stored
+function_set_updated_at 2019-07-14T00:39:54Z notroot <notroot@7d035dfe497a> # utility function used in triggers to set the updated_at column on tables
+type_jwt 2019-07-14T02:19:28Z notroot <notroot@aca5f7bd7650> # An authentication token returned by routines that log a user into an account
+table_profile 2019-07-13T23:26:16Z notroot <notroot@5d0ec6b2335d> # The profiles for our users.  These are publicly accessible and can include information like a display name, profile images, and other non-sensitive user data.
+table_profile_rbac 2019-07-14T02:39:02Z notroot <notroot@50a63ffbab9d> # role-based access control for the profile table
+table_profile_rls 2019-07-14T02:41:01Z notroot <notroot@66cd1e2fc569> # row-level security for the profile table
+table_profile_triggers 2019-07-14T00:27:57Z notroot <notroot@1cb6751e7307> # adding updated_at trigger to profile table
+table_credentials 2019-07-13T23:28:16Z notroot <notroot@439e3ecc4d20> # A private table for storing user login credentials.  This includes the username (email?) and password associated with the account
+table_credentials_rbac 2019-07-14T02:39:40Z notroot <notroot@5e364f9237c0> # role-based access control for the credentials table
+table_credentials_rls 2019-07-14T02:40:46Z notroot <notroot@a4f36528b932> # row-level security for the credentials table
+table_credentials_triggers 2019-07-14T00:28:16Z notroot <notroot@7d808c065772> # adding updated_at trigger to credentials table
+function_signup 2019-07-14T01:18:17Z notroot <notroot@f2dff170a00f> # A signup routine for regular user/pass accounts.  Alternative signup routines are provided by passport, for example github, google, facebook, etc.  Check the passportjs documentation on how to add and use alternative signup routines.
+function_login 2019-07-14T02:25:58Z notroot <notroot@b78c495ccbdd> # Stored procedure for taking in an email and a password, verifying it against the database, and returning a JWT on success
+function_currentProfile 2019-07-14T02:33:54Z notroot <notroot@d39db483698d> # Retrieve the profile for the user corresponding to the current JWT.

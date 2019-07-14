@@ -2,6 +2,6 @@
 
 BEGIN;
 
-  drop trigger credentials_updated_at;
+  drop trigger credentials_updated_at on account_private.credentials cascade;
 
 COMMIT;

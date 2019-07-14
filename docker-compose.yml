@@ -2,6 +2,8 @@ version: "3"
 services:
   frontend:
     build: frontend
+    networks:
+      - rpgapp
     image: frontend:local
     command: yarn dev
     depends_on:
@@ -18,6 +20,8 @@ services:
       context: api
       args:
         NODE_ENV: "development"
+    networks:
+      - rpgapp
     image: api:local
     command: yarn run start
     depends_on:
@@ -32,6 +36,8 @@ services:
       - ./api/yarn.lock:/opt/app/yarn.lock
   db:
     image: postgres:11
+    networks:
+      - rpgapp
     environment:
       - POSTGRES_PASSWORD=localdev
       - POSTGRES_DB=rpg
@@ -40,3 +46,5 @@ services:
       - ./postgres-data:/var/lib/postgresql/data/pgdata
     ports:
       - '8001:5432'
+networks:
+  rpgapp:

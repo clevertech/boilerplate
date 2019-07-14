@@ -2,6 +2,6 @@
 
 BEGIN;
 
-  create extension if not exists uuid-ossp with schema public;
+  create extension if not exists "uuid-ossp" with schema public;
 
 COMMIT;

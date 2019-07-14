@@ -2,6 +2,6 @@
 
 BEGIN;
 
-  create extension if not exists citext with schema public;
+  create extension if not exists "citext" with schema public;
 
 COMMIT;

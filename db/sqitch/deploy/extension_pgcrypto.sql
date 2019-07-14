@@ -2,6 +2,6 @@
 
 BEGIN;
 
-  create extension if not exists pgcrypto with schema public;
+  create extension if not exists "pgcrypto" with schema public;
 
 COMMIT;

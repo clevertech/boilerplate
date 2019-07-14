@@ -3,6 +3,6 @@
 BEGIN;
 
   create schema account;
-  grant usage on schema account to authenticated;
+  grant usage on schema account to anonymous, authenticated;
 
 COMMIT;
