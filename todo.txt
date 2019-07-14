@@ -1,0 +1,14 @@
+General Documentation:
+- switching to semi-standard
+- adding an admin portal
+- adding sentry
+
+Document Backend:
+- adding a posts table
+- adding github oauth with passport
+- switching to usernames rather than email addresses
+- adding first and last name fields to signup
+
+Document Frontend
+- replacing bulma with material ui
+- adding a new route
