@@ -6,6 +6,7 @@ const pgConnectionString = process.env.DB_URI
 export const pgPool = new Pool({ connectionString: pgConnectionString })
 
 pgPool.on('connect', client => {
+  client.query('SET statement_timeout TO 3000')
   client.on('notice', event => {
     logger.info(`[time:${new Date().toISOString()}]${event.message}`)
   })

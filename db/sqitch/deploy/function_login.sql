@@ -9,7 +9,7 @@ BEGIN;
   begin
     select c.* into credentials from account_private.credentials as c where email = _email;
 
-    if credentials.password_hash = crypt(_password, credentials.password) then
+    if credentials.password = crypt(_password, credentials.password) then
       return ('authenticated', credentials.profile_id)::account.jwt_token;
     else
       return null;

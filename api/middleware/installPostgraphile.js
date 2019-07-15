@@ -1,5 +1,6 @@
 import { postgraphile } from "postgraphile"
 import postgraphileConfig from "../postgraphilerc.js"
+import JwtToCookie from '../plugins/JwtToCookie'
 
 console.log({postgraphileConfig})
 
@@ -14,11 +15,19 @@ function installPostgraphile(app, additionalContext) {
       // Import our shared options
       ...options,
 
+      // our schema plugins
+      appendPlugins: [
+        JwtToCookie
+      ],
+
       // The return value of this is added to `context` - the third argument of
       // GraphQL resolvers. This is useful for our custom plugins.
       additionalGraphQLContextFromRequest(req) {
+        const res = req.res;
         return {
           ...additionalContext,
+          res,
+          req
         }
       },
     })

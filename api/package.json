@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "graphile-utils": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
     "postgraphile": "^4.4.0",
     "ramda": "^0.26.1",
     "webpack": "^4.33.0",
