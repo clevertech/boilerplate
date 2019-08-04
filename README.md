@@ -133,7 +133,7 @@ restart it to see your changes. To avoid that when doing simple changes (like
 adding a package), you can do something like:
 
 ```
-docker-compose exec api yarn add $YOUR_PACKAGE$
+docker-compose run api yarn add $YOUR_PACKAGE$
 ```
 
 ### Customizing Style
