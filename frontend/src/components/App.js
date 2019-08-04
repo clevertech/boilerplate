@@ -25,7 +25,10 @@ class App extends Component {
   }
 
   render() {
-    const { props, state: { burgerOpen } } = this;
+    const {
+      props,
+      state: { burgerOpen }
+    } = this;
     return (
       <div>
         <nav className="navbar is-transparent">
@@ -114,4 +117,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 App.propTypes = propTypes;
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

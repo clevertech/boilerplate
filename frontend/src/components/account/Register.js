@@ -137,4 +137,9 @@ const mapDispatchToProps = dispatch => ({
 
 Register.propTypes = propTypes;
 export { Register };
-export default withError(connect(mapStateToProps, mapDispatchToProps)(Register));
+export default withError(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Register)
+);
