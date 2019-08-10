@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack index.js -o build/index.js --mode=development --target='node' && node build/index.js",
+    "start": "webpack index.js -o build/index.js --mode=development --target='node' & nodemon build/index.js",
     "build": "webpack index.js -o dist/index.js --mode=production --target='node'"
   },
   "devDependencies": {
@@ -13,6 +13,7 @@
     "express": "^4.16.4",
     "graphile-utils": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.19.1",
     "postgraphile": "^4.4.0",
     "ramda": "^0.26.1",
     "webpack": "^4.33.0",
