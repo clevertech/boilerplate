@@ -1,6 +1,9 @@
+const nodeExternals = require('webpack-node-externals');
+
 module.exports = {
-  externals: ["pg-native"],
-  target: "node",
+  target: 'node',
+  externals: [nodeExternals(), "pg-native"],
+  watch: true,
   node: {
     __dirname: true,
   }
