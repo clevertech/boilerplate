@@ -36,4 +36,4 @@ RUN set -ex; \
 USER node
 
 # note this gets overridden by docker-compose during local development
-CMD ["node", "dist/index.js"]
+CMD ["node", "build/index.js"]
