@@ -5,8 +5,8 @@ export default makeWrapResolversPlugin({
   LoginPayload: {
     async jwtToken(resolve, source, args, context, resolveInfo) {
       const oldJwt = await resolve()
-      //return signJwt(await resolve())
-      return null
+      return signJwt(await resolve())
+      //return null
     },
   },
 });
