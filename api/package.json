@@ -7,17 +7,20 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.5",
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
+    "bufferutil": "^4.0.1",
     "express": "^4.16.4",
     "graphile-utils": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^1.19.1",
     "postgraphile": "^4.4.0",
     "ramda": "^0.26.1",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2",
+    "utf-8-validate": "^5.0.2",
+    "webpack-node-externals": "^1.7.2",
     "winston": "^3.2.1"
   }
 }
