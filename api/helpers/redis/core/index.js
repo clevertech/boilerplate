@@ -92,4 +92,15 @@ redisCore.set = function redisCoreSet(keyName, keyValue) {
   })
 }
 
+// regular del async wrapper
+redisCore.del = function redisCoreDel(keyName) {
+  if (!redisCore.client) redisCore.connect()
+  return new Promise((resolve,reject) => {
+    redisCore.client.del(keyName, keyValue, function redisCoreClientDelCallback(err, obj) {
+      if (err) return reject(err)
+      return resolve(obj)
+    })
+  })
+}
+
 export default redisCore

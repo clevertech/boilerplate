@@ -2,6 +2,7 @@ const redis = jest.genMockFromModule('redis')
 
 const dataStore = {}
 export const mockRedisClient = {
+  del: jest.fn(async (key, callback) => callback()),
   set: jest.fn(async (key, value, callback) => callback()),
   get: jest.fn(async (key, callback) => callback()),
   hmset: jest.fn(async (hash, object, callback) => callback()),

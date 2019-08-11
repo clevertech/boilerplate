@@ -1,12 +1,17 @@
 import subject from './'
-import redis from 'redis'
+import redisCore from '../core'
 
-jest.mock(redis)
+const redisJwtHelper = {}
+export const redisJwtWhitelistPrefix = 'jwt-whitelist:'
 
-const jwtString = ""+Math.random()
+redisJwtHelper.whitelistJwt = async function redisJwtHelperWhitelistJwt(jwt) {
+  return redisCore.set(redisJwtWhitelistPrefix+jwt)
+}
+redisJwtHelper.dewhitelistJwt = async function redisJwtHelperDewhitelistJwt(jwt) {
+  return redisCore.del(redisJwtWhitelistPrefix+jwt)
+}
+redisJwtHelper.checkJwt = async function redisJwtHelperCheckJwt(jwt) {
+  return redisCore.get(redisJwtWhitelistPrefix+jwt)
+}
 
-describe('Redis JWT Helper', () => {
-   it('can write JWT', () => {
-      subject.writeJwt(jwtString)
-   })
-})
+export default redisJwtHelper
