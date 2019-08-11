@@ -2,24 +2,14 @@ const redis = jest.genMockFromModule('redis')
 
 const dataStore = {}
 export const mockRedisClient = {
-  hmset: jest.fn((hash,key,value) => {
-    if (datastore[hash]) {
-      datastore[hash][key] = value
-    } else {
-      datastore[hash] = {key: value}
-    }
-  }),
-  hmget: jest.fn((hash,key,value) => {
-    if (datastore[hash]) {
-      return datastore[hash][key]
-    } else {
-      return undefined
-    }
-  })
+  hmset: jest.fn(async (hash, object, callback) => callback()),
+  hmget: jest.fn(async (hash, field, callback) => callback()),
+  hmgetall: jest.fn(async (hash, callback) => callback()),
+  quit: jest.fn(async () => {}),
 }
 
-redis.createClient = function createClient(port, client) {
+redis.createClient = jest.fn(function createClient(port, client) {
   return mockRedisClient
-}
+})
 
 export default redis
