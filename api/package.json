@@ -19,6 +19,7 @@
     "nodemon": "^1.19.1",
     "postgraphile": "^4.4.0",
     "ramda": "^0.26.1",
+    "redis": "^2.8.0",
     "utf-8-validate": "^5.0.2",
     "webpack-node-externals": "^1.7.2",
     "winston": "^3.2.1"
