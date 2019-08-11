@@ -49,4 +49,19 @@ describe('Redis core helper', () => {
     expect(redisMock.createClient).toHaveBeenCalled()
     expect(mockRedisClient.hmgetall).toHaveBeenCalledWith(hashName, expect.any(Function))
   })
+  it('can set a key in redis', async () => {
+    const keyName = 'someKeyName'
+    const keyValue = 'someKeyValue'
+
+    await subject.set(keyName, keyValue)
+    expect(redisMock.createClient).toHaveBeenCalled()
+    expect(mockRedisClient.set).toHaveBeenCalledWith(keyName, keyValue, expect.any(Function))
+  })
+  it('can get a key from redis', async () => {
+    const keyName = 'someKeyName'
+
+    await subject.get(keyName)
+    expect(redisMock.createClient).toHaveBeenCalled()
+    expect(mockRedisClient.get).toHaveBeenCalledWith(keyName, expect.any(Function))
+  })
 })

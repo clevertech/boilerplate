@@ -70,4 +70,26 @@ redisCore.hmget = function redisCoreHmget(hash, hashObject) {
   })
 }
 
+// regular get async wrapper
+redisCore.get = function redisCoreGet(keyName) {
+  if (!redisCore.client) redisCore.connect()
+  return new Promise((resolve,reject) => {
+    redisCore.client.get(keyName, function redisCoreClientGetCallback(err, obj) {
+      if (err) return reject(err)
+      return resolve(obj)
+    })
+  })
+}
+
+// regular set async wrapper
+redisCore.set = function redisCoreSet(keyName, keyValue) {
+  if (!redisCore.client) redisCore.connect()
+  return new Promise((resolve,reject) => {
+    redisCore.client.set(keyName, keyValue, function redisCoreClientSetCallback(err, obj) {
+      if (err) return reject(err)
+      return resolve(obj)
+    })
+  })
+}
+
 export default redisCore
