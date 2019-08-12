@@ -1,6 +1,6 @@
 import { postgraphile } from "postgraphile"
 import postgraphileConfig from "../postgraphilerc.js"
-import JwtToCookie from '../plugins/JwtToCookie'
+import LoginJwtHook from '../plugins/LoginJwtHook'
 
 const db = process.env.DATABASE_URL
 const schemas = postgraphileConfig.POSTGRAPHILE_SCHEMAS
@@ -13,7 +13,7 @@ function installPostgraphile(app, additionalContext) {
 
       // our schema plugins
       appendPlugins: [
-        JwtToCookie
+        LoginJwtHook
       ],
 
       // The return value of this is added to `context` - the third argument of
