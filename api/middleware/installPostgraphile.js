@@ -1,6 +1,7 @@
 import { postgraphile } from "postgraphile"
 import postgraphileConfig from "../postgraphilerc.js"
 import LoginJwtHook from '../plugins/LoginJwtHook'
+import responseHelper from './postgraphileResponseContext'
 
 const db = process.env.DATABASE_URL
 const schemas = postgraphileConfig.POSTGRAPHILE_SCHEMAS
@@ -23,7 +24,8 @@ function installPostgraphile(app, additionalContext) {
         return {
           ...additionalContext,
           res,
-          req
+          req,
+          responseHelper(res)
         }
       },
     })
