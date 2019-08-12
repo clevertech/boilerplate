@@ -5,13 +5,10 @@ import redisMock, {mockRedisClient} from '../../../__mocks__/redis'
 jest.mock('redis')
 
 describe('Redis core helper', () => {
-  const OLD_ENV = process.env
 
-  beforeEach(async () => {
-    jest.resetModules()
-    jest.resetAllMocks()
-    process.env = { ...OLD_ENV }
-    await subject.disconnect()
+  afterEach(async () => {
+    subject.disconnect()
+    jest.clearAllMocks()
   })
   it('creates and caches a redis client only once', async () => {
     subject.connect()

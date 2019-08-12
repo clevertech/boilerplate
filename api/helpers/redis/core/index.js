@@ -5,7 +5,7 @@ import RedisCoreError from './RedisCoreError'
 const redisCore = {}
 
 // async wrapper around createClient for consistency
-redisCore.connect = async function redisCoreConnect() {
+redisCore.connect = function redisCoreConnect() {
   if (redisCore.client) return redisCore.client
   return redisCore.client = redis.createClient(process.env.REDIS_PORT, process.env.REDIS_HOST, {
     retry_strategy: function (options) {
@@ -30,7 +30,7 @@ redisCore.connect = async function redisCoreConnect() {
 }
 
 // cleanly disconnect the redis client
-redisCore.disconnect = async function redisCoreDisconnect() {
+redisCore.disconnect = function redisCoreDisconnect() {
   if (!redisCore.client) redisCore.connect()
   redisCore.client.quit()
   delete redisCore.client
@@ -96,7 +96,7 @@ redisCore.set = function redisCoreSet(keyName, keyValue) {
 redisCore.del = function redisCoreDel(keyName) {
   if (!redisCore.client) redisCore.connect()
   return new Promise((resolve,reject) => {
-    redisCore.client.del(keyName, keyValue, function redisCoreClientDelCallback(err, obj) {
+    redisCore.client.del(keyName, function redisCoreClientDelCallback(err, obj) {
       if (err) return reject(err)
       return resolve(obj)
     })
