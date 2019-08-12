@@ -1,5 +1,5 @@
 import { Pool } from 'pg'
-import { logger } from './log'
+import { logger } from '../log'
 
 const pgConnectionString = process.env.DB_URI
 
