@@ -4,7 +4,7 @@
     "build": "webpack index.js -o dist/index.js --mode=production --target='node'",
     "test": "jest",
     "test:unit": "jest --testPathIgnorePatterns=\"./integrationTests/\"",
-    "test:integration": "jest --runInBand --testPathPattern=\"./integrationTests/\""
+    "test:integration": "jest --runInBand --testPathPattern=\"./integrationTests/\" --testPathIgnorePatterns=\"./integrationTests/testHelpers\""
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -12,6 +12,8 @@
     "babel-loader": "^8.0.5",
     "dotenv": "^8.0.0",
     "jest": "^24.8.0",
+    "mock-req": "^0.2.0",
+    "mock-res": "^0.5.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.2"
   },
