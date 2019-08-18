@@ -1,15 +1,11 @@
-import request from "supertest"
-import app from "../../app"
-
 import { setup, teardown, runGraphQLQuery } from "../testHelpers/postgraphileTestHelper"
-
 
 describe('LoginJwtHook Plugin', () => {
   beforeAll(setup)
   afterAll(teardown)
   // no need to reinit db due to postgraphileTestHelper's use of transactions
 
-  test("should return a JWT", async () => {
+  it("should return a JWT", async () => {
     await runGraphQLQuery(
       // GraphQL query goes here:
       `{ nodeId }`,
