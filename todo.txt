@@ -1,14 +1,51 @@
-General Documentation:
-- switching to semi-standard
-- adding an admin portal
-- adding sentry
+# Tasks for RPG-Next
 
-Document Backend:
-- adding a posts table
-- adding github oauth with passport
-- switching to usernames rather than email addresses
-- adding first and last name fields to signup
+## Authentication
+### Signup
+- Setup email system
+- Setup token for email verification
+- Invalidate all tokens when one token is used
+- Make token expire after a configurable time
+- Add form validation
 
-Document Frontend
-- replacing bulma with material ui
-- adding a new route
+### Login
+- Store JWT in redis
+- Return JWT as cookie
+- Add form validation
+
+### Logout
+- Invalidate all JWTs in redis
+- Invalidate all session nonces in redis
+
+### Password Reset
+- Setup email system
+- Setup token for password reset
+- Invalidate all tokens when one token is used
+- Make token expire after a configurable time
+- Add form validation
+
+### CSRF
+- Implement session-level nonce
+- Implement referrer/origin check
+
+## Documentation:
+###  General Documentation:
+  - switching to semi-standard
+  - adding an admin portal
+  - adding sentry
+
+### Document Backend:
+  - adding a posts table
+  - adding github oauth with passport
+  - switching to usernames rather than email addresses
+  - adding first and last name fields to signup
+
+### Document Frontend
+  - replacing bulma with material ui
+  - adding a new route
+
+## Verification
+ - Database setup script -- be sure it sets up users and test db
+
+## Stack configuration
+ - cba script should remove all instances of "rpg" and "rpg-boilerplate"
