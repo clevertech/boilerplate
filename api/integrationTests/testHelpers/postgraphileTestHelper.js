@@ -1,16 +1,16 @@
 // from https://www.graphile.org/postgraphile/testing-jest/
+
 import postgraphilerc from '../../postgraphilerc'
 
-const pg = require("pg");
-const {
-  createPostGraphileSchema,
-  withPostGraphileContext,
-} = require("postgraphile");
-const { graphql } = require("graphql");
-const MockReq = require("mock-req");
-const MockRes = require("mock-res");
+import { postgraphileOptions } from "../../middleware/installPostgraphile"
 
-const { postgraphileOptions } = require("../../server/middleware/postgraphile");
+jest.unmock('pg')
+jest.unmock('redis')
+
+const pg = require('pg')
+const { createPostGraphileSchema, withPostGraphileContext } = require('postgraphile')
+const { graphql } = require('graphql')
+const MockReq = require('mock-req')
 
 // This is the role that your normal PostGraphile connection string would use,
 // e.g. `postgres://POSTGRAPHILE_AUTHENTICATOR_ROLE:password@host/db`
