@@ -12,3 +12,4 @@ frontend/dist
 api/.yarn-cache.tgz
 frontend/.yarn-cache.tgz
 api/build/*
+*/**/yarn-error.log
