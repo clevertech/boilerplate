@@ -7,6 +7,10 @@ import { options, appendPlugins, schemas, additionalGraphQLContextFromRequest } 
 jest.unmock('pg')
 jest.unmock('redis')
 
+const truncateTables = [
+  'account.profile'
+]
+
 const pg = require('pg')
 const { createPostGraphileSchema, withPostGraphileContext } = require('postgraphile')
 const { graphql } = require('graphql')
@@ -91,6 +95,10 @@ exports.teardown = async () => {
       return null;
     }
     const { rootPgPool } = ctx;
+    const client = await rootPgPool.connect()
+    for (const table of truncateTables) {
+      client.query(`truncate table ${table} cascade`)
+    }
     ctx = null;
     await rootPgPool.end();
     return null;
@@ -104,7 +112,8 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
   query, // The GraphQL query string
   variables, // The GraphQL variables
   reqOptions, // Any additional items to set on `req` (e.g. `{user: {id: 17}}`)
-  checker = () => {} // Place test assertions in this function
+  checker = () => {}, // Place test assertions in this function
+  useTransactions = true
 ) {
   const { schema, rootPgPool, options } = ctx;
   const req = new MockReq({
@@ -138,7 +147,9 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
       // we need to replace it, and re-implement the settings logic. Sorry.
 
       const replacementPgClient = await rootPgPool.connect();
-      await replacementPgClient.query("begin");
+      if (useTransactions) {
+        replacementPgClient.query("begin");
+      }
       await replacementPgClient.query(`select set_config('role', $1, true)`, [
         POSTGRAPHILE_AUTHENTICATOR_ROLE,
       ]);
@@ -223,7 +234,7 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
       } finally {
         // Rollback the transaction so no changes are written to the DB - this
         // makes our tests fairly deterministic.
-        await replacementPgClient.query("rollback");
+        if (useTransactions) replacementPgClient.query("rollback");
         replacementPgClient.release();
       }
       return checkResult;
