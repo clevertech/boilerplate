@@ -2,7 +2,7 @@
 
 import postgraphilerc from '../../postgraphilerc'
 
-import { postgraphileOptions } from "../../middleware/installPostgraphile"
+import { options, appendPlugins, schemas, additionalGraphQLContextFromRequest } from '../../middleware/installPostgraphile'
 
 jest.unmock('pg')
 jest.unmock('redis')
@@ -10,7 +10,8 @@ jest.unmock('redis')
 const pg = require('pg')
 const { createPostGraphileSchema, withPostGraphileContext } = require('postgraphile')
 const { graphql } = require('graphql')
-const MockReq = require('mock-req')
+const MockReq = require('mock-express-request')
+const MockRes = require('mock-express-response')
 
 // This is the role that your normal PostGraphile connection string would use,
 // e.g. `postgres://POSTGRAPHILE_AUTHENTICATOR_ROLE:password@host/db`
@@ -63,12 +64,18 @@ exports.setup = async () => {
     connectionString: process.env.TEST_ROOT_DATABASE_URL,
   });
 
-  const options = postgraphileOptions();
+  const postgraphileOptions = {
+    ...options,
+    appendPlugins,
+    additionalGraphQLContextFromRequest
+  };
   const schema = await createPostGraphileSchema(
     rootPgPool,
-    postgraphilerc.POSTGRAPHILE_SCHEMAS,
-    options
+    schemas,
+    postgraphileOptions
   );
+
+
 
   // Store the context
   ctx = {
@@ -109,6 +116,8 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
     },
     ...reqOptions,
   });
+
+  req.res = new MockRes()
 
   const { pgSettings: pgSettingsGenerator } = options;
   const pgSettings =
@@ -207,7 +216,7 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
         // Also note that we pass the `replacementPgClient` so that you can
         // query the data in the database from within the transaction before it
         // gets rolled back.
-        checkResult = await checker(result, { pgClient: replacementPgClient });
+        checkResult = await checker(result, { pgClient: replacementPgClient, req })
 
         // You don't have to keep this, I just like knowing when things change!
         expect(sanitise(result)).toMatchSnapshot();
