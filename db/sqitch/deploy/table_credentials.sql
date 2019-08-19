@@ -4,7 +4,7 @@ BEGIN;
 
   create table account_private.credentials
   (
-    profile_id uuid not null constraint credentials_profile_id_fkey references account.profile primary key,
+    profile_id uuid not null constraint credentials_profile_id_fkey references account.profile on delete cascade primary key,
     password text not null,
     email citext not null constraint credentials_email_key unique constraint credentials_email_check check (email ~* '^.+@.+\..+$'::text),
     created_at timestamp without time zone default now() not null,
