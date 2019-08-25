@@ -96,7 +96,7 @@ exports.teardown = async () => {
     }
     const { rootPgPool } = ctx;
     const client = await rootPgPool.connect()
-    await client.query(`select set_config('role', 'postgres')`)
+    await client.query(`select set_config('role', 'postgres', false)`)
     for (const table of truncateTables) {
       client.query(`truncate table ${table} cascade`)
     }
@@ -114,7 +114,6 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
   variables, // The GraphQL variables
   reqOptions, // Any additional items to set on `req` (e.g. `{user: {id: 17}}`)
   checker = () => {}, // Place test assertions in this function
-  useTransactions = true
 ) {
   const { schema, rootPgPool, options } = ctx;
   const req = new MockReq({
@@ -148,9 +147,7 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
       // we need to replace it, and re-implement the settings logic. Sorry.
 
       const replacementPgClient = await rootPgPool.connect();
-      if (useTransactions) {
-        replacementPgClient.query("begin");
-      }
+      await replacementPgClient.query("begin");
       await replacementPgClient.query(`select set_config('role', $1, true)`, [
         POSTGRAPHILE_AUTHENTICATOR_ROLE,
       ]);
@@ -235,7 +232,7 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
       } finally {
         // Rollback the transaction so no changes are written to the DB - this
         // makes our tests fairly deterministic.
-        if (useTransactions) replacementPgClient.query("rollback");
+        await replacementPgClient.query("rollback");
         replacementPgClient.release();
       }
       return checkResult;
