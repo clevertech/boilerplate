@@ -2,7 +2,7 @@
   "scripts": {
     "start": "webpack index.js -o build/index.js --mode=development --target='node' & nodemon build/index.js",
     "build": "webpack index.js -o dist/index.js --mode=production --target='node'",
-    "test": "jest",
+    "test": "yarn test:unit",
     "test:unit": "jest --testPathIgnorePatterns=\"./integrationTests/\" --detectOpenHandles",
     "test:integration": "jest --runInBand --testPathPattern=\"./integrationTests/\" --testPathIgnorePatterns=\"./integrationTests/testHelpers\" --detectOpenHandles"
   },
