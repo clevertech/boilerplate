@@ -1,4 +1,5 @@
 import { setup, teardown, runGraphQLQuery } from "../testHelpers/postgraphileTestHelper"
+import { signup } from '../testHelpers/authHelper'
 
 describe('LoginJwtHook Plugin', () => {
   beforeAll(setup)
@@ -11,6 +12,7 @@ describe('LoginJwtHook Plugin', () => {
       email: 'test@example.com',
       password: 'someTestPassword'
     }
+    await signup(testUser)
     await runGraphQLQuery(
       // GraphQL query goes here:
       `mutation Login($input: LoginInput!){ login( input: $input ) { clientMutationId jwtToken  } }`,

@@ -1,5 +1,7 @@
 import { setup, teardown, runGraphQLQuery } from "../testHelpers/postgraphileTestHelper"
+jest.unmock('pg')
 
+const pg = require('pg')
 const getCookie = (cookies, name) => {
   var match = cookies.match(new RegExp('(^| )' + name + '=([^;]+)'))
   if (match) {
@@ -44,22 +46,13 @@ export const signup = async ({
   email,
   password
 } = {}) => {
-  await runGraphQLQuery(
-    // GraphQL query goes here:
-    `mutation signup( $input: SignupInput! ) { profile { id displayName } } }`,
-
-    // GraphQL variables go here:
-    { email, password },
-
-    {},
-    // This function runs all your test assertions:
-    (json, { pgClient, req }) => {
-      const response = req.res
-      expect(response.statusCode).toBe(200)
-      expect(json.errors).toBeUndefined()
-      expect(json.data.signup.profile.id).toBeTruthy()
-      expect(json.data.signup.profile.displayName).toBeTruthy()
-    },
-    false
-  )
+  const rootPgPool = new pg.Pool({
+    connectionString: process.env.TEST_ROOT_DATABASE_URL,
+  });
+  const client = await rootPgPool.connect()
+  await client.query('select account.signup($1,$2,$3);', [
+    displayName,
+    email,
+    password
+  ])
 }
