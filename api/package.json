@@ -4,7 +4,7 @@
     "build": "webpack index.js -o dist/index.js --mode=production --target='node'",
     "test": "yarn test:unit",
     "test:unit": "jest --testPathIgnorePatterns=\"./integrationTests/\" --detectOpenHandles",
-    "test:integration": "jest --runInBand --testPathPattern=\"./integrationTests/\" --testPathIgnorePatterns=\"./integrationTests/testHelpers\" --detectOpenHandles"
+    "test:integration": "jest --runInBand --testPathPattern=\"./integrationTests/\" --testPathIgnorePatterns=\"./integrationTests/testHelpers\""
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
