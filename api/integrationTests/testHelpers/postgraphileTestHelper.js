@@ -96,6 +96,7 @@ exports.teardown = async () => {
     }
     const { rootPgPool } = ctx;
     const client = await rootPgPool.connect()
+    await client.query(`select set_config('role', 'postgres')`)
     for (const table of truncateTables) {
       client.query(`truncate table ${table} cascade`)
     }
