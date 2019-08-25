@@ -13,10 +13,10 @@ describe('LoginJwtHook Plugin', () => {
     }
     await runGraphQLQuery(
       // GraphQL query goes here:
-      `mutation { login( $input: LoginInput! ) { clientMutationId jwtToken  } }`,
+      `mutation Login($input: LoginInput!){ login( input: $input ) { clientMutationId jwtToken  } }`,
 
       // GraphQL variables go here:
-      {input: {email: testUser.email, password: testUser.password}},
+      {input: {username: testUser.email, password: testUser.password}},
 
       // Any additional properties you want `req` to have (e.g. if you're using
       // `pgSettings`) go here:
