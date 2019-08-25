@@ -6,7 +6,7 @@ describe('LoginJwtHook Plugin', () => {
   afterAll(teardown)
   // no need to reinit db due to postgraphileTestHelper's use of transactions
 
-  it("should return a JWT", async () => {
+  it("should return a JWT on successful login", async () => {
     const testUser = {
       displayName: 'TestUser',
       email: 'test@example.com',
@@ -15,7 +15,7 @@ describe('LoginJwtHook Plugin', () => {
     await signup(testUser)
     await runGraphQLQuery(
       // GraphQL query goes here:
-      `mutation Login($input: LoginInput!){ login( input: $input ) { clientMutationId jwtToken  } }`,
+      `mutation Login($input: LoginInput!){ login( input: $input ) { jwtToken  } }`,
 
       // GraphQL variables go here:
       {input: {username: testUser.email, password: testUser.password}},
@@ -26,10 +26,11 @@ describe('LoginJwtHook Plugin', () => {
 
       // This function runs all your test assertions:
       (json, { req }) => {
-        expect(json.errors).toBeFalsy()
-        console.log(req.res.get('Set-Cookie'))
-        expect(json.data.clientMutationId).toBeTruthy()
-        expect(json.data.jwtToken).toBeFalsy()
+        const result = json.data.login
+        const authCookie = req.res.get('Set-Cookie')
+        expect(json.errors).toBeUndefined()
+        expect(result.jwtToken).toBeNull()
+        expect(authCookie).toEqual(expect.stringMatching(/^__Host-jwt=[^;]*; HttpOnly; Secure; SameSite=Strict$/))
       }
     )
   })
