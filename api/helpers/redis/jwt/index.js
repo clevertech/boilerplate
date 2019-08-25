@@ -1,17 +1,18 @@
-import subject from './'
 import redisCore from '../core'
+import { parseJwt } from '../../jwt'
 
 const redisJwtHelper = {}
 export const redisJwtWhitelistPrefix = 'jwt-whitelist:'
 
 redisJwtHelper.whitelistJwt = async function redisJwtHelperWhitelistJwt(jwt) {
-  return redisCore.set(redisJwtWhitelistPrefix+jwt)
+  const parsedJwt = parseJwt(jwt)
+  return await redisCore.set(redisJwtWhitelistPrefix+jwt, parsedJwt.profileId)
 }
 redisJwtHelper.dewhitelistJwt = async function redisJwtHelperDewhitelistJwt(jwt) {
-  return redisCore.del(redisJwtWhitelistPrefix+jwt)
+  return await redisCore.del(redisJwtWhitelistPrefix+jwt)
 }
 redisJwtHelper.checkJwt = async function redisJwtHelperCheckJwt(jwt) {
-  return redisCore.get(redisJwtWhitelistPrefix+jwt)
+  return await redisCore.get(redisJwtWhitelistPrefix+jwt)
 }
 
 export default redisJwtHelper

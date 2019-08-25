@@ -1,8 +1,10 @@
+import {sign} from 'jsonwebtoken'
 import subject, {redisJwtWhitelistPrefix} from './'
 import redisCore from '../core'
 jest.mock('../core')
 
-let myJwt = 'someJsonWebTokenObject'
+let myRawJwt = {profileId: '1111-111-11-11-1111'}
+let myJwt = sign(myRawJwt, process.env.JWT_SECRET)
 describe('Redis JWT helper', () => {
   beforeEach(() => {
     jest.resetAllMocks()
@@ -10,7 +12,7 @@ describe('Redis JWT helper', () => {
 
   it('allows whitelisting of the JWT', async () => {
     await subject.whitelistJwt(myJwt)
-    expect(redisCore.set).toHaveBeenCalledWith('jwt-whitelist:'+myJwt)
+    expect(redisCore.set).toHaveBeenCalledWith('jwt-whitelist:'+myJwt, myRawJwt.profileId)
   })
 
   it('allows checking the JWT whitelist for a given JWT', async () => {
