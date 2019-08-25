@@ -3,6 +3,7 @@
 import postgraphilerc from '../../postgraphilerc'
 
 import { options, appendPlugins, schemas, additionalGraphQLContextFromRequest } from '../../middleware/installPostgraphile'
+import responseHelper from '../../middleware/postgraphileResponseContext'
 
 jest.unmock('pg')
 jest.unmock('redis')
@@ -126,7 +127,8 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
     ...reqOptions,
   });
 
-  req.res = new MockRes()
+  const res = new MockRes()
+  req.res = res
 
   const { pgSettings: pgSettingsGenerator } = options;
   const pgSettings =
@@ -145,6 +147,8 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
       // We're not going to use the `pgClient` that came with
       // `withPostGraphileContext` because we want to ROLLBACK at the end. So
       // we need to replace it, and re-implement the settings logic. Sorry.
+      context.req = req
+      context.responseHelper = responseHelper(res)
 
       const replacementPgClient = await rootPgPool.connect();
       await replacementPgClient.query("begin");
