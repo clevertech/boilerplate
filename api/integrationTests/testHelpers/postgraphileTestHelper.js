@@ -64,6 +64,26 @@ const sanitise = json => {
 // Contains the PostGraphile schema and rootPgPool
 let ctx;
 
+const truncate = async () => {
+  try {
+    if (!ctx) {
+      return null;
+    }
+    const { rootPgPool } = ctx;
+    const client = await rootPgPool.connect()
+    await client.query(`select set_config('role', 'postgres', false)`)
+    for (const table of truncateTables) {
+      await client.query(`truncate table ${table} cascade`)
+    }
+    client.release()
+  } catch (e) {
+    console.error(e);
+  }
+  return null;
+}
+
+exports.truncate = truncate
+
 exports.setup = async () => {
   const rootPgPool = new pg.Pool({
     connectionString: process.env.TEST_ROOT_DATABASE_URL,
@@ -95,14 +115,10 @@ exports.teardown = async () => {
     if (!ctx) {
       return null;
     }
+    await truncate()
     const { rootPgPool } = ctx;
-    const client = await rootPgPool.connect()
-    await client.query(`select set_config('role', 'postgres', false)`)
-    for (const table of truncateTables) {
-      client.query(`truncate table ${table} cascade`)
-    }
-    ctx = null;
     await rootPgPool.end();
+    ctx = null;
     return null;
   } catch (e) {
     console.error(e);

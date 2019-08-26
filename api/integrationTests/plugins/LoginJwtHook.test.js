@@ -1,8 +1,9 @@
-import { setup, teardown, runGraphQLQuery } from "../testHelpers/postgraphileTestHelper"
+import { setup, teardown, truncate, runGraphQLQuery } from "../testHelpers/postgraphileTestHelper"
 import { signup } from '../testHelpers/authHelper'
 
 describe('LoginJwtHook Plugin', () => {
   beforeAll(setup)
+  afterEach(truncate)
   afterAll(teardown)
   // no need to reinit db due to postgraphileTestHelper's use of transactions
 
