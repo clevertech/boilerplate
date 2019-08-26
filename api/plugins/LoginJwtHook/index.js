@@ -9,8 +9,8 @@ export const wrapResolversPlugin = {
       if (!jwt) {
         throw new Error("Authentication failed")
       }
-      const signedJwt = signJwt(jwt)
       try {
+        const signedJwt = signJwt(jwt)
         await redisJwtHelper.whitelistJwt(signedJwt)
         context.responseHelper.setJwtCookie(signedJwt)
       } catch (e) {
