@@ -35,4 +35,32 @@ describe('LoginJwtHook Plugin', () => {
       }
     )
   })
+  it("should return an error and no JWT on unsuccessful login", async () => {
+    const testUser = {
+      displayName: 'TestUser',
+      email: 'test@example.com',
+      password: 'someTestPassword'
+    }
+    await runGraphQLQuery(
+      // GraphQL query goes here:
+      `mutation Login($input: LoginInput!){ login( input: $input ) { jwtToken  } }`,
+
+      // GraphQL variables go here:
+      {input: {username: testUser.email, password: testUser.password}},
+
+      // Any additional properties you want `req` to have (e.g. if you're using
+      // `pgSettings`) go here:
+      {},
+
+      // This function runs all your test assertions:
+      (json, { req }) => {
+        const result = json.data.login
+        const authCookie = req.res.get('Set-Cookie')
+        expect(json.errors).toHaveLength(1)
+        expect(json.errors[0].message).toEqual(expect.any(String))
+        expect(result.jwtToken).toBeNull()
+        expect(authCookie).toBeUndefined()
+      }
+    )
+  })
 })

@@ -247,8 +247,6 @@ exports.runGraphQLQuery = async function runGraphQLQuery(
         // gets rolled back.
         checkResult = await checker(result, { pgClient: replacementPgClient, req })
 
-        // You don't have to keep this, I just like knowing when things change!
-        expect(sanitise(result)).toMatchSnapshot();
       } finally {
         // Rollback the transaction so no changes are written to the DB - this
         // makes our tests fairly deterministic.
