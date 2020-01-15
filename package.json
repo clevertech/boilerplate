@@ -20,7 +20,7 @@
     "chalk": "^2.3.0",
     "dashify": "^0.2.2",
     "fs-extra": "^4.0.2",
-    "inquirer": "^3.3.0",
+    "inquirer": "^6.0.0",
     "just-snake-case": "^1.0.0",
     "nanoid": "^1.0.1",
     "uppercamelcase": "^3.0.0",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.9.2"
   }
 }
