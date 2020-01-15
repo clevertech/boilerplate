@@ -56,7 +56,7 @@ const databases = {
 }
 
 const databaseNames = Object.keys(databases)
-const defaultDeatabase = databaseNames[0]
+const defaultDatabase = databaseNames[0]
 
 console.log('Creating a new Clevertech project in', basedir)
 
@@ -261,15 +261,11 @@ const updatePrettierConfiguration = async answers => {
 }
 
 const useProjectName = async answers => {
-  const files = [
-    'api/Makefile',
-    'frontend/Makefile',
-    'docker/run'
-  ]
+  const files = ['api/Makefile', 'frontend/Makefile', 'docker/run']
   for (const file of files) {
     const filePath = path.join(basedir, file)
     // Some files do not exist if you are not a Clevertech employee
-    if (!(await fs.exists(filePath))) continue
+    if (!await fs.exists(filePath)) continue
     const source = await fs.readFile(filePath, 'utf8')
     const sourceNew = source
       .replace(/boilerplate/g, dashify(answers.projectName))
@@ -386,23 +382,26 @@ const makeAdminQuestions = async initialAnswers => {
   ])
 }
 
-const addExtras = async (deployMode) => {
+const addExtras = async answers => {
   const dir = path.join(basedir, 'extras')
   await cloneRepo('boilerplate-extras', dir)
 
   const files = ['api/Makefile', 'frontend/Makefile', 'terraform']
-  if (deployMode === 'k8s') {
-      files.push('buildspec-k8s-api.yml');
-      files.push('buildspec-k8s-frontend.yml');
+  if (answers.deployMode === 'k8s') {
+    files.push('buildspec-k8s-api.yml')
+    files.push('buildspec-k8s-frontend.yml')
   } else {
-      files.push('buildspec-ecs-api.yml');
-      files.push('buildspec-ecs-frontend.yml');
+    files.push('buildspec-ecs-api.yml')
+    files.push('buildspec-ecs-frontend.yml')
   }
 
   // move files
   await Promise.all(
     files.map(filename =>
-      fs.move(path.join(dir, filename), path.join(basedir, filename.replace( /\-k8s|\-ecs/, '' )))
+      fs.move(
+        path.join(dir, filename),
+        path.join(basedir, filename.replace(/\-k8s|\-ecs/, ''))
+      )
     )
   )
 
@@ -413,11 +412,29 @@ const addExtras = async (deployMode) => {
   source += '\n\n' + (await fs.readFile(readmeExtra))
   await fs.writeFile(readme, source)
 
+  // replace APPNAME in tpl files for the original values
+  const appname_files = [
+    'terraform/global/terraform.tfvars.tpl',
+    'terraform/envs/dev/terraform.backend.tpl',
+    'terraform/envs/prod/terraform.backend.tpl',
+    'terraform/envs/stag/terraform.backend.tpl'
+  ]
+
+  await Promise.all(
+    appname_files.map(filename => {
+      const src = path.join(basedir, filename)
+      const dst = path.join(basedir, filename.replace('.tpl', ''))
+      exec(
+        `sed -e \"s/\\\${APPNAME}/${answers.projectName}/g\" ${src} > ${dst}`
+      )
+    })
+  )
+
   // Remove cloned extras repo
   await fs.remove(dir)
 }
 
-const createRootEnvFile = async (answers) => {
+const createRootEnvFile = async answers => {
   const content = `COMPOSE_PROJECT_NAME=${toSnakeCase(answers.projectName)}\n`
   await fs.writeFile(path.join(basedir, '.env'), content)
 }
@@ -438,7 +455,7 @@ const run = async () => {
         type: 'list',
         message: 'Which database engine are you going to use?',
         choices: databaseNames,
-        default: defaultDeatabase
+        default: defaultDatabase
       },
       {
         name: 'gitRemote',
@@ -462,7 +479,7 @@ const run = async () => {
         name: 'deployMode',
         type: 'list',
         message: 'What is the deploy mode?',
-        choices: ['k8s','ecs'],
+        choices: ['k8s', 'ecs'],
         default: 'k8s'
       },
       {
@@ -475,7 +492,7 @@ const run = async () => {
     ])
 
     if (answers.employee) {
-      await addExtras(answers.deployMode)
+      await addExtras(answers)
     }
 
     const dbPassword = nanoid()
