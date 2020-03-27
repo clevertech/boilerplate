@@ -386,7 +386,7 @@ const addExtras = async answers => {
   const dir = path.join(basedir, 'extras')
   await cloneRepo('boilerplate-extras', dir)
 
-  const files = ['api/Makefile', 'frontend/Makefile', 'terraform']
+  const files = ['api/Makefile', 'frontend/Makefile', 'terraform', 'Jenkinsfile', 'JenkinsKubernetesPod.yaml']
   if (answers.deployMode === 'k8s') {
     files.push('buildspec-k8s-api.yml')
     files.push('buildspec-k8s-frontend.yml')
