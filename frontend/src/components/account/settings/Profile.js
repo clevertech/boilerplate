@@ -48,7 +48,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 Profile.propTypes = propTypes;
 export { Profile };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

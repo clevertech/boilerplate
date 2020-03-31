@@ -17,7 +17,4 @@ const mapStateToProps = (state, { location }) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({});
 
 EnsureAuthenticated.propTypes = propTypes;
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(EnsureAuthenticated);
+export default connect(mapStateToProps, mapDispatchToProps)(EnsureAuthenticated);

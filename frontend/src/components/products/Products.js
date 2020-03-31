@@ -55,9 +55,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 Products.propTypes = propTypes;
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Products)
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Products));
