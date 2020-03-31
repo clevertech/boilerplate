@@ -47,7 +47,7 @@ function retrieveYarnCache() {
 
   if [ "$RETRIEVE" = true ]; then
     echo "Retrieving"
-    docker run --rm --entrypoint cat ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest /.yarn-cache.tgz > $SERVICE_DIR/.yarn-cache.tgz
+    docker run --rm ${COMPOSE_PROJECT_NAME}_$SERVICE_NAME:latest tar czf - /usr/local/share/.cache/yarn > $SERVICE_DIR/.yarn-cache.tgz
     cp /tmp/${SERVICE_NAME}_yarn.lock $SERVICE_DIR/yarn.lock
   else
     echo "Not retrieving"
