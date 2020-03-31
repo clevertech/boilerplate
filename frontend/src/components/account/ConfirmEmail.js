@@ -78,9 +78,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 ConfirmEmail.propTypes = propTypes;
 export { ConfirmEmail };
-export default withError(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(ConfirmEmail)
-);
+export default withError(connect(mapStateToProps, mapDispatchToProps)(ConfirmEmail));

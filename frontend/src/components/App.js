@@ -117,9 +117,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 App.propTypes = propTypes;
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(App)
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
