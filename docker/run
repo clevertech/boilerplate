@@ -25,7 +25,7 @@ function initCache() {
   touch $SERVICE_DIR/yarn.lock
   if [ ! -f $SERVICE_DIR/.yarn-cache.tgz ]; then
     echo "Init empty $SERVICE_DIR/.yarn-cache.tgz"
-    tar cvzf $SERVICE_DIR/.yarn-cache.tgz --files-from /dev/null
+    GZIP="-n" tar cvzf $SERVICE_DIR/.yarn-cache.tgz --files-from /dev/null
     CACHE_INIT=true
   fi
 }

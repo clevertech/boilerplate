@@ -8,7 +8,7 @@ CONFIG_FILE=docker-compose.yml
 touch yarn.lock
 if [ ! -f .-yarn-cache.tgz ]; then
   echo "Init empty .yarn-cache.tgz"
-  tar cvzf api/.yarn-cache.tgz --files-from /dev/null
+  GZIP="-n" tar cvzf api/.yarn-cache.tgz --files-from /dev/null
 fi
 
 make -C api build
