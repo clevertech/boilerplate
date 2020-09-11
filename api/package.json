@@ -49,7 +49,7 @@
     "helmet": "^3.9.0",
     "jsonwebtoken": "^8.1.0",
     "knex": "^0.13.0",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^2.6.1",
     "pg": "^7.3.0",
     "raven": "^2.2.1",
     "useragent": "^2.3.0",
