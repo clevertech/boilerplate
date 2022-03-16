@@ -1,5 +1,6 @@
 FROM node:8-alpine
 LABEL maintainer="Clevertech DevOps <support@clevertech.biz>"
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # Update OS
 RUN apk --no-cache add ca-certificates python2 make g++ && update-ca-certificates
