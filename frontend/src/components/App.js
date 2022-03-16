@@ -25,10 +25,7 @@ class App extends Component {
   }
 
   render() {
-    const {
-      props,
-      state: { burgerOpen }
-    } = this;
+    const { props, state: { burgerOpen } } = this;
     return (
       <div>
         <nav className="navbar is-transparent">

@@ -27,7 +27,7 @@ services:
       - ./frontend/.:/opt/app
       - /opt/app/node_modules
   db:
-    image: postgres
+    image: postgres:11.15
     restart: always
     environment:
       POSTGRES_PASSWORD: o5MU9UhWaHNUXfrMqU~Ho
