@@ -5,7 +5,7 @@
   "dependencies": {
     "bulma": "^0.7.1",
     "bulma-extensions": "^2.2.1",
-    "moment": "^2.19.2",
+    "moment": "^2.29.2",
     "object-assign": "4.1.1",
     "promise": "8.0.1",
     "raf": "^3.4.0",
