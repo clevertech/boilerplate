@@ -1,71 +1,65 @@
 #!/bin/bash
 
-set -e
+set -eu
 
 log() {
-  echo $1 >&2
+  echo "$1" >&2
 }
 
-is_merge_commit(){
+is_merge_commit() {
   if [ "$(git show | awk '{print $1}' | head -n 2 | tail  -1)" == "Merge:" ]; then
-    echo "TRUE"
-  else
-    echo "FALSE"
+    return 0
   fi
+
+  return 1
 }
 
 # This should use registry API, not pulling
 docker_image_exists() {
   local image_full_name="$1"; shift
-  log "Trying to pull ${image_full_name}"
-  local wait_time="${1:-5}"
-  local search_term='Pulling|is up to date|not found'
-  local result="$((timeout --preserve-status "$wait_time" docker 2>&1 pull "$image_full_name" &) | grep -v 'Pulling repository' | egrep -o "$search_term")"
-  test "$result" || { log "Timed out too soon. Try using a wait_time greater than $wait_time..."; return 1 ;}
+  log "Checking if image ${image_full_name} exists..."
 
-  if [[ "${result}" == *"Pulling"* ]] || [ "${result}" == "is up to date" ]; then
-    echo "TRUE"
-  else
-    echo "FALSE"
+  if DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect "$image_full_name" > /dev/null 2>&1; then
+    log "Image ${image_full_name} exists, pulling it..."
+    docker pull --quiet "$image_full_name" > /dev/null 2>&1 &
+
+    return 0
   fi
+
+  log "Image ${image_full_name} does not exist, building it..."
+  return 1
 }
 
-get_last_commit_id(){
+get_last_commit_id() {
   cid=$(git log --no-merges --format="%H" -1)
-  echo ${cid}
+  echo "${cid}"
 }
 
 diff() {
-  if git diff --quiet HEAD $1; then
+  if git diff --quiet HEAD "$1"; then
     return 0
-  else
-    return 1
   fi
+
+  return 1
 }
 
-COMMIT_ID=$2
+COMMIT_ID="$2"
 log "Fast track detection for commit id $COMMIT_ID"
 
-IS_MERGE_COMMIT=$(is_merge_commit)
-log "Is this a merge commit? $IS_MERGE_COMMIT"
-
-if [ "${IS_MERGE_COMMIT}" == "TRUE" ]; then
+if is_merge_commit; then
   PARENT_COMMIT_ID=$(get_last_commit_id)
-  log "Checking diff with parent commit id $PARENT_COMMIT_ID"
-  if diff $PARENT_COMMIT_ID; then
+  log "This is a merge commit. Checking diff with parent commit id $PARENT_COMMIT_ID"
+
+  if diff "$PARENT_COMMIT_ID"; then
     log "$PARENT_COMMIT_ID is identical to HEAD"
-    COMMIT_ID=$PARENT_COMMIT_ID
+    COMMIT_ID="$PARENT_COMMIT_ID"
   else
     log "$PARENT_COMMIT_ID differs from HEAD"
   fi
 fi
 
-IMAGE_EXISTS=$(docker_image_exists $1:$COMMIT_ID)
-
-log "Does the image exist in the registry? ${IMAGE_EXISTS}"
-
-if [ "${IMAGE_EXISTS}" == "TRUE" ]; then
-  echo $COMMIT_ID
+if docker_image_exists "$1:$COMMIT_ID"; then
+  echo "$COMMIT_ID"
 else
-  echo FALSE
+  echo "FALSE"
 fi
