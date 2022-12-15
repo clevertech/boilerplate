@@ -2385,8 +2385,8 @@ repeating@^2.0.0:
     is-finite "^1.0.0"
 
 replicator@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/replicator/-/replicator-1.0.1.tgz#8b382b4ebb871cdbb98e2306ff352ae409d484a9"
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/replicator/-/replicator-1.0.5.tgz#f1e56df7e276a62afe80c2248b8ac03896f4708f"
 
 require-from-string@^2.0.1:
   version "2.0.1"
