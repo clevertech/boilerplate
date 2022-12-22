@@ -47,7 +47,7 @@
     "express": "^4.13.3",
     "express-session": "^1.15.6",
     "helmet": "^3.9.0",
-    "jsonwebtoken": "^8.1.0",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.13.0",
     "node-fetch": "^1.7.3",
     "pg": "^7.3.0",
